@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif KR", serif;
+  --font-sans: "Pretendard", sans-serif;
+  --font-gungsuh: "Gungsuh", "Batang", "Noto Serif KR", serif;
+
+  --color-era1-primary: #A5CCBF;
+  --color-era1-secondary: #90A4AE;
+  
+  --color-era2-primary: #E2E7E4;
+  --color-era2-secondary: #D8D8D8;
+  
+  --color-era3-primary: #E0E4E8;
+  --color-era3-secondary: #1F3A69;
+  
+  --color-era4-primary: #F5EFE6;
+  --color-era4-secondary: #F7B500;
+
+  --color-level4-bg: #FAF8F5;
+  --color-text-main: #2D2A26;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background-color: var(--color-era1-primary);
+  overflow: hidden; /* We'll handle scrolling inside or via GSAP */
+}
+
+/* Hanji Noise Texture */
+.hanji-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Vertical text for Hanja */
+.vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
