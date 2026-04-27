@@ -40,7 +40,7 @@ export function Level1MacroView({ setActiveEra, onSelectKing }: Level1Props) {
         <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tighter mb-4">조선 왕조 500년</h1>
         <p className="text-xl opacity-70 mb-32">The 500 Years of the Joseon Dynasty</p>
 
-        {ERAS.map((era, i) => (
+        {ERAS.map(era => (
           <div key={era.id} className="era-section min-h-[80vh] flex flex-col justify-center mb-32 relative">
             <div className="absolute left-0 top-0 w-1 h-full bg-black/10"></div>
             <div className="pl-12">
