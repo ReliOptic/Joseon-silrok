@@ -10,3 +10,5 @@ coverage/
 # Generated SQLite — rebuild via `npm run db:seed`
 db/*.sqlite
 db/*.sqlite-journal
+db/*.sqlite-wal
+db/*.sqlite-shm
