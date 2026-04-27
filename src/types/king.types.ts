@@ -2,6 +2,10 @@ export interface KingEvent {
   readonly year: number;
   readonly title: string;
   readonly desc: string;
+  readonly hanjaChar?: string;
+  readonly unofficialHistory?: string;
+  readonly figures?: readonly KingFigure[];
+  readonly sillokEntry?: KingSillokEntry;
 }
 
 export interface KingFigure {
@@ -19,6 +23,8 @@ export interface KingDetail {
 }
 
 export interface KingSillokEntry {
+  readonly articleId?: string;
+  readonly sourceUrl?: string;
   readonly date: string;
   readonly title: string;
   readonly original: string;

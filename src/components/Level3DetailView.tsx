@@ -1,17 +1,42 @@
 import type { KingData } from '../types/king.types';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Level3Props {
   kingData: KingData;
+  eventIndex: number;
+  onNavigateEvent: (direction: 'prev' | 'next') => void;
   zoomIn: () => void;
 }
 
-export function Level3DetailView({ kingData, zoomIn }: Level3Props) {
+export function Level3DetailView({ kingData, eventIndex, onNavigateEvent, zoomIn }: Level3Props) {
   const { detail } = kingData;
+  const safeIndex = Math.min(eventIndex, kingData.events.length - 1);
+  const event = kingData.events[safeIndex];
+  const hanjaChar = event.hanjaChar ?? detail.hanjaChar;
+  const unofficialHistory = event.unofficialHistory ?? detail.unofficialHistory;
+  const figures = event.figures ?? detail.figures;
 
   return (
     <div className="max-w-4xl mx-auto px-6 pt-12 pb-32">
+      <div className="flex items-center justify-between mb-6">
+        <button
+          onClick={() => onNavigateEvent('prev')}
+          className="flex items-center gap-1.5 text-sm opacity-50 hover:opacity-100 transition-opacity disabled:opacity-20 disabled:cursor-not-allowed"
+          disabled={safeIndex === 0 && !kingData}
+        >
+          <ChevronLeft size={16} />이전 사건
+        </button>
+        <span className="text-xs opacity-40 tracking-widest">{safeIndex + 1} / {kingData.events.length}</span>
+        <button
+          onClick={() => onNavigateEvent('next')}
+          className="flex items-center gap-1.5 text-sm opacity-50 hover:opacity-100 transition-opacity"
+        >
+          다음 사건<ChevronRight size={16} />
+        </button>
+      </div>
+
       <div className="mb-16">
-        <h1 className="text-[48px] font-serif font-bold mb-4 leading-[1.4] tracking-[-0.02em]">{detail.date}</h1>
+        <h1 className="text-[48px] font-serif font-bold mb-4 leading-[1.4] tracking-[-0.02em]">{event.year}년</h1>
       </div>
 
       <div
@@ -19,25 +44,25 @@ export function Level3DetailView({ kingData, zoomIn }: Level3Props) {
         onClick={zoomIn}
       >
         <div className="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none select-none">
-          <span className="text-[200px] font-serif leading-none">{detail.hanjaChar}</span>
+          <span className="text-[200px] font-serif leading-none">{hanjaChar}</span>
         </div>
 
         <div className="flex items-center gap-3 mb-6 relative z-10">
-          <span className="px-3 py-1 bg-black/10 rounded-full text-xs font-bold uppercase tracking-widest">{detail.date}</span>
+          <span className="px-3 py-1 bg-black/10 rounded-full text-xs font-bold uppercase tracking-widest">{event.year}년</span>
         </div>
 
-        <h2 className="text-[32px] font-serif font-bold mb-6 relative z-10 leading-[1.5] tracking-[-0.01em]">{detail.title}</h2>
-        <p className="text-base leading-[1.6] tracking-[-0.01em] opacity-90 mb-8 relative z-10">{detail.desc}</p>
+        <h2 className="text-[32px] font-serif font-bold mb-6 relative z-10 leading-[1.5] tracking-[-0.01em]">{event.title}</h2>
+        <p className="text-base leading-[1.6] tracking-[-0.01em] opacity-90 mb-8 relative z-10">{event.desc}</p>
 
         <div className="relative z-10 bg-[#F5EFE6] p-6 rounded-2xl rounded-tl-none border border-[#F7B500]/30 shadow-sm mb-8 max-w-2xl">
           <div className="absolute -top-3 left-0 w-4 h-4 bg-[#F5EFE6] border-t border-l border-[#F7B500]/30 transform rotate-45"></div>
           <span className="text-xs font-bold text-[#F7B500] mb-2 block">야사 (Unofficial History)</span>
-          <p className="text-sm leading-[1.6] tracking-[-0.01em] opacity-80">{detail.unofficialHistory}</p>
+          <p className="text-sm leading-[1.6] tracking-[-0.01em] opacity-80">{unofficialHistory}</p>
         </div>
 
         <div className="flex items-center gap-4 pt-6 border-t border-black/10 relative z-10">
           <div className="flex -space-x-3">
-            {detail.figures.slice(0, 3).map((fig, i) => (
+            {figures.slice(0, 3).map((fig, i) => (
               <div key={i} className="w-10 h-10 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-[10px] font-bold overflow-hidden px-1 text-center">
                 {fig.name}
               </div>
