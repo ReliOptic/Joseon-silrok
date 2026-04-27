@@ -50,6 +50,10 @@ CREATE TABLE IF NOT EXISTS sillok (
   translation_html  TEXT NOT NULL,
   commentary_html   TEXT,
   source_url        TEXT NOT NULL,
+  source_id         TEXT,                              -- e.g. kda_12512030_002, derived from source_url
+  provenance        TEXT NOT NULL DEFAULT 'authored',  -- authored | imported | verified
+  imported_at       TEXT,                              -- ISO timestamp of last import
   is_hero           INTEGER NOT NULL DEFAULT 0
 );
-CREATE INDEX IF NOT EXISTS idx_sillok_event ON sillok(event_id);
+CREATE INDEX IF NOT EXISTS idx_sillok_event     ON sillok(event_id);
+CREATE INDEX IF NOT EXISTS idx_sillok_source_id ON sillok(source_id);

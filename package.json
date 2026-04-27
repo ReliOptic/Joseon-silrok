@@ -8,6 +8,8 @@
     "dev:web": "vite --port=3000 --host=0.0.0.0",
     "dev:api": "tsx watch server/index.ts",
     "db:seed": "tsx server/seed/run.ts",
+    "db:import": "tsx server/import/run.ts",
+    "db:verify": "tsx server/import/verify.ts",
     "build": "npm run db:seed && vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist db/sillok.sqlite",

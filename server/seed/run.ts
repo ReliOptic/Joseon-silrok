@@ -1,4 +1,5 @@
 import { openDb, applySchema, DB_PATH } from '../db.js';
+import { extractSourceId } from '../sourceId.js';
 import { ERAS } from './eras.js';
 import { KINGS } from './kings.js';
 import { ALL_EVENTS } from './events/index.js';
@@ -93,8 +94,8 @@ function main() {
     VALUES (@king_id, @year, @reign_year, @lunar_date, @title_ko, @title_hanja, @summary_html, @tags)
   `);
   const insertSillok = db.prepare(`
-    INSERT INTO sillok (event_id, volume, date_lunar, date_solar, title_ko, original_html, translation_html, commentary_html, source_url, is_hero)
-    VALUES (@event_id, @volume, @date_lunar, @date_solar, @title_ko, @original_html, @translation_html, @commentary_html, @source_url, @is_hero)
+    INSERT INTO sillok (event_id, volume, date_lunar, date_solar, title_ko, original_html, translation_html, commentary_html, source_url, source_id, provenance, is_hero)
+    VALUES (@event_id, @volume, @date_lunar, @date_solar, @title_ko, @original_html, @translation_html, @commentary_html, @source_url, @source_id, 'authored', @is_hero)
   `);
 
   let sillokCount = 0;
@@ -121,6 +122,7 @@ function main() {
         translation_html: s.translation_html,
         commentary_html: s.commentary_html ?? null,
         source_url: s.source_url,
+        source_id: extractSourceId(s.source_url),
         is_hero: s.is_hero ? 1 : 0,
       });
       sillokCount++;
