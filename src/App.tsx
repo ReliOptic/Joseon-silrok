@@ -1,229 +1,352 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ERAS, SEJONG_EVENTS, SILLOK_ENTRY } from './data';
-import { ChevronRight, ArrowLeft, Bookmark, Search, BookOpen, Share2, ZoomIn, ZoomOut } from 'lucide-react';
+import {
+  ChevronRight,
+  ArrowLeft,
+  History as HistoryIcon,
+  ZoomIn,
+  ZoomOut,
+} from 'lucide-react';
+import { api } from './api';
+import { useZoomHistory, type ZoomFrame } from './zoomHistory';
+import type { Era, King, EventRow, SillokEntry } from './types';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const ERA_BG_FALLBACK = '#A5CCBF';
+const LEVEL3_BG = '#F0F4F2';
+const LEVEL4_BG = 'var(--color-level4-bg)';
+
 export default function App() {
-  const [level, setLevel] = useState(1);
-  const [activeEra, setActiveEra] = useState(ERAS[0]);
+  const history = useZoomHistory({ level: 1 });
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Handle Zoom In/Out
-  const zoomIn = () => {
-    if (level < 4) {
-      gsap.to(containerRef.current, {
-        scale: 1.25,
-        opacity: 0,
-        y: -20,
-        duration: 0.4,
-        onComplete: () => {
-          setLevel(l => l + 1);
-          gsap.fromTo(containerRef.current, 
-            { scale: 0.8, opacity: 0, y: 20 },
-            { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-          );
-        }
-      });
-    }
-  };
+  const [eras, setEras] = useState<Era[]>([]);
+  const [kings, setKings] = useState<King[]>([]);
+  const [activeEra, setActiveEra] = useState<Era | null>(null);
+  const [historyOpen, setHistoryOpen] = useState(false);
 
-  const zoomOut = () => {
-    if (level > 1) {
-      gsap.to(containerRef.current, {
-        scale: 0.8,
-        opacity: 0,
-        y: 20,
-        duration: 0.4,
-        onComplete: () => {
-          setLevel(l => l - 1);
-          gsap.fromTo(containerRef.current, 
-            { scale: 1.25, opacity: 0, y: -20 },
-            { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-          );
-        }
-      });
-    }
-  };
-
+  // Initial load.
   useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      if (e.ctrlKey) {
-        e.preventDefault();
-        if (e.deltaY > 0) {
-          zoomOut();
-        } else {
-          zoomIn();
-        }
-      }
-    };
-    
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    return () => window.removeEventListener('wheel', handleWheel);
-  }, [level]);
-
-  // Background color transition based on level and active era
-  useEffect(() => {
-    let bgColor = activeEra.color.primary;
-    if (level === 2) bgColor = activeEra.color.primary; 
-    if (level === 3) bgColor = '#F0F4F2'; 
-    if (level === 4) bgColor = 'var(--color-level4-bg)';
-
-    gsap.to('body', {
-      backgroundColor: bgColor,
-      duration: 1.2,
-      ease: "power2.inOut"
+    Promise.all([api.eras(), api.kings()]).then(([e, k]) => {
+      setEras(e);
+      setKings(k);
+      if (e.length) setActiveEra(e[0]);
     });
-  }, [level, activeEra]);
+  }, []);
+
+  const animateZoom = (direction: 1 | -1, mutate: () => void) => {
+    const el = containerRef.current;
+    if (!el) {
+      mutate();
+      return;
+    }
+    gsap.to(el, {
+      scale: direction === 1 ? 1.25 : 0.8,
+      opacity: 0,
+      y: direction === 1 ? -20 : 20,
+      duration: 0.4,
+      onComplete: () => {
+        mutate();
+        gsap.fromTo(
+          el,
+          { scale: direction === 1 ? 0.8 : 1.25, opacity: 0, y: direction === 1 ? 20 : -20 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' },
+        );
+      },
+    });
+  };
+
+  const zoomTo = (frame: ZoomFrame) => animateZoom(1, () => history.push(frame));
+  const zoomBack = () => animateZoom(-1, () => history.pop());
+
+  // Background colour reacts to level + era.
+  useEffect(() => {
+    const lv = history.current.level;
+    let bg = activeEra?.color.primary ?? ERA_BG_FALLBACK;
+    if (lv === 3) bg = LEVEL3_BG;
+    if (lv === 4) bg = LEVEL4_BG;
+    gsap.to('body', { backgroundColor: bg, duration: 1.2, ease: 'power2.inOut' });
+  }, [history.current, activeEra]);
+
+  // Ctrl+wheel = zoom.
+  useEffect(() => {
+    const handle = (e: WheelEvent) => {
+      if (!e.ctrlKey) return;
+      e.preventDefault();
+      if (e.deltaY > 0) zoomBack();
+    };
+    window.addEventListener('wheel', handle, { passive: false });
+    return () => window.removeEventListener('wheel', handle);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [history.current]);
+
+  const frame = history.current;
+  const currentKing = 'kingId' in frame ? kings.find(k => k.id === frame.kingId) : undefined;
 
   return (
     <div className="relative w-full h-screen overflow-hidden text-[#2D2A26]">
-      <div className="hanji-noise"></div>
-      
-      {/* Fixed Navigation */}
+      <div className="hanji-noise" />
+
       <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between bg-white/10 backdrop-blur-md border-b border-black/5">
         <div className="flex items-center gap-4">
-          {level > 1 && (
-            <button onClick={zoomOut} className="p-2 hover:bg-black/5 rounded-full transition-colors">
+          {frame.level > 1 && (
+            <button onClick={zoomBack} className="p-2 hover:bg-black/5 rounded-full transition-colors" aria-label="back">
               <ArrowLeft size={24} />
             </button>
           )}
-          <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase opacity-80">
-            <span className="cursor-pointer hover:opacity-100" onClick={() => {if(level>1) zoomOut()}}>조선 (Joseon)</span>
-            {level > 1 && <ChevronRight size={14} />}
-            {level > 1 && <span className="cursor-pointer hover:opacity-100">세종 (Sejong)</span>}
-            {level > 2 && <ChevronRight size={14} />}
-            {level > 2 && <span className="cursor-pointer hover:opacity-100">25년 (Year 25)</span>}
-            {level > 3 && <ChevronRight size={14} />}
-            {level > 3 && <span>실록 (Sillok)</span>}
-          </div>
+          <Breadcrumbs frame={frame} king={currentKing} onJump={i => animateZoom(-1, () => history.jumpTo(i))} stack={history.stack} kings={kings} />
         </div>
         <div className="flex items-center gap-4">
-          <button onClick={zoomOut} disabled={level === 1} className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30"><ZoomOut size={20}/></button>
-          <span className="text-xs font-bold">LV.{level}</span>
-          <button onClick={zoomIn} disabled={level === 4} className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30"><ZoomIn size={20}/></button>
+          <button onClick={() => setHistoryOpen(o => !o)} className="p-2 hover:bg-black/5 rounded-full transition-colors" aria-label="history">
+            <HistoryIcon size={20} />
+          </button>
+          <button onClick={zoomBack} disabled={frame.level === 1} className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+            <ZoomOut size={20} />
+          </button>
+          <span className="text-xs font-bold">LV.{frame.level}</span>
+          <button disabled={frame.level === 4} className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30 cursor-default" aria-hidden>
+            <ZoomIn size={20} />
+          </button>
         </div>
       </nav>
 
-      {/* Main Content Area */}
+      {historyOpen && (
+        <HistoryPanel
+          stack={history.stack}
+          kings={kings}
+          onJump={i => {
+            animateZoom(-1, () => history.jumpTo(i));
+            setHistoryOpen(false);
+          }}
+          onClose={() => setHistoryOpen(false)}
+        />
+      )}
+
       <div ref={containerRef} className="w-full h-full pt-20 overflow-y-auto no-scrollbar">
-        {level === 1 && <Level1MacroView setActiveEra={setActiveEra} zoomIn={zoomIn} />}
-        {level === 2 && <Level2EventView zoomIn={zoomIn} />}
-        {level === 3 && <Level3DetailView zoomIn={zoomIn} />}
-        {level === 4 && <Level4SillokView />}
+        {frame.level === 1 && (
+          <Level1 eras={eras} kings={kings} setActiveEra={setActiveEra} onPickKing={id => zoomTo({ level: 2, kingId: id })} />
+        )}
+        {frame.level === 2 && 'kingId' in frame && (
+          <Level2 kingId={frame.kingId} kings={kings} onPickEvent={eid => zoomTo({ level: 3, kingId: frame.kingId, eventId: eid })} />
+        )}
+        {frame.level === 3 && 'eventId' in frame && (
+          <Level3 eventId={frame.eventId} onPickSillok={sid => zoomTo({ level: 4, kingId: frame.kingId, eventId: frame.eventId, sillokId: sid })} />
+        )}
+        {frame.level === 4 && 'sillokId' in frame && <Level4 sillokId={frame.sillokId} />}
       </div>
     </div>
   );
 }
 
-function Level1MacroView({ setActiveEra, zoomIn }: { setActiveEra: any, zoomIn: () => void }) {
-  const erasRef = useRef<HTMLDivElement>(null);
+function Breadcrumbs({
+  frame, king, kings, stack, onJump,
+}: {
+  frame: ZoomFrame;
+  king: King | undefined;
+  kings: King[];
+  stack: ZoomFrame[];
+  onJump: (i: number) => void;
+}) {
+  // Walk the stack to give each crumb a clickable history index.
+  const crumbs: Array<{ label: string; index: number }> = [];
+  stack.forEach((f, i) => {
+    if (f.level === 1) crumbs.push({ label: '조선 (Joseon)', index: i });
+    if (f.level === 2 && 'kingId' in f) {
+      const k = kings.find(x => x.id === f.kingId);
+      crumbs.push({ label: k ? `${k.name_ko}` : f.kingId, index: i });
+    }
+    if (f.level === 3) crumbs.push({ label: '사건', index: i });
+    if (f.level === 4) crumbs.push({ label: '실록', index: i });
+  });
+  void king; void frame;
+  return (
+    <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase opacity-80">
+      {crumbs.map((c, i) => (
+        <span key={i} className="flex items-center gap-2">
+          {i > 0 && <ChevronRight size={14} />}
+          <span
+            className={i < crumbs.length - 1 ? 'cursor-pointer hover:opacity-100' : ''}
+            onClick={() => i < crumbs.length - 1 && onJump(c.index)}
+          >
+            {c.label}
+          </span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function HistoryPanel({
+  stack, kings, onJump, onClose,
+}: {
+  stack: ZoomFrame[];
+  kings: King[];
+  onJump: (i: number) => void;
+  onClose: () => void;
+}) {
+  return (
+    <div className="fixed top-16 right-6 z-50 w-80 bg-white/90 backdrop-blur-md border border-black/10 rounded-2xl shadow-xl p-4">
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-xs font-bold tracking-widest uppercase opacity-60">이력 (history)</span>
+        <button onClick={onClose} className="text-xs opacity-60 hover:opacity-100">닫기</button>
+      </div>
+      <ol className="flex flex-col gap-1">
+        {stack.map((f, i) => {
+          const king = 'kingId' in f ? kings.find(k => k.id === f.kingId) : undefined;
+          let label = `Lv.${f.level}`;
+          if (f.level === 1) label += ' · 조선';
+          else if (f.level === 2 && king) label += ` · ${king.name_ko}`;
+          else if (f.level === 3) label += ` · ${king?.name_ko ?? ''} 사건 #${(f as any).eventId}`;
+          else if (f.level === 4) label += ` · 실록 #${(f as any).sillokId}`;
+          return (
+            <li key={i}>
+              <button
+                onClick={() => onJump(i)}
+                className="w-full text-left px-3 py-2 rounded-lg hover:bg-black/5 text-sm"
+              >
+                {label}
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  );
+}
+
+// ─── Level 1 ─────────────────────────────────────────────────────────
+function Level1({
+  eras, kings, setActiveEra, onPickKing,
+}: {
+  eras: Era[];
+  kings: King[];
+  setActiveEra: (e: Era) => void;
+  onPickKing: (id: string) => void;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const sections = gsap.utils.toArray('.era-section');
-      sections.forEach((sec: any, i) => {
+      const sections = gsap.utils.toArray<HTMLElement>('.era-section');
+      sections.forEach((sec, i) => {
         ScrollTrigger.create({
           trigger: sec,
-          start: "top 40%",
-          end: "bottom 60%",
+          start: 'top 40%',
+          end: 'bottom 60%',
           onEnter: () => {
-            setActiveEra(ERAS[i]);
-            gsap.to('body', { backgroundColor: ERAS[i].color.primary, duration: 1.5, ease: "power2.inOut" });
+            setActiveEra(eras[i]);
+            gsap.to('body', { backgroundColor: eras[i].color.primary, duration: 1.5, ease: 'power2.inOut' });
           },
           onEnterBack: () => {
-            setActiveEra(ERAS[i]);
-            gsap.to('body', { backgroundColor: ERAS[i].color.primary, duration: 1.5, ease: "power2.inOut" });
-          }
+            setActiveEra(eras[i]);
+            gsap.to('body', { backgroundColor: eras[i].color.primary, duration: 1.5, ease: 'power2.inOut' });
+          },
         });
       });
-    }, erasRef);
+    }, ref);
     return () => ctx.revert();
-  }, [setActiveEra]);
+  }, [eras, setActiveEra]);
 
   return (
-    <div ref={erasRef} className="pb-32">
+    <div ref={ref} className="pb-32">
       <div className="max-w-5xl mx-auto px-6 pt-20">
         <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tighter mb-4">조선 왕조 500년</h1>
         <p className="text-xl opacity-70 mb-32">The 500 Years of the Joseon Dynasty</p>
 
-        {ERAS.map((era, i) => (
-          <div key={era.id} className="era-section min-h-[80vh] flex flex-col justify-center mb-32 relative">
-            <div className="absolute left-0 top-0 w-1 h-full bg-black/10"></div>
-            <div className="pl-12">
-              <span className="text-sm font-bold tracking-widest uppercase opacity-60 mb-2 block">{era.period}</span>
-              <h2 className="text-[48px] font-serif font-bold mb-6 leading-[1.4] tracking-[-0.02em]">{era.name}</h2>
-              <p className="text-lg opacity-80 max-w-2xl mb-12 leading-relaxed tracking-[-0.01em]">{era.description}</p>
-              
-              <div className="flex flex-col gap-4 relative">
-                <div className="absolute left-[30px] top-0 bottom-0 w-px bg-black/20"></div>
-                {era.kingsList.map(king => {
-                  // Calculate height based on years (min height 80px, scale factor 4)
-                  const height = Math.max(80, king.years * 4);
-                  return (
-                    <div 
-                      key={king.id} 
-                      onClick={zoomIn}
-                      className="relative pl-20 group cursor-pointer"
-                      style={{ minHeight: `${height}px` }}
-                    >
-                      {/* Timeline dot */}
-                      <div className="absolute left-[26px] top-6 w-2.5 h-2.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-150 transition-all z-10"></div>
-                      
-                      {/* Reign duration bar */}
-                      <div 
-                        className="absolute left-[29px] top-8 w-[3px] bg-black/40 group-hover:bg-black transition-colors"
-                        style={{ height: `calc(100% - 32px)` }}
-                      ></div>
-                      
-                      <div className="p-6 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 transition-all group-hover:bg-white/40 group-hover:-translate-y-1 h-full flex flex-col justify-center">
-                        <div className="flex items-baseline gap-4 mb-2">
-                          <h3 className="text-[32px] font-serif font-bold leading-[1.5] tracking-[-0.01em]">{king.name}</h3>
-                          <span className="text-sm font-bold opacity-60 bg-black/5 px-2 py-1 rounded-full">{king.years}년</span>
+        {eras.map(era => {
+          const eraKings = kings.filter(k => k.era_id === era.id).sort((a, b) => a.ordinal - b.ordinal);
+          return (
+            <div key={era.id} className="era-section min-h-[80vh] flex flex-col justify-center mb-32 relative">
+              <div className="absolute left-0 top-0 w-1 h-full bg-black/10" />
+              <div className="pl-12">
+                <span className="text-sm font-bold tracking-widest uppercase opacity-60 mb-2 block">{era.period}</span>
+                <h2 className="text-[48px] font-serif font-bold mb-6 leading-[1.4] tracking-[-0.02em]">{era.name_ko}</h2>
+                <p className="text-lg opacity-80 max-w-2xl mb-12 leading-relaxed tracking-[-0.01em]">{era.description}</p>
+
+                <div className="flex flex-col gap-4 relative">
+                  <div className="absolute left-[30px] top-0 bottom-0 w-px bg-black/20" />
+                  {eraKings.map(king => {
+                    const height = Math.max(80, king.years * 4);
+                    return (
+                      <div
+                        key={king.id}
+                        onClick={() => onPickKing(king.id)}
+                        className="relative pl-20 group cursor-pointer"
+                        style={{ minHeight: `${height}px` }}
+                      >
+                        <div className="absolute left-[26px] top-6 w-2.5 h-2.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-150 transition-all z-10" />
+                        <div className="absolute left-[29px] top-8 w-[3px] bg-black/40 group-hover:bg-black transition-colors" style={{ height: 'calc(100% - 32px)' }} />
+                        <div className="p-6 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 transition-all group-hover:bg-white/40 group-hover:-translate-y-1 h-full flex flex-col justify-center">
+                          <div className="flex items-baseline gap-4 mb-2">
+                            <h3 className="text-[32px] font-serif font-bold leading-[1.5] tracking-[-0.01em]">
+                              {king.ordinal}대 {king.name_ko}
+                            </h3>
+                            <span className="text-sm font-bold opacity-60 bg-black/5 px-2 py-1 rounded-full">{king.years}년</span>
+                          </div>
+                          <p className="text-sm opacity-60 mb-2">{king.reign_start}–{king.reign_end}</p>
+                          <p className="text-base font-medium leading-[1.6] tracking-[-0.01em]">{king.summary}</p>
                         </div>
-                        <p className="text-sm opacity-60 mb-2">{king.reign}</p>
-                        <p className="text-base font-medium leading-[1.6] tracking-[-0.01em]">{king.desc}</p>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
 }
 
-function Level2EventView({ zoomIn }: { zoomIn: () => void }) {
+// ─── Level 2 — events for a king ─────────────────────────────────────
+function Level2({
+  kingId, kings, onPickEvent,
+}: {
+  kingId: string;
+  kings: King[];
+  onPickEvent: (id: number) => void;
+}) {
+  const king = kings.find(k => k.id === kingId);
+  const [events, setEvents] = useState<EventRow[] | null>(null);
+  useEffect(() => {
+    setEvents(null);
+    api.kingEvents(kingId).then(setEvents);
+  }, [kingId]);
+
+  if (!king) return null;
+
   return (
     <div className="max-w-4xl mx-auto px-6 pt-12 pb-32">
       <div className="mb-20">
-        <span className="text-sm font-bold tracking-widest uppercase opacity-60 mb-2 block">제4대 왕 (4th King)</span>
-        <h1 className="text-[48px] font-serif font-bold mb-4 leading-[1.4] tracking-[-0.02em]">세종 (Sejong)</h1>
-        <p className="text-xl opacity-80">1418 - 1450 • 재위 32년</p>
+        <span className="text-sm font-bold tracking-widest uppercase opacity-60 mb-2 block">제{king.ordinal}대 왕</span>
+        <h1 className="text-[48px] font-serif font-bold mb-4 leading-[1.4] tracking-[-0.02em]">
+          {king.name_ko} <span className="font-gungsuh opacity-60 text-3xl ml-2">{king.name_hanja}</span>
+        </h1>
+        <p className="text-xl opacity-80">{king.reign_start} – {king.reign_end} · 재위 {king.years}년</p>
+        <p className="text-base opacity-70 mt-4">{king.summary}</p>
       </div>
 
       <div className="relative">
-        <div className="absolute left-[15px] top-0 w-px h-full bg-black/20"></div>
-        
-        {SEJONG_EVENTS.map((ev, i) => (
-          <div key={i} className="relative pl-12 mb-16 group cursor-pointer" onClick={zoomIn}>
-            <div className="absolute left-[11px] top-2 w-2.5 h-2.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-150 transition-all"></div>
-            
-            {/* 1px translucent curve for relationships (decorative) */}
-            {i < SEJONG_EVENTS.length - 1 && (
-              <svg className="absolute left-[15px] top-4 w-12 h-24 pointer-events-none opacity-30" viewBox="0 0 50 100" fill="none">
-                <path d="M 0 0 C 20 20, 20 80, 0 100" stroke="black" strokeWidth="1" />
-              </svg>
-            )}
+        <div className="absolute left-[15px] top-0 w-px h-full bg-black/20" />
 
-            <span className="text-xl font-bold opacity-60 mb-1 block">{ev.year}</span>
-            <h3 className="text-[32px] font-serif font-bold mb-3 group-hover:text-[#1F3A69] transition-colors leading-[1.5] tracking-[-0.01em]">{ev.title}</h3>
-            <p className="text-base opacity-80 leading-[1.6] tracking-[-0.01em]">{ev.desc}</p>
+        {events === null && <p className="pl-12 opacity-60">불러오는 중…</p>}
+        {events?.length === 0 && <p className="pl-12 opacity-60">아직 정리된 사건이 없습니다.</p>}
+        {events?.map(ev => (
+          <div key={ev.id} className="relative pl-12 mb-16 group cursor-pointer" onClick={() => onPickEvent(ev.id)}>
+            <div className="absolute left-[11px] top-2 w-2.5 h-2.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-150 transition-all" />
+            <div className="flex items-baseline gap-3 mb-1">
+              <span className="text-xl font-bold opacity-60">{ev.year}</span>
+              {ev.lunar_date && <span className="text-xs opacity-50">{ev.lunar_date}</span>}
+            </div>
+            <h3 className="text-[28px] font-serif font-bold mb-3 group-hover:text-[#1F3A69] transition-colors leading-[1.5] tracking-[-0.01em]">
+              {ev.title_ko}
+              {ev.title_hanja && <span className="font-gungsuh ml-2 opacity-50 text-xl">{ev.title_hanja}</span>}
+            </h3>
+            <div className="text-base opacity-80 leading-[1.6] tracking-[-0.01em] prose-sillok"
+                 dangerouslySetInnerHTML={{ __html: ev.summary_html }} />
           </div>
         ))}
       </div>
@@ -231,93 +354,109 @@ function Level2EventView({ zoomIn }: { zoomIn: () => void }) {
   );
 }
 
-function Level3DetailView({ zoomIn }: { zoomIn: () => void }) {
+// ─── Level 3 — sillok index for one event ────────────────────────────
+function Level3({ eventId, onPickSillok }: { eventId: number; onPickSillok: (id: number) => void }) {
+  const [event, setEvent] = useState<EventRow | null>(null);
+  const [sillok, setSillok] = useState<SillokEntry[] | null>(null);
+
+  useEffect(() => {
+    setEvent(null); setSillok(null);
+    Promise.all([api.event(eventId), api.eventSillok(eventId)]).then(([e, s]) => {
+      setEvent(e); setSillok(s);
+    });
+  }, [eventId]);
+
+  if (!event) return null;
+
   return (
     <div className="max-w-4xl mx-auto px-6 pt-12 pb-32">
-      <div className="mb-16">
-        <h1 className="text-[48px] font-serif font-bold mb-4 leading-[1.4] tracking-[-0.02em]">1443년 (세종 25년)</h1>
-        <p className="text-xl opacity-80">계해년 (癸亥年)</p>
+      <div className="mb-12">
+        <span className="text-sm font-bold tracking-widest uppercase opacity-60 mb-2 block">{event.year}년</span>
+        <h1 className="text-[42px] font-serif font-bold mb-3 leading-[1.4] tracking-[-0.02em]">{event.title_ko}</h1>
+        {event.title_hanja && <p className="font-gungsuh text-2xl opacity-60 mb-3">{event.title_hanja}</p>}
+        <div className="text-lg opacity-80 leading-relaxed prose-sillok"
+             dangerouslySetInnerHTML={{ __html: event.summary_html }} />
       </div>
 
-      <div className="bg-white/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/50 shadow-xl relative overflow-hidden cursor-pointer hover:bg-white/50 transition-colors" onClick={zoomIn}>
-        {/* Map Watermark */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-multiply" style={{ backgroundImage: 'url(https://picsum.photos/seed/map/800/600)', backgroundSize: 'cover' }}></div>
-        
-        <div className="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
-          <span className="text-[200px] font-serif leading-none">訓</span>
+      {sillok && sillok.length === 0 && (
+        <div className="bg-white/40 backdrop-blur-md rounded-2xl p-8 border border-white/50">
+          <p className="opacity-70 text-sm">이 사건의 실록 본문은 다음 데이터 배치에서 추가될 예정입니다.</p>
         </div>
-        
-        <div className="flex items-center gap-3 mb-6 relative z-10">
-          <span className="px-3 py-1 bg-black/10 rounded-full text-xs font-bold uppercase tracking-widest">12월 30일</span>
-          <span className="text-sm opacity-60">겨울 (Winter)</span>
-        </div>
-        
-        <h2 className="text-[32px] font-serif font-bold mb-6 relative z-10 leading-[1.5] tracking-[-0.01em]">훈민정음 창제</h2>
-        <p className="text-base leading-[1.6] tracking-[-0.01em] opacity-90 mb-8 relative z-10">
-          "백성을 가르치는 바른 소리." 세종대왕이 친히 스물여덟 자를 창제하시다. 
-          글을 몰라 억울한 일을 당하는 백성들을 위해, 누구나 쉽게 배우고 쓸 수 있는 새로운 문자가 탄생하였다.
-        </p>
+      )}
 
-        {/* Unofficial History Speech Bubble */}
-        <div className="relative z-10 bg-[#F5EFE6] p-6 rounded-2xl rounded-tl-none border border-[#F7B500]/30 shadow-sm mb-8 max-w-2xl">
-          <div className="absolute -top-3 left-0 w-4 h-4 bg-[#F5EFE6] border-t border-l border-[#F7B500]/30 transform rotate-45"></div>
-          <span className="text-xs font-bold text-[#F7B500] mb-2 block">야사 (Unofficial History)</span>
-          <p className="text-sm leading-[1.6] tracking-[-0.01em] opacity-80">
-            "전하께서 눈병이 심하여 요양을 가신 중에도 밤낮으로 문자를 연구하시니, 신하들의 걱정이 이만저만이 아니었다고 전해진다."
-          </p>
-        </div>
-
-        <div className="flex items-center gap-4 pt-6 border-t border-black/10 relative z-10">
-          <div className="flex -space-x-3">
-            <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs font-bold">집현전</div>
-            <div className="w-10 h-10 rounded-full bg-gray-400 border-2 border-white flex items-center justify-center text-xs font-bold">정인지</div>
-          </div>
-          <span className="text-sm opacity-60">관련 인물 및 기관</span>
-        </div>
+      <div className="grid gap-6">
+        {sillok?.map(s => (
+          <button
+            key={s.id}
+            onClick={() => onPickSillok(s.id)}
+            className="text-left bg-white/40 backdrop-blur-md rounded-2xl p-8 border border-white/50 shadow-sm hover:bg-white/60 transition-colors"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              {s.is_hero && <span className="px-2 py-0.5 bg-[#1F3A69] text-white text-[10px] tracking-widest uppercase rounded-full">대표</span>}
+              {s.volume && <span className="text-xs opacity-60">{s.volume}</span>}
+            </div>
+            <h3 className="text-[22px] font-serif font-bold mb-2">{s.title_ko}</h3>
+            <p className="text-sm opacity-60 truncate">{stripTags(s.translation_html).slice(0, 120)}…</p>
+          </button>
+        ))}
       </div>
     </div>
   );
 }
 
-function Level4SillokView() {
+function stripTags(html: string) {
+  return html.replace(/<[^>]+>/g, '');
+}
+
+// ─── Level 4 — single sillok entry ───────────────────────────────────
+function Level4({ sillokId }: { sillokId: number }) {
+  const [s, setS] = useState<SillokEntry | null>(null);
+  useEffect(() => {
+    setS(null);
+    api.sillok(sillokId).then(setS);
+  }, [sillokId]);
+
+  if (!s) return null;
+
   return (
     <div className="max-w-3xl mx-auto px-6 pt-12 pb-32">
       <div className="flex items-start justify-between border-b-2 border-black/10 pb-6 mb-12">
         <div>
           <span className="block text-xs font-bold tracking-widest uppercase opacity-60 mb-2">조선왕조실록 (Veritable Records)</span>
-          <h2 className="text-[48px] font-serif font-bold leading-[1.4] tracking-[-0.02em]">{SILLOK_ENTRY.title}</h2>
-        </div>
-        <div className="w-16 h-16 rounded-full border border-black/20 flex items-center justify-center bg-black/5">
-          <span className="font-serif font-bold text-xl">世宗</span>
+          <h2 className="text-[40px] font-serif font-bold leading-[1.4] tracking-[-0.02em]">{s.title_ko}</h2>
+          {s.volume && <p className="text-sm opacity-60 mt-2">{s.volume}</p>}
+          {s.date_lunar && <p className="text-sm opacity-60">{s.date_lunar}</p>}
         </div>
       </div>
 
       <div className="mb-12 relative flex flex-col md:flex-row gap-12">
-        {/* Original Text (Vertical) */}
         <div className="md:w-1/3 flex justify-end">
-          <div className="vertical-rl font-gungsuh text-[18px] leading-[1.8] opacity-80 h-[400px]">
-            {SILLOK_ENTRY.original}
-          </div>
+          <div className="vertical-rl font-gungsuh text-[18px] leading-[1.8] opacity-80 max-h-[420px] overflow-hidden prose-sillok"
+               dangerouslySetInnerHTML={{ __html: s.original_html }} />
         </div>
-        
-        {/* Translation */}
+
         <div className="md:w-2/3 relative z-10">
           <div className="flex items-baseline gap-4 mb-4">
             <span className="text-xs font-bold uppercase tracking-widest opacity-50">국역 (Translation)</span>
-            <div className="h-px bg-black/10 flex-1"></div>
+            <div className="h-px bg-black/10 flex-1" />
           </div>
-          <p className="font-serif text-[18px] leading-[1.8] text-justify break-keep mb-12">
-            {SILLOK_ENTRY.translation}
-          </p>
+          <div className="font-serif text-[18px] leading-[1.8] text-justify break-keep mb-12 prose-sillok"
+               dangerouslySetInnerHTML={{ __html: s.translation_html }} />
 
-          <div className="bg-[#E2E7E4]/50 rounded-r-2xl border-l-4 border-[#90A4AE] p-8 relative">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
-              사신은 논한다 <span className="opacity-50 font-normal">(Historian's Commentary)</span>
-            </h3>
-            <p className="font-serif text-[18px] leading-[1.8] italic opacity-90">
-              {SILLOK_ENTRY.commentary}
-            </p>
-          </div>
+          {s.commentary_html && (
+            <div className="bg-[#E2E7E4]/50 rounded-r-2xl border-l-4 border-[#90A4AE] p-8">
+              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
+                사신은 논한다 <span className="opacity-50 font-normal">(Historian's Commentary)</span>
+              </h3>
+              <div className="font-serif text-[18px] leading-[1.8] italic opacity-90 prose-sillok"
+                   dangerouslySetInnerHTML={{ __html: s.commentary_html }} />
+            </div>
+          )}
+
+          <a href={s.source_url} target="_blank" rel="noreferrer"
+             className="inline-block mt-8 text-xs opacity-60 hover:opacity-100 underline">
+            원문 영구링크 (sillok.history.go.kr)
+          </a>
         </div>
       </div>
     </div>

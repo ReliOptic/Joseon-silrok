@@ -1,0 +1,76 @@
+import type { SeedEvent } from '../types.js';
+
+// Era 3 (선조 ~ 정조, 1567~1800). 헤드라인.
+export const ERA3_EVENTS: SeedEvent[] = [
+  // 선조
+  { king_id: 'seonjo', year: 1592, reign_year: 25, lunar_date: '4월 13일',
+    title_ko: '임진왜란 발발', title_hanja: '壬辰倭亂',
+    summary_html: '<p>도요토미 히데요시가 보낸 왜군이 부산진을 함락시키며 7년 전쟁의 막이 올랐다. 한 달 만에 한양이 함락되고 임금은 의주로 몽진하였다.</p>',
+    tags: ['임진왜란', '몽진'] },
+  { king_id: 'seonjo', year: 1592, reign_year: 25, lunar_date: '7월 8일',
+    title_ko: '한산도 대첩', title_hanja: '閑山島大捷',
+    summary_html: '<p>이순신이 학익진(鶴翼陣)으로 왜선 70여 척을 격파하였다. 제해권을 장악하여 왜군의 보급을 끊은 결정적 승리였다.</p>',
+    tags: ['이순신', '한산도'] },
+  { king_id: 'seonjo', year: 1597, reign_year: 30, lunar_date: '9월 16일',
+    title_ko: '명량 해전', title_hanja: '鳴梁海戰',
+    summary_html: '<p>삼도수군통제사로 복귀한 이순신이 단 13척의 배로 왜선 130여 척을 울돌목에서 격파하였다. “신에게는 아직 12척의 배가 있나이다.”</p>',
+    tags: ['이순신', '명량'] },
+  { king_id: 'seonjo', year: 1598, reign_year: 31, lunar_date: '11월 19일',
+    title_ko: '노량 해전 — 이순신 전사',
+    summary_html: '<p>철수하는 왜군을 추격한 마지막 해전에서 이순신이 적탄에 맞아 전사하였다. “지금 싸움이 한창이니 나의 죽음을 알리지 말라.”</p>',
+    tags: ['이순신', '노량', '전사'] },
+  // 광해군
+  { king_id: 'gwanghaegun', year: 1608, reign_year: 0, title_ko: '대동법 시범 시행',
+    summary_html: '<p>이원익의 건의로 경기도부터 <strong>대동법</strong>을 시범 시행하였다. 공물(貢物)을 미곡으로 통일·납부하게 하여 백성의 부담을 줄였다.</p>',
+    tags: ['대동법'] },
+  { king_id: 'gwanghaegun', year: 1623, reign_year: 15, lunar_date: '3월 13일',
+    title_ko: '인조반정', title_hanja: '仁祖反正',
+    summary_html: '<p>능양군(인조)과 서인(西人) 일파가 군사를 일으켜 광해군을 폐하고 새 임금을 추대하였다. 광해군은 강화·제주에 차례로 유배되었다.</p>',
+    tags: ['반정'] },
+  // 인조
+  { king_id: 'injo', year: 1636, reign_year: 14, lunar_date: '12월',
+    title_ko: '병자호란', title_hanja: '丙子胡亂',
+    summary_html: '<p>청 태종이 직접 12만 군을 이끌고 침입하니, 인조는 남한산성에 들어가 47일을 농성하였다.</p>',
+    tags: ['병자호란', '남한산성'] },
+  { king_id: 'injo', year: 1637, reign_year: 15, lunar_date: '1월 30일',
+    title_ko: '삼전도의 굴욕', title_hanja: '三田渡之恥',
+    summary_html: '<p>인조가 삼전도에서 청 태종에게 <em>삼배구고두례(三拜九叩頭禮)</em>를 올리고 항복하였다. 소현세자·봉림대군이 인질로 끌려갔다.</p>',
+    tags: ['삼전도', '항복'] },
+  // 효종
+  { king_id: 'hyojong', year: 1654, reign_year: 5, title_ko: '제1차 나선정벌',
+    summary_html: '<p>청의 요청으로 변급(邊岌)이 이끄는 조총수 100여 명이 흑룡강 유역에서 러시아군과 교전하여 승리하였다.</p>',
+    tags: ['나선정벌', '조총'] },
+  // 현종
+  { king_id: 'hyeonjong', year: 1659, reign_year: 0, title_ko: '제1차 예송 (기해예송)',
+    summary_html: '<p>효종 사후 자의대비의 복상(服喪) 기간을 둘러싸고 서인(1년)과 남인(3년)이 격돌하였다. 1차에서는 서인의 기년설이 채택되었다.</p>',
+    tags: ['예송'] },
+  // 숙종
+  { king_id: 'sukjong', year: 1678, reign_year: 4, title_ko: '상평통보 주조',
+    summary_html: '<p>전국적으로 통용된 최초의 동전 <strong>상평통보(常平通寶)</strong>를 주조·발행하였다. 화폐 경제가 본격적으로 자리잡았다.</p>',
+    tags: ['상평통보', '화폐'] },
+  { king_id: 'sukjong', year: 1689, reign_year: 15, title_ko: '기사환국',
+    summary_html: '<p>장희빈 소생 왕자(경종)의 원자 책봉을 둘러싸고 서인이 실각하고 남인이 다시 정권을 잡았다. 송시열은 사사되었다.</p>',
+    tags: ['환국', '장희빈', '송시열'] },
+  // 경종
+  { king_id: 'gyeongjong', year: 1721, reign_year: 1, title_ko: '신축·임인옥사 (신임사화)',
+    summary_html: '<p>연잉군(영조)의 세제 책봉과 대리청정을 추진한 노론 4대신이 소론에게 몰려 처형되거나 유배되었다.</p>',
+    tags: ['신임사화', '노론'] },
+  // 영조
+  { king_id: 'yeongjo', year: 1727, reign_year: 3, title_ko: '탕평책 천명',
+    summary_html: '<p>“붕당의 폐단이 망국에 이르렀다” 하며 노론·소론을 고루 등용하는 <strong>탕평(蕩平)</strong>을 정사의 근본으로 삼았다.</p>',
+    tags: ['탕평'] },
+  { king_id: 'yeongjo', year: 1750, reign_year: 26, title_ko: '균역법 시행',
+    summary_html: '<p>군포(軍布)를 1필로 줄이고, 부족분을 결작(結作)·어염세 등으로 보충하는 <strong>균역법</strong>을 시행하여 양인의 군역 부담을 절반으로 줄였다.</p>',
+    tags: ['균역법'] },
+  { king_id: 'yeongjo', year: 1762, reign_year: 38, lunar_date: '윤5월 21일',
+    title_ko: '임오화변 — 사도세자의 죽음', title_hanja: '壬午禍變',
+    summary_html: '<p>사도세자가 뒤주에 갇혀 8일 만에 굶어 죽었다. 노·소론과 외척의 갈등, 부자 사이의 비극이 한 데 얽힌 사건이었다.</p>',
+    tags: ['사도세자', '뒤주'] },
+  // 정조
+  { king_id: 'jeongjo', year: 1776, reign_year: 0, title_ko: '규장각 설치',
+    summary_html: '<p>창덕궁 후원에 <strong>규장각</strong>을 두어 역대 임금의 글과 책을 보관하고, 인재를 길러 친위 학문 기구로 삼았다.</p>',
+    tags: ['규장각'] },
+  { king_id: 'jeongjo', year: 1796, reign_year: 20, title_ko: '수원 화성 완공',
+    summary_html: '<p>정약용의 거중기(擧重器)를 활용하여 2년 9개월 만에 <strong>수원 화성</strong>을 완성하였다. 신도시 건설과 군영(장용영)의 복합 거점이었다.</p>',
+    tags: ['수원 화성', '정약용', '거중기'] },
+];

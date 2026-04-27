@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Generated SQLite — rebuild via `npm run db:seed`
+db/*.sqlite
+db/*.sqlite-journal
