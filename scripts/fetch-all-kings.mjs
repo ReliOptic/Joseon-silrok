@@ -284,11 +284,11 @@ function parseLines(lines) {
   return { title, translation, original, classification, archiveRef: sourceLine ?? '' };
 }
 
-async function fetchArticle(browser, articleId) {
+async function fetchArticle(context, articleId) {
   const url = `${BASE}/id/${articleId}`;
   for (let attempt = 0; attempt <= 2; attempt++) {
     if (attempt > 0) await delay(attempt * 4000);
-    const page = await browser.newPage();
+    const page = await context.newPage();
     try {
       await page.goto(url, { waitUntil: 'load', timeout: 40000 });
       const bodyText = await page.evaluate(() => document.body.innerText);
@@ -314,7 +314,7 @@ async function fetchArticle(browser, articleId) {
   return null;
 }
 
-async function collectKing(browser, kingId) {
+async function collectKing(context, kingId) {
   const target = KING_TARGETS[kingId];
   if (!target) { console.error(`알 수 없는 왕: ${kingId}`); return; }
 
@@ -328,14 +328,14 @@ async function collectKing(browser, kingId) {
   console.error(`\n=== ${kingId} (${target.code}) ===`);
   const results = [];
 
-  const listPage = await browser.newPage();
+  const listPage = await context.newPage();
   for (const { year, month, keywords } of target.months) {
     const ids = await fetchArticleIds(listPage, target.code, year, month);
     console.error(`  ${year}년 ${month}월: ${ids.length}개 ID 수집`);
 
     for (const id of ids.slice(0, 20)) {
       await delay(DELAY_BETWEEN_ARTICLES);
-      const article = await fetchArticle(browser, id);
+      const article = await fetchArticle(context, id);
       if (!article) continue;
 
       const matched = keywords.some(kw => article.title.includes(kw) || article.translation.includes(kw));
@@ -363,13 +363,19 @@ const kings = targetKings.length
 console.error(`수집 대상: ${kings.join(', ')}`);
 
 const browser = await chromium.launch({ headless: true });
+const context = await browser.newContext({
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  locale: 'ko-KR',
+  extraHTTPHeaders: { 'Accept-Language': 'ko-KR,ko;q=0.9' },
+});
 
 try {
   for (let i = 0; i < kings.length; i++) {
     if (i > 0) await delay(DELAY_BETWEEN_KINGS);
-    await collectKing(browser, kings[i]);
+    await collectKing(context, kings[i]);
   }
 } finally {
+  await context.close();
   await browser.close();
 }
 
