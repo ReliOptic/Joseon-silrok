@@ -58,7 +58,12 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
               </svg>
             )}
 
-            <span className="text-xl font-bold opacity-60 mb-1 block">{ev.year}</span>
+            <div className="flex items-baseline gap-3 mb-1">
+              <span className="text-xl font-bold opacity-60">{ev.year}</span>
+              {ev.sillokEntry && (
+                <span className="text-[10px] font-bold tracking-widest uppercase opacity-40 border border-current rounded px-1.5 py-0.5">실록</span>
+              )}
+            </div>
             <h3 className="text-[32px] font-serif font-bold mb-3 group-hover:text-[#1F3A69] transition-colors leading-[1.5] tracking-[-0.01em]">
               {ev.title}
             </h3>
@@ -70,7 +75,7 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
       {/* End-of-reign divider */}
       <div className="mt-24 mb-16 flex items-center gap-4">
         <div className="h-px flex-1 bg-black/10" />
-        <span className="text-[10px] tracking-[0.4em] uppercase opacity-30">
+        <span className="text-xs tracking-[0.4em] uppercase opacity-30">
           재위 종료 {kingMeta?.reign?.split('–')[1]?.trim() ?? ''}
         </span>
         <div className="h-px flex-1 bg-black/10" />
@@ -82,7 +87,7 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
           onClick={() => onNavigateKing(nextKing.id, 'next')}
           className="w-full group bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:border-white/60 transition-all text-left"
         >
-          <span className="text-[10px] tracking-[0.35em] uppercase opacity-40 block mb-4">다음 왕</span>
+          <span className="text-xs tracking-[0.35em] uppercase opacity-40 block mb-4">다음 왕</span>
           <div className="flex items-center justify-between gap-6">
             <div className="flex-1 min-w-0">
               <h3 className="text-[36px] font-serif font-bold leading-[1.3] mb-2">{nextKing.name}</h3>
@@ -103,7 +108,7 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
           onClick={() => onNavigateKing(prevKing.id, 'prev')}
           className="w-full group bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:border-white/60 transition-all text-left"
         >
-          <span className="text-[10px] tracking-[0.35em] uppercase opacity-40 block mb-4">이전 왕</span>
+          <span className="text-xs tracking-[0.35em] uppercase opacity-40 block mb-4">이전 왕</span>
           <div className="flex items-center gap-6">
             <ChevronLeft
               size={36}

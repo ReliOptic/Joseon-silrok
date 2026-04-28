@@ -4,20 +4,36 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ERAS } from './data';
 import { KINGS_DATA } from './data/index';
 import type { Era } from './types/king.types';
-import { ArrowLeft, ZoomIn, ZoomOut, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ZoomIn, ZoomOut, ChevronRight, Search, Share2 } from 'lucide-react';
 import { Level1MacroView } from './components/Level1MacroView';
 import { Level2EventView } from './components/Level2EventView';
 import { Level3DetailView } from './components/Level3DetailView';
 import { Level4SillokView } from './components/Level4SillokView';
 import { TimelineBar } from './components/TimelineBar';
+import { SearchModal } from './components/SearchModal';
 
 gsap.registerPlugin(ScrollTrigger);
 
+function parseUrlState(): { level: number; kingId: string; eventIndex: number } {
+  const params = new URLSearchParams(window.location.search);
+  const rawLevel = parseInt(params.get('level') ?? '', 10);
+  const level = rawLevel >= 1 && rawLevel <= 4 ? rawLevel : 1;
+  const kingId = params.get('king') ?? 'sejong';
+  const validKingId = ERAS.flatMap(e => e.kingsList).some(k => k.id === kingId) ? kingId : 'sejong';
+  const rawEvent = parseInt(params.get('event') ?? '', 10);
+  const eventIndex = Number.isFinite(rawEvent) && rawEvent >= 0 ? rawEvent : 0;
+  return { level, kingId: validKingId, eventIndex };
+}
+
+const INITIAL_URL_STATE = parseUrlState();
+
 export function App() {
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(INITIAL_URL_STATE.level);
   const [activeEra, setActiveEra] = useState<Era>(ERAS[0]);
-  const [selectedKingId, setSelectedKingId] = useState('sejong');
-  const [selectedEventIndex, setSelectedEventIndex] = useState(0);
+  const [selectedKingId, setSelectedKingId] = useState(INITIAL_URL_STATE.kingId);
+  const [selectedEventIndex, setSelectedEventIndex] = useState(INITIAL_URL_STATE.eventIndex);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [shareCopied, setShareCopied] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchInitialDistance = useRef<number | null>(null);
 
@@ -73,10 +89,60 @@ export function App() {
     });
   };
 
+  const zoomToLevel = (target: number) => {
+    if (target >= level) return;
+    gsap.to(containerRef.current, {
+      scale: 0.8, opacity: 0, y: 20, duration: 0.3,
+      onComplete: () => {
+        setLevel(target);
+        gsap.fromTo(containerRef.current,
+          { scale: 1.25, opacity: 0, y: -20 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }
+        );
+      }
+    });
+  };
+
   const selectKing = (id: string) => {
     setSelectedKingId(id);
     setSelectedEventIndex(0);
     zoomIn();
+  };
+
+  const shareUrl = () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2000);
+    });
+  };
+
+  const jumpToEvent = (kingId: string, eventIndex: number) => {
+    gsap.to(containerRef.current, {
+      scale: 0.95, opacity: 0, duration: 0.25,
+      onComplete: () => {
+        setSelectedKingId(kingId);
+        setSelectedEventIndex(eventIndex);
+        setLevel(3);
+        gsap.fromTo(containerRef.current,
+          { scale: 1.05, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.5, ease: 'power2.out' }
+        );
+      }
+    });
+  };
+
+  const selectKingFromTimeline = (id: string) => {
+    if (level <= 1) {
+      setSelectedKingId(id);
+      setSelectedEventIndex(0);
+      zoomIn();
+    } else if (level > 2) {
+      setSelectedKingId(id);
+      setSelectedEventIndex(0);
+      zoomToLevel(2);
+    } else if (id !== selectedKingId) {
+      slideAnimate('next', () => { setSelectedKingId(id); setSelectedEventIndex(0); });
+    }
   };
 
   const selectEvent = (index: number) => {
@@ -112,6 +178,18 @@ export function App() {
   useEffect(() => {
     if (level === 2) setSelectedEventIndex(0);
   }, [level]);
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (level > 1) {
+      params.set('level', String(level));
+      params.set('king', selectedKingId);
+      params.set('event', String(selectedEventIndex));
+      window.history.replaceState(null, '', '?' + params.toString());
+    } else {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, [level, selectedKingId, selectedEventIndex]);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -159,6 +237,22 @@ export function App() {
     gsap.to('body', { backgroundColor: bgColor, duration: 1.2, ease: "power2.inOut" });
   }, [level, activeEra]);
 
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (isSearchOpen) return;
+      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement).tagName)) {
+        e.preventDefault();
+        setIsSearchOpen(true);
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isSearchOpen]);
+
   return (
     <div className="relative w-full h-screen overflow-hidden text-[#2D2A26]">
       <div className="hanji-noise"></div>
@@ -166,28 +260,45 @@ export function App() {
       <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between bg-white/10 backdrop-blur-md border-b border-black/5">
         <div className="flex items-center gap-4">
           {level > 1 && (
-            <button onClick={zoomOut} className="p-2 hover:bg-black/5 rounded-full transition-colors">
+            <button onClick={zoomOut} aria-label="뒤로 가기" className="p-2 hover:bg-black/5 rounded-full transition-colors">
               <ArrowLeft size={24} />
             </button>
           )}
           <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase opacity-80">
-            <span className="cursor-pointer hover:opacity-100" onClick={() => { if (level > 1) zoomOut(); }}>
+            <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(1)}>
               조선 (Joseon)
             </span>
             {level > 1 && <ChevronRight size={14} />}
-            {level > 1 && <span className="cursor-pointer hover:opacity-100">{kingMeta?.name ?? ''}</span>}
+            {level > 1 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(2)}>{kingMeta?.name ?? ''}</span>}
             {level > 2 && <ChevronRight size={14} />}
-            {level > 2 && <span className="cursor-pointer hover:opacity-100">{currentEvent.year}년</span>}
+            {level > 2 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(3)}>{currentEvent.year}년</span>}
             {level > 3 && <ChevronRight size={14} />}
             {level > 3 && <span>실록 (Sillok)</span>}
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <button onClick={zoomOut} disabled={level === 1} className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+        <div className="flex items-center gap-2">
+          {level > 1 && (
+            <button
+              onClick={shareUrl}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs opacity-50 hover:opacity-80 transition-opacity rounded-full hover:bg-black/5"
+              title="현재 페이지 URL 복사"
+            >
+              <Share2 size={14} />
+              <span className="hidden sm:inline">{shareCopied ? '복사됨!' : '공유'}</span>
+            </button>
+          )}
+          <button
+            onClick={() => setIsSearchOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs opacity-50 hover:opacity-80 transition-opacity rounded-full hover:bg-black/5"
+            title="검색 (/ 또는 ⌘K)"
+          >
+            <Search size={14} /><span className="hidden sm:inline">검색</span>
+          </button>
+          <button onClick={zoomOut} disabled={level === 1} aria-label="축소" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
             <ZoomOut size={20} />
           </button>
           <span className="text-xs font-bold">LV.{level}</span>
-          <button onClick={zoomIn} disabled={level === 4} className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+          <button onClick={zoomIn} disabled={level === 4} aria-label="확대" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
             <ZoomIn size={20} />
           </button>
         </div>
@@ -200,7 +311,14 @@ export function App() {
         {level === 4 && <Level4SillokView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} />}
       </div>
 
-      <TimelineBar currentKingId={level > 1 ? selectedKingId : null} />
+      <TimelineBar currentKingId={level > 1 ? selectedKingId : null} onSelectKing={selectKingFromTimeline} />
+
+      {isSearchOpen && (
+        <SearchModal
+          onSelect={jumpToEvent}
+          onClose={() => setIsSearchOpen(false)}
+        />
+      )}
     </div>
   );
 }

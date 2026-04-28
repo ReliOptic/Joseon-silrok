@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ChevronRight } from 'lucide-react';
 import { ERAS } from '../data';
 import type { Era } from '../types/king.types';
 
@@ -53,10 +54,11 @@ export function Level1MacroView({ setActiveEra, onSelectKing }: Level1Props) {
                 {era.kingsList.map(king => {
                   const height = Math.max(80, king.years * 4);
                   return (
-                    <div
+                    <button
                       key={king.id}
                       onClick={() => onSelectKing(king.id)}
-                      className="relative pl-20 group cursor-pointer"
+                      aria-label={`${king.name} 선택`}
+                      className="relative pl-20 group cursor-pointer text-left w-full"
                       style={{ minHeight: `${height}px` }}
                     >
                       <div className="absolute left-[26px] top-6 w-2.5 h-2.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-150 transition-all z-10"></div>
@@ -68,11 +70,12 @@ export function Level1MacroView({ setActiveEra, onSelectKing }: Level1Props) {
                         <div className="flex items-baseline gap-4 mb-2">
                           <h3 className="text-[32px] font-serif font-bold leading-[1.5] tracking-[-0.01em]">{king.name}</h3>
                           <span className="text-sm font-bold opacity-60 bg-black/5 px-2 py-1 rounded-full">{king.years}년</span>
+                          <ChevronRight size={18} className="opacity-0 group-hover:opacity-40 transition-opacity ml-auto shrink-0" />
                         </div>
                         <p className="text-sm opacity-60 mb-2">{king.reign}</p>
                         <p className="text-base font-medium leading-[1.6] tracking-[-0.01em]">{king.desc}</p>
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
