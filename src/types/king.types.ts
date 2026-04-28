@@ -4,6 +4,7 @@ export interface KingEvent {
   readonly desc: string;
   readonly hanjaChar?: string;
   readonly unofficialHistory?: string;
+  readonly unofficialHistorySourceLevel?: 'sillok' | 'historical-record' | 'tradition';
   readonly figures?: readonly KingFigure[];
   readonly sillokEntry?: KingSillokEntry;
 }
@@ -19,6 +20,7 @@ export interface KingDetail {
   readonly title: string;
   readonly desc: string;
   readonly unofficialHistory: string;
+  readonly unofficialHistorySourceLevel?: 'sillok' | 'historical-record' | 'tradition';
   readonly figures: readonly KingFigure[];
 }
 
@@ -27,9 +29,9 @@ export interface KingSillokEntry {
   readonly sourceUrl?: string;
   readonly date: string;
   readonly title: string;
-  readonly original: string;
+  readonly original?: string;
   readonly translation: string;
-  readonly commentary: string;
+  readonly commentary?: string;
 }
 
 export interface KingData {
