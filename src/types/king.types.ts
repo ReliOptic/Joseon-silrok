@@ -7,11 +7,25 @@ export interface KingEvent {
   readonly unofficialHistorySourceLevel?: 'sillok' | 'historical-record' | 'tradition';
   readonly figures?: readonly KingFigure[];
   readonly sillokEntry?: KingSillokEntry;
+  readonly storyEntry?: KingStoryEntry;
 }
 
 export interface KingFigure {
   readonly name: string;
   readonly role: string;
+}
+
+export interface KingStoryScene {
+  readonly imagePrompt: string;
+  readonly narration: string;
+  readonly durationMs?: number;
+}
+
+export interface KingStoryEntry {
+  readonly title: string;
+  readonly scenes: readonly KingStoryScene[];
+  readonly generatedAt?: string;
+  readonly sourceArticleId?: string;
 }
 
 export interface KingDetail {

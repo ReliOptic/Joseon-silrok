@@ -8,6 +8,7 @@ import { ArrowLeft, ZoomIn, ZoomOut, ChevronRight, Search, Share2 } from 'lucide
 import { Level1MacroView } from './components/Level1MacroView';
 import { Level2EventView } from './components/Level2EventView';
 import { Level3DetailView } from './components/Level3DetailView';
+import { Level35StoryView } from './components/Level35StoryView';
 import { Level4SillokView } from './components/Level4SillokView';
 import { TimelineBar } from './components/TimelineBar';
 import { SearchModal } from './components/SearchModal';
@@ -16,8 +17,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function parseUrlState(): { level: number; kingId: string; eventIndex: number } {
   const params = new URLSearchParams(window.location.search);
-  const rawLevel = parseInt(params.get('level') ?? '', 10);
-  const level = rawLevel >= 1 && rawLevel <= 4 ? rawLevel : 1;
+  const rawLevel = parseFloat(params.get('level') ?? '');
+  const level = [1, 2, 3, 3.5, 4].includes(rawLevel) ? rawLevel : 1;
   const kingId = params.get('king') ?? 'sejong';
   const validKingId = ERAS.flatMap(e => e.kingsList).some(k => k.id === kingId) ? kingId : 'sejong';
   const rawEvent = parseInt(params.get('event') ?? '', 10);
@@ -26,6 +27,18 @@ function parseUrlState(): { level: number; kingId: string; eventIndex: number } 
 }
 
 const INITIAL_URL_STATE = parseUrlState();
+
+function getNextLevel(current: number, hasStory: boolean): number {
+  if (current === 3) return hasStory ? 3.5 : 4;
+  if (current === 3.5) return 4;
+  return Math.min(current + 1, 4);
+}
+
+function getPrevLevel(current: number, hasStory: boolean): number {
+  if (current === 4) return hasStory ? 3.5 : 3;
+  if (current === 3.5) return 3;
+  return Math.max(current - 1, 1);
+}
 
 export function App() {
   const [level, setLevel] = useState(INITIAL_URL_STATE.level);
@@ -62,11 +75,12 @@ export function App() {
   };
 
   const zoomIn = () => {
-    if (level >= 4) return;
+    const next = getNextLevel(level, !!currentEvent.storyEntry);
+    if (next <= level) return;
     gsap.to(containerRef.current, {
       scale: 1.25, opacity: 0, y: -20, duration: 0.4,
       onComplete: () => {
-        setLevel(l => l + 1);
+        setLevel(next);
         gsap.fromTo(containerRef.current,
           { scale: 0.8, opacity: 0, y: 20 },
           { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
@@ -76,11 +90,12 @@ export function App() {
   };
 
   const zoomOut = () => {
-    if (level <= 1) return;
+    const prev = getPrevLevel(level, !!currentEvent.storyEntry);
+    if (prev >= level) return;
     gsap.to(containerRef.current, {
       scale: 0.8, opacity: 0, y: 20, duration: 0.4,
       onComplete: () => {
-        setLevel(l => l - 1);
+        setLevel(prev);
         gsap.fromTo(containerRef.current,
           { scale: 1.25, opacity: 0, y: -20 },
           { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
@@ -233,7 +248,7 @@ export function App() {
   }, [level]);
 
   useEffect(() => {
-    const bgColor = level >= 3 ? (level === 4 ? 'var(--color-level4-bg)' : '#F0F4F2') : activeEra.color.primary;
+    const bgColor = level >= 3 ? (level >= 4 ? 'var(--color-level4-bg)' : '#F0F4F2') : activeEra.color.primary;
     gsap.to('body', { backgroundColor: bgColor, duration: 1.2, ease: "power2.inOut" });
   }, [level, activeEra]);
 
@@ -294,11 +309,11 @@ export function App() {
           >
             <Search size={14} /><span className="hidden sm:inline">검색</span>
           </button>
-          <button onClick={zoomOut} disabled={level === 1} aria-label="축소" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+          <button onClick={zoomOut} disabled={level <= 1} aria-label="축소" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
             <ZoomOut size={20} />
           </button>
-          <span className="text-xs font-bold">LV.{level}</span>
-          <button onClick={zoomIn} disabled={level === 4} aria-label="확대" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+          <span className="text-xs font-bold">LV.{Math.floor(level)}</span>
+          <button onClick={zoomIn} disabled={level >= 4} aria-label="확대" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
             <ZoomIn size={20} />
           </button>
         </div>
@@ -308,6 +323,7 @@ export function App() {
         {level === 1 && <Level1MacroView setActiveEra={setActiveEra} onSelectKing={selectKing} />}
         {level === 2 && <Level2EventView kingData={kingData} onSelectEvent={selectEvent} prevKing={prevKing} nextKing={nextKing} onNavigateKing={navigateToKing} />}
         {level === 3 && <Level3DetailView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} zoomIn={zoomIn} />}
+        {level === 3.5 && <Level35StoryView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} zoomIn={zoomIn} zoomOut={zoomOut} />}
         {level === 4 && <Level4SillokView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} />}
       </div>
 
