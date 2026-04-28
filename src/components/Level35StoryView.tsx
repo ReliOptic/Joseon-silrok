@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { KingData } from '../types/king.types';
 import { ERAS } from '../data';
 import { ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
@@ -15,6 +16,13 @@ export function Level35StoryView({ kingData, eventIndex, onNavigateEvent, zoomIn
   const event = kingData.events[safeIndex];
   const kingMeta = ERAS.flatMap(e => e.kingsList).find(k => k.id === kingData.id);
   const storyEntry = event.storyEntry;
+  const sceneCount = storyEntry?.scenes.length ?? 0;
+
+  const [sceneIdx, setSceneIdx] = useState(0);
+  const currentScene = storyEntry?.scenes[sceneIdx];
+
+  const prevScene = () => setSceneIdx(i => Math.max(0, i - 1));
+  const nextScene = () => setSceneIdx(i => Math.min(sceneCount - 1, i + 1));
 
   return (
     <div className="max-w-3xl mx-auto px-6 pt-12 pb-32">
@@ -46,7 +54,7 @@ export function Level35StoryView({ kingData, eventIndex, onNavigateEvent, zoomIn
       </div>
 
       {/* 스토리 씬 영역 */}
-      {storyEntry ? (
+      {storyEntry && currentScene ? (
         <div className="mb-8">
           {/* 스토리 제목 + 뱃지 */}
           <div className="flex items-center gap-3 mb-6">
@@ -56,44 +64,63 @@ export function Level35StoryView({ kingData, eventIndex, onNavigateEvent, zoomIn
             </span>
           </div>
 
-          {/* 씬 카드 목록 */}
-          {storyEntry.scenes.map((scene, i) => (
-            <div
-              key={i}
-              className="relative aspect-video rounded-2xl overflow-hidden mb-5 bg-gradient-to-br from-[#0d0d1a] via-[#111827] to-[#0a0a12]"
-            >
-              {/* 씬 번호 */}
-              <div className="absolute top-4 left-5 text-xs font-mono tracking-widest opacity-50">
-                {String(i + 1).padStart(2, '0')} / {String(storyEntry.scenes.length).padStart(2, '0')}
-              </div>
-
-              {/* 중앙 나레이션 */}
-              <div className="absolute inset-0 flex items-center justify-center px-10">
-                <p className="font-serif text-lg text-white leading-relaxed tracking-wide text-center">
-                  {scene.narration}
-                </p>
-              </div>
-
-              {/* imagePrompt 힌트 */}
-              <div className="absolute bottom-4 left-5 right-5">
-                <p className="text-[10px] font-mono opacity-20 truncate">{scene.imagePrompt}</p>
-              </div>
-
-              {/* 하단 dot 인디케이터 */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5">
-                {storyEntry.scenes.map((_, dotIdx) => (
-                  <span
-                    key={dotIdx}
-                    className={`inline-block w-1 h-1 rounded-full ${dotIdx === i ? 'bg-white opacity-70' : 'bg-white opacity-20'}`}
-                  />
-                ))}
-              </div>
+          {/* 씬 카드 — 한 번에 하나 */}
+          <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#0d0d1a] via-[#111827] to-[#0a0a12]">
+            {/* 씬 번호 */}
+            <div className="absolute top-4 left-5 text-xs font-mono tracking-widest text-white opacity-50">
+              {String(sceneIdx + 1).padStart(2, '0')} / {String(sceneCount).padStart(2, '0')}
             </div>
-          ))}
+
+            {/* 좌우 씬 이동 버튼 */}
+            {sceneIdx > 0 && (
+              <button
+                onClick={prevScene}
+                aria-label="이전 씬"
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white z-10"
+              >
+                <ChevronLeft size={18} />
+              </button>
+            )}
+            {sceneIdx < sceneCount - 1 && (
+              <button
+                onClick={nextScene}
+                aria-label="다음 씬"
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white z-10"
+              >
+                <ChevronRight size={18} />
+              </button>
+            )}
+
+            {/* 중앙 나레이션 */}
+            <div className="absolute inset-0 flex items-center justify-center px-14">
+              <p className="font-serif text-lg text-white leading-relaxed tracking-wide text-center">
+                {currentScene.narration}
+              </p>
+            </div>
+
+            {/* imagePrompt 힌트 */}
+            <div className="absolute bottom-10 left-5 right-5">
+              <p className="text-[10px] font-mono text-white opacity-20 truncate">{currentScene.imagePrompt}</p>
+            </div>
+
+            {/* 하단 dot 인디케이터 */}
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+              {storyEntry.scenes.map((_, dotIdx) => (
+                <button
+                  key={dotIdx}
+                  aria-label={`씬 ${dotIdx + 1}`}
+                  onClick={() => setSceneIdx(dotIdx)}
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${
+                    dotIdx === sceneIdx ? 'bg-white opacity-80 scale-125' : 'bg-white opacity-25 hover:opacity-50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
 
           {/* generatedAt */}
           {storyEntry.generatedAt && (
-            <p className="text-xs opacity-25 tracking-widest text-right mt-2">
+            <p className="text-xs opacity-25 tracking-widest text-right mt-3">
               생성일 {storyEntry.generatedAt.slice(0, 10)}
             </p>
           )}

@@ -113,7 +113,7 @@ export function Level3DetailView({ kingData, eventIndex, onNavigateEvent, zoomIn
             )}
           </div>
           <div className="ml-auto flex items-center gap-1 text-xs opacity-30 group-hover:opacity-60 transition-opacity">
-            <span>실록 원문</span>
+            <span>{event.storyEntry ? '스토리 보기' : '실록 원문'}</span>
             <span>→</span>
           </div>
         </div>
