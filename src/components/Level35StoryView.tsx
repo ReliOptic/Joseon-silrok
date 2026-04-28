@@ -48,12 +48,55 @@ export function Level35StoryView({ kingData, eventIndex, onNavigateEvent, zoomIn
       {/* 스토리 씬 영역 */}
       {storyEntry ? (
         <div className="mb-8">
-          <p className="text-sm opacity-50 mb-4">{storyEntry.title}</p>
+          {/* 스토리 제목 + 뱃지 */}
+          <div className="flex items-center gap-3 mb-6">
+            <h2 className="text-2xl font-serif font-bold tracking-tight">{storyEntry.title}</h2>
+            <span className="shrink-0 text-[10px] tracking-widest px-2 py-0.5 rounded-full border border-white/20 opacity-40">
+              AI 해석 · 실록 기반
+            </span>
+          </div>
+
+          {/* 씬 카드 목록 */}
           {storyEntry.scenes.map((scene, i) => (
-            <div key={i} className="aspect-video rounded-2xl bg-black/20 flex items-center justify-center mb-4">
-              <p className="text-sm opacity-40 italic px-8 text-center">{scene.narration}</p>
+            <div
+              key={i}
+              className="relative aspect-video rounded-2xl overflow-hidden mb-5 bg-gradient-to-br from-[#0d0d1a] via-[#111827] to-[#0a0a12]"
+            >
+              {/* 씬 번호 */}
+              <div className="absolute top-4 left-5 text-xs font-mono tracking-widest opacity-50">
+                {String(i + 1).padStart(2, '0')} / {String(storyEntry.scenes.length).padStart(2, '0')}
+              </div>
+
+              {/* 중앙 나레이션 */}
+              <div className="absolute inset-0 flex items-center justify-center px-10">
+                <p className="font-serif text-lg text-white leading-relaxed tracking-wide text-center">
+                  {scene.narration}
+                </p>
+              </div>
+
+              {/* imagePrompt 힌트 */}
+              <div className="absolute bottom-4 left-5 right-5">
+                <p className="text-[10px] font-mono opacity-20 truncate">{scene.imagePrompt}</p>
+              </div>
+
+              {/* 하단 dot 인디케이터 */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5">
+                {storyEntry.scenes.map((_, dotIdx) => (
+                  <span
+                    key={dotIdx}
+                    className={`inline-block w-1 h-1 rounded-full ${dotIdx === i ? 'bg-white opacity-70' : 'bg-white opacity-20'}`}
+                  />
+                ))}
+              </div>
             </div>
           ))}
+
+          {/* generatedAt */}
+          {storyEntry.generatedAt && (
+            <p className="text-xs opacity-25 tracking-widest text-right mt-2">
+              생성일 {storyEntry.generatedAt.slice(0, 10)}
+            </p>
+          )}
         </div>
       ) : (
         <div className="mb-8 aspect-video rounded-2xl bg-gradient-to-br from-[#1A1A2E] to-[#16213E] border border-white/10 flex flex-col items-center justify-center gap-4 text-white">

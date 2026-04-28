@@ -6,7 +6,14 @@ export const TAEJONG_DATA: KingData = {
     {
       year: 1400,
       title: "즉위",
-      desc: "정종의 양위를 받아 조선 제3대 왕으로 즉위하다."
+      desc: "정종의 양위를 받아 조선 제3대 왕으로 즉위하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_C0_A01_01A_14A_00020_2005_001_XML",
+        date: "태종 1년 신사(1401) 1월 14일",
+        title: "문하부 건의로 인재 등용·변정 도감 폐지·둔전 폐지 방안 등을 채택",
+        translation: "문하부(門下府) 낭사(郞舍)가 상소하였다. '전월 26일에 특별히 교서를 내리시어, 중외의 신료는 각각 소견을 개진하여 조목조목 올리라 하셨으므로, 신 등이 삼가 어리석은 충곡을 가지고 천총을 우러러 더럽힙니다. 사대부들이 모여 쓸데없는 말을 하여 시비를 변란하는 자가 있으니 헌사로 하여금 엄중히 규리를 행하게 하여 붕비의 폐단을 막을 것. 지난번에 전하께서 양부 백사로 하여금 각각 아는 사람을 천거토록 하셨으니 이는 인재를 빠뜨리지 않게 하려 한 것입니다. 지금 그 천거된 사람들이 모두 쓰이지 않고 있습니다.' 임금이 이를 받아들여 채택하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_C0_A01_01A_14A_00020_2005_001_XML",
+      },
     },
     {
       year: 1401,
@@ -16,7 +23,28 @@ export const TAEJONG_DATA: KingData = {
     {
       year: 1413,
       title: "호패법 실시",
-      desc: "16세 이상 남성에게 호패 패용을 의무화하여 인구를 파악하고 요역 및 군역 기반을 확립하다."
+      desc: "16세 이상 남성에게 호패 패용을 의무화하여 인구를 파악하고 요역 및 군역 기반을 확립하다.",
+      storyEntry: {
+        title: "나무 패 하나에 새긴 나라",
+        scenes: [
+          {
+            imagePrompt: "Joseon king seated on throne in an intimate audience hall issuing a royal decree to assembled ministers, a wooden name tag being passed between officials, traditional ink wash painting, candlelight atmosphere, determined royal gaze",
+            narration: "태종 13년, 임금은 전국 16세 이상 남성 모두에게 이름과 본관이 새겨진 나무 패를 차도록 명하였다. 호패 하나로 조선의 모든 남정네를 국가의 장부 위에 올린다는 뜻이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon government clerks distributing carved wooden identification tags to lines of common men at a county office courtyard, officials recording names in large ledgers, traditional ink wash painting with warm earth tones, orderly but tense atmosphere",
+            narration: "관아 마당에 줄지어 선 백성들이 하나씩 호패를 받아 들었다. 이름 석 자와 신분이 새겨진 그 작은 나무 조각은, 이제 이 사람이 국가에 속한다는 증표였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon man wearing a small wooden name tag at his waist walking through a busy market street, government soldiers checking identification at a checkpoint, ink wash painting with detailed street life, symbolic tension between state control and daily life",
+            narration: "호패는 군역과 요역의 기초였고, 도망과 은신을 막는 눈이었다. 저잣거리를 걷는 사람의 허리에는 이제 나라의 시선이 매달려 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1414,
@@ -31,7 +59,36 @@ export const TAEJONG_DATA: KingData = {
     {
       year: 1418,
       title: "양녕대군 폐위 및 세종 책봉",
-      desc: "세자 양녕대군을 폐하고 충녕대군을 세자로 책봉한 뒤 왕위를 물려주어 조선 제4대 왕 세종의 치세를 열다."
+      desc: "세자 양녕대군을 폐하고 충녕대군을 세자로 책봉한 뒤 왕위를 물려주어 조선 제4대 왕 세종의 치세를 열다.",
+      storyEntry: {
+        title: "아버지가 고른 왕",
+        scenes: [
+          {
+            imagePrompt: "Joseon king summoning senior ministers to announce the deposition of the crown prince, a solemn audience hall with ministers kneeling in rows, ink wash painting with high contrast, the weight of the decision pressing down on every figure",
+            narration: "태종 18년 여름, 임금은 대신들을 불러 세자 양녕을 폐한다고 선언하였다. 장자 계승의 법도를 스스로 깨는 결단이었다. 편전에는 오랜 침묵이 흘렀다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young Chungnyeong prince kneeling to receive the crown prince investiture scroll from the king, court officials witnessing the ceremony, traditional Joseon palace interior with sunlight streaming through latticed windows, ink wash painting with golden tones",
+            narration: "충녕대군은 조용히 무릎을 꿇었다. 형들이 아닌 셋째가 세자의 자리에 오르는 순간, 조선의 역사는 방향을 바꾸었다. 훗날 그 이름은 세종이 된다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Taejong passing the royal throne scroll to young King Sejong in an abdication ceremony, the elder king stepping back into shadow while the young king faces forward into bright light, dramatic ink wash painting, passing of generations",
+            narration: "얼마 뒤 태종은 왕위를 넘겼다. 강한 손으로 조선을 빚어 온 아버지가, 이제 뒤로 물러서며 아들의 시대를 열었다. 그것이 태종이 역사에 바친 마지막 선물이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_C0_A18_08A_08A_00020_2005_008_XML",
+      },
+      sillokEntry: {
+        articleId: "ITKC_JT_C0_A18_08A_08A_00020_2005_008_XML",
+        date: "태종 18년 무술(1418) 8월 8일",
+        title: "임금이 세자에게 국보를 주다",
+        translation: "임금이 세자에게 국보(國寶)를 주고, 연화방의 옛 세자궁으로 이어하였다. 이보다 앞서 임금이 내선의 거조를 행하고자 하여 지신사 이명덕 등을 불러 말하였다. '내가 재위한 지 지금 이미 18년이다. 비록 덕망은 없으나 불의한 일을 행하지는 않았는데, 능히 위로 천의에 보답하지 못하여 여러 번 수재·한재와 충황의 재앙에 이르고, 또 묵은 병이 있어 근래 더욱 심하니, 이에 세자에게 전위하려고 한다. 아비가 아들에게 전위하는 것은 천하 고금의 떳떳한 일이요, 신하들이 의논하여 간쟁할 수가 없는 것이다. 나의 상과 모양은 임금의 상이 아니다. 위의와 동정이 모두 임금에 적합하지 않다.' 마침내 국보를 세자에게 내려 주었다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_C0_A18_08A_08A_00020_2005_008_XML",
+      },
     }
   ],
   detail: {

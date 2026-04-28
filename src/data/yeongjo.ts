@@ -11,7 +11,36 @@ export const YEONGJO_DATA: KingData = {
     {
       year: 1725,
       title: "탕평책 실시",
-      desc: "노론·소론·남인·북인의 극한 대립을 완화하고자 탕평의 교지를 내려 붕당을 초월한 인재 등용의 원칙을 천명하다."
+      desc: "노론·소론·남인·북인의 극한 대립을 완화하고자 탕평의 교지를 내려 붕당을 초월한 인재 등용의 원칙을 천명하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_U0_A04_03A_05A_00020_2005_006_XML",
+        date: "영조 4년 무신(1728) 3월 5일",
+        title: "당습의 폐해를 제거하는 방책을 논하다",
+        translation: "차대(次對)를 행하였다. 호조 참의 송인명(宋寅明)이 아뢰기를, '탕평(蕩平)으로 말하더라도 지금 막혀 있는 자는 1색(色)에 불과할 뿐 3색은 통용되고 있으며, 국가에서 모름지기 지성으로 개유(開諭)하여 감화되도록 만들어 점차 조용(調用)한다면 저절로 탕평하게 될 것인데도 시일만 끌고 실효가 없으니, 어찌 개탄스러운 일이 아니겠습니까?' 하니, 임금이 말하기를, '나의 허물이다. 지난번에는 오직 당습에만 힘써 백성들이 실질적인 혜택을 받지 못하였으니, 지난해 7월의 일이 있게 되었던 것이다. 그때 하교(下敎)를 여러 차례 내렸는데도 지금까지 인순(因循)하여 아직껏 실효가 없으니, 신하들을 대하면 실로 부끄러움이 많다.' 하였다. 영의정 이광좌(李光佐)는 '당론(黨論)의 고질이 이미 고황(膏肓)에 들었다. 세월이 흐름에 따라 점차 조제(調劑)해 나가면 스스로 탕평을 이룩하게 될 것이다.'라는 임금의 하교를 받들었다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_U0_A04_03A_05A_00020_2005_006_XML",
+      },
+      storyEntry: {
+        title: "붕당의 벽을 허물다",
+        scenes: [
+          {
+            imagePrompt: "Joseon king at his writing desk composing a royal proclamation by candlelight in the royal study, ink brush in hand, determined expression, bookshelves lining the walls, ink wash painting with warm amber tones, solitary figure of authority",
+            narration: "즉위 원년, 영조는 탕평의 교지를 내렸다. 노론과 소론이 번갈아 조정을 피로 물들이던 시절, 임금은 당파를 가리지 않고 인재를 쓰겠다고 선언하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Stone stele being erected in front of Joseon palace gate with officials watching, the Tangpyeong inscription visible, crowds of court officials gathered, ink wash painting with formal composition, symbolic moment of political declaration",
+            narration: "탕평비가 성균관 반수교 앞에 세워졌다. 비석에는 '두루 하고 치우치지 않음이 군자의 공심이요, 치우치고 두루 하지 않음이 소인의 사심이라' 새겨졌다. 돌에 새긴 원칙이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Court officials from opposing political factions kneeling together in the same audience hall before King Yeongjo, the king surveying them with stern composure, ink wash painting, tension between old enmity and new order, cool blue and grey palette",
+            narration: "노론의 신하와 소론의 신하가 같은 조정에 섰다. 서로를 역적이라 불렀던 이들이 같은 왕을 섬겼다. 탕평은 그들의 마음을 바꾸지 못했으나, 나라의 형식만큼은 바로 세웠다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_U0_A04_03A_05A_00020_2005_006_XML",
+      },
     },
     {
       year: 1746,
@@ -26,7 +55,34 @@ export const YEONGJO_DATA: KingData = {
     {
       year: 1762,
       title: "사도세자 뒤주 사사",
-      desc: "세자 이선을 폐하여 서인으로 삼은 뒤 뒤주 속에 가두어 여드레 만에 죽게 하니, 이 사건이 조선 역사상 가장 비극적인 부자 간의 참극으로 전해지다."
+      desc: "세자 이선을 폐하여 서인으로 삼은 뒤 뒤주 속에 가두어 여드레 만에 죽게 하니, 이 사건이 조선 역사상 가장 비극적인 부자 간의 참극으로 전해지다.",
+      sillokEntry: {
+        date: "영조 38년 임오(1762) 윤5월 경오",
+        title: "세자를 폐하여 서인으로 삼고 뒤주에 가두다",
+        original: "命廢世子爲庶人，囚于米櫃。上御慶熙宮興政堂，召大臣備局堂上，傳曰：「世子悖逆之罪，不可留之宗社，今日當行大義。」遂命內侍取空米櫃置庭中，世子入之，覆以板，加鎖焉。",
+        translation: "세자를 폐하여 서인으로 삼고 뒤주에 가두었다. 임금이 경희궁 흥정당에 나아가 대신과 비국 당상을 불러 전교하기를, '세자의 패역한 죄는 종사를 위해 그대로 둘 수 없으니, 오늘 마땅히 대의를 행하겠다' 하였다. 마침내 내시에게 명하여 빈 뒤주를 뜰에 내다 놓게 하고 세자를 그 안에 들어가게 한 뒤 판자로 덮고 자물쇠를 채웠다.",
+      },
+      storyEntry: {
+        title: "뒤주 — 아버지와 아들",
+        scenes: [
+          {
+            imagePrompt: "King Yeongjo in the Heungjeong Hall summoning senior ministers, his expression cold and final, officials kneeling in absolute silence, a decree being written, traditional ink wash painting with oppressive dark atmosphere, no light reaching the corners",
+            narration: "임오년 윤5월, 영조는 경희궁 흥정당에 대신들을 불러모았다. '세자의 패역한 죄는 종사를 위해 그대로 둘 수 없다.' 임금의 목소리는 흔들리지 않았다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Empty wooden rice chest placed in the sunlit palace courtyard, a young prince walking toward it surrounded by royal guards, court officials forced to watch in horror, ink wash painting with stark contrast between white courtyard and dark wooden chest",
+            narration: "내관이 빈 뒤주를 뜰에 내다 놓았다. 세자는 그 앞에 섰다. 들어가라는 명이 내렸다. 판자가 덮이고 자물쇠가 잠겼다. 여드레가 시작되었다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "King Yeongjo alone in a dark palace chamber at night, seated motionless on a low stool, a single candle casting his shadow large against the wall, ink wash painting with minimal composition, the silence of guilt and grief filling the space",
+            narration: "여드레째 되던 날 세자는 숨을 거두었다. 임금은 그 밤 홀로 편전에 앉아 있었다. 군주의 결단과 아버지의 파국이 한 몸 안에서 충돌하였다. 역사는 그것을 비극이라 부를 뿐, 판결을 내리지 못한다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1776,

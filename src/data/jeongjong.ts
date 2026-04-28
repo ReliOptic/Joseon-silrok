@@ -22,6 +22,35 @@ export const JEONGJONG_DATA: KingData = {
       year: 1400,
       title: "제2차 왕자의 난",
       desc: "방간(芳幹)과 방원(芳遠) 형제 사이에 유혈 충돌이 벌어지고, 방원이 최후의 승자로 떠오르다.",
+      storyEntry: {
+        title: "형제의 칼날",
+        scenes: [
+          {
+            imagePrompt: "Two Joseon princes facing each other at the gates of Gaeju palace at dawn, armed retainers with torches and spears filling the courtyard, tension frozen in the air before bloodshed, ink wash painting style with cold blue-grey tones",
+            narration: "정종 2년 정월, 넷째 왕자 방간이 군사를 일으켰다. 조정을 장악한 정안공 방원을 제거하겠다는 것이었다. 왕의 형제들이 다시 칼을 겨누었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Prince Bangwon in armor on horseback commanding his troops in a narrow street of Gaeju, defeated soldiers of Banggan throwing down their weapons, smoke rising from distant buildings, ink wash painting style",
+            narration: "싸움은 짧고 결정적이었다. 방간의 군사는 무너졌고, 방간은 사로잡혀 토산으로 유배되었다. 이방원의 위세는 이제 누구도 거스를 수 없었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Jeongjong seated alone on the throne in a dim audience hall, court officials bowing before him, the shadow of Prince Bangwon looming large on the wall behind, ink wash painting style with muted gold and grey",
+            narration: "정종은 왕좌에 앉아 있었으나, 실권은 이미 방원의 손에 있었다. 왕은 이 사실을 모르지 않았다. 그리고 그것이 어쩌면 더 나은 길임을 알고 있었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_B0_A02_01A_28A_00030_2005_001_XML",
+      },
+      sillokEntry: {
+        articleId: "ITKC_JT_B0_A02_01A_28A_00030_2005_001_XML",
+        date: "정종 2년 경진(1400) 1월 28일",
+        title: "제2차 왕자의 난. 이방간을 토산에 추방하다",
+        translation: "회안공(懷安公) 이방간(李芳幹)을 토산(兎山)에 추방하였다. 이방의(李芳毅)·이방간(李芳幹)과 정안공(靖安公)은 모두 임금의 동복 아우였다. 임금이 적사(嫡嗣)가 없으니, 동복 아우가 마땅히 후사(後嗣)가 될 터인데, 방간은 자기가 차례로써 마땅히 후사가 되어야 한다고 생각하였으나 배우지 못하여 광망하고 어리석었으며, 정안공은 영예(英睿)하고 숙성(夙成)하며 경서와 이치에 통달하여 개국(開國)과 정사(定社)가 모두 그의 공이었으므로 나라 사람들이 모두 마음으로 귀부(歸附)하였다. 방간이 깊이 꺼리어 마침내 군사를 일으켰으나, 정안공에게 패하여 토산으로 유배되었다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_B0_A02_01A_28A_00030_2005_001_XML",
+      },
     },
     {
       year: 1400,

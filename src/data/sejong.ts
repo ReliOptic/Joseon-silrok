@@ -14,6 +14,28 @@ export const SEJONG_DATA: KingData = {
         { name: "태종 이방원", role: "선왕, 양위 결정자 / 즉위 후에도 군사권 보유" },
         { name: "양녕대군", role: "폐세자, 충녕의 형" },
       ],
+      storyEntry: {
+        title: "스물두 살의 왕",
+        scenes: [
+          {
+            imagePrompt: "A young Joseon king in ceremonial royal robes stands before the grand Geunjeongjeon throne hall steps, rows of court officials in blue and red robes kneeling in the courtyard, morning mist rising over the tiled rooftops, ink wash painting style",
+            narration: "태종은 스스로 왕위를 내려놓고 셋째 아들 충녕대군에게 나라를 맡겼다. 스물두 살의 청년은 자신이 통치하게 될 땅을 굽어보며 조용히 마음을 다졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Taejong in elder statesman robes seated on a dais, watching as his young son Sejong receives the royal seal from court officials, candlelight flickering in a formal audience chamber, ink wash painting style with subtle gold accents",
+            narration: "왕위를 넘긴 뒤에도 태종은 4년간 군사권을 손에 쥐었다. 새 왕은 그 그늘 안에서 글을 읽고 제도를 익히며, 혼자 힘으로 나라를 이끌 날을 준비했다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young King Sejong alone in a candlelit palace library late at night, surrounded by towering stacks of books and scrolls, brush in hand, absorbed in study, moonlight casting long shadows through latticed windows, monochrome ink wash painting style",
+            narration: "역사는 이 조용한 수련의 날들을 기억하지 않는다. 그러나 조선 역사상 가장 긴 빛을 발한 치세는 바로 이 밤들 위에 세워졌다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_D0_A00_08A_11A_00010_2005_001_XML",
+      },
       sillokEntry: {
         articleId: "ITKC_JT_D0_A00_08A_11A_00010_2005_001_XML",
         sourceUrl: "",
@@ -36,6 +58,28 @@ export const SEJONG_DATA: KingData = {
         { name: "최윤덕", role: "내이포 방어 담당 장군" },
         { name: "이수", role: "우군절제사" },
       ],
+      storyEntry: {
+        title: "바다를 건넌 징벌",
+        scenes: [
+          {
+            imagePrompt: "A vast armada of 227 Joseon warships sailing across the Korea Strait toward Tsushima Island at dawn, soldiers in armor lining the decks, waves crashing against hulls, dramatic sky with clouds parting, ink wash painting style",
+            narration: "병선 227척이 현해탄의 파도를 갈랐다. 수십 년간 남해안을 불태우고 백성을 약탈한 왜구의 소굴로, 이종무 장군이 17,000명의 군사를 이끌고 나아갔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon soldiers storming ashore on Tsushima Island, burning enemy ships in the harbor, smoke rising into the sky, Japanese pirates fleeing into forested hills, ink wash painting style with red and orange fire accents",
+            narration: "두지포에 닻을 내리자 왜인들은 넋을 잃고 달아났다. 조선 군사는 적선 129척을 불태우고 포로로 붙잡혔던 중국인 131명을 되찾았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon warships returning home across calm evening seas, rescued prisoners huddled on deck, officers recording the campaign results by lantern light, distant mountains of Korea visible on the horizon, ink wash painting style",
+            narration: "원정 이후 삼포를 통한 합법 교역의 문이 열렸다. 칼 대신 장부로, 약탈 대신 교역으로 — 바다의 질서가 다시 세워졌다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_D0_A01_06A_20A_00040_2005_001_XML",
+      },
       sillokEntry: {
         articleId: "ITKC_JT_D0_A01_06A_20A_00040_2005_001_XML",
         sourceUrl: "",
@@ -59,6 +103,28 @@ export const SEJONG_DATA: KingData = {
         { name: "박팽년", role: "집현전 응교" },
         { name: "신숙주", role: "집현전 부수찬, 음운학 연구" },
       ],
+      storyEntry: {
+        title: "지식의 요람",
+        scenes: [
+          {
+            imagePrompt: "Interior of Jiphyeonjeon hall in Gyeongbokgung palace, young Joseon scholars in blue official robes seated at low desks surrounded by towering stacks of books and scrolls, warm candlelight, ink wash painting style with soft golden tones",
+            narration: "세종은 경복궁 안에 집현전을 크게 열고 가장 총명한 젊은 학자들을 불러 모았다. 이들에게는 오직 하나의 임무만 주어졌다 — 읽고 생각하고 토론하라.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Sejong seated informally among scholars at Jiphyeonjeon, engaged in animated discussion over open books, scholar Jeong Inji gesturing toward a text, evening light through palace windows, ink wash painting style",
+            narration: "왕은 틈이 날 때마다 집현전에 들러 학자들과 직접 토론을 나누었다. 신분과 위계를 잠시 내려놓은 그 자리에서, 조선 학문의 가장 빛나는 씨앗들이 자랐다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Scholar Shin Sukju walking through a moonlit courtyard at Jiphyeonjeon, carrying a stack of phonology texts, other scholars visible through lit windows still working late, ink wash painting style with pale moonlight effects",
+            narration: "신숙주는 음운학을 배우기 위해 요동까지 열세 번 발길을 옮겼다. 정인지, 성삼문, 박팽년 — 이 집현전의 인물들이 훗날 훈민정음을 완성하게 된다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_D0_A02_03A_16A_00010_2005_002_XML",
+      },
       sillokEntry: {
         articleId: "ITKC_JT_D0_A02_03A_16A_00010_2005_002_XML",
         sourceUrl: "",
@@ -81,6 +147,28 @@ export const SEJONG_DATA: KingData = {
         { name: "이천", role: "공조판서, 제작 총감독" },
         { name: "이순지", role: "천문·역법 연구 관원" },
       ],
+      storyEntry: {
+        title: "스스로 치는 시계",
+        scenes: [
+          {
+            imagePrompt: "Jang Yeong-sil the inventor in craftsman's workshop robes, bent over intricate bronze water clock mechanisms by torchlight, gears and water vessels arranged on a workbench, tools scattered around, ink wash painting style",
+            narration: "노비 출신의 장영실은 물의 흐름으로 시각을 재는 장치를 설계했다. 정해진 시각이 되면 기계 인형이 스스로 종을 치고 북을 울리고 징을 두드렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The completed Jagyeongnu water clock installed in Borugak pavilion within Gyeongbokgung palace, bronze figures striking bells and drums automatically, court officials and servants watching in amazement, ink wash painting style",
+            narration: "보루각에 자격루가 설치되던 날, 보는 이마다 놀라고 감탄하였다고 실록은 전한다. 이 땅의 역사에 없던 거룩한 제도라는 말이 조정에 퍼졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Sejong presenting Jang Yeong-sil with an official rank tablet in a formal court ceremony, officials in ceremonial robes looking on, some with expressions of surprise, ink wash painting style with formal composition",
+            narration: "세종은 천민 출신 장영실에게 종3품 상호군의 벼슬을 내렸다. 신분이 아니라 능력을 보는 왕의 눈이, 조선 과학의 황금기를 열었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_D0_A16_07A_01A_00040_2005_010_XML",
+      },
       sillokEntry: {
         articleId: "ITKC_JT_D0_A16_07A_01A_00040_2005_010_XML",
         sourceUrl: "",
@@ -108,6 +196,28 @@ export const SEJONG_DATA: KingData = {
       title: "훈민정음 창제 — 스물여덟 자의 혁명",
       desc: "자음 17자·모음 11자, 합계 스물여덟 자로 이루어진 훈민정음을 친히 창제하다. 한자를 알지 못해 억울한 일을 당해도 글로 호소할 수 없는 백성들의 처지를 안타깝게 여겨, 발음 기관의 모양을 본뜬 자음과 하늘·땅·사람의 형상을 본뜬 모음을 결합하는 독창적인 원리로 설계하였다. 어른도 아이도 하루 이틀이면 깨칠 수 있는 소리글자가 탄생하는 역사적인 날이었다.",
       unofficialHistorySourceLevel: 'tradition',
+      storyEntry: {
+        title: "스물여덟 자의 탄생",
+        scenes: [
+          {
+            imagePrompt: "King Sejong alone in a dimly lit palace study late at night, hunched over a desk covered with phonology charts and diagrams of mouth shapes, a single candle burning low, ink wash painting style with deep shadows",
+            narration: "세종은 수년간 홀로 음운학을 연구했다. 눈이 침침한 날도 촛불을 켜고 밤을 새우며, 어떤 문자 체계와도 다른 새로운 원리를 그의 머릿속에서 빚어냈다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Detailed ink wash painting of Korean consonant shapes inspired by mouth and throat anatomy diagrams, arranged in a grid on rice paper, with calligraphic brushstrokes showing the formation principles, scholarly atmosphere",
+            narration: "자음은 발음 기관의 모양을 본뜨고, 모음은 하늘과 땅과 사람의 형상을 담았다. 세상의 모든 소리를 적을 수 있는 스물여덟 자가 마침내 완성되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A common Joseon farmer and his wife by firelight, one teaching the other to write simple Korean words on the ground with a stick, children watching with curiosity, humble thatched roof home visible, ink wash painting style",
+            narration: "글을 몰라 억울한 일을 당해도 호소할 길 없던 백성들. 이 스물여덟 자로, 이제 누구든 자신의 목소리를 글로 남길 수 있게 되었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "wda_12512030_002",
+      },
       sillokEntry: {
         articleId: "wda_12512030_002",
         sourceUrl: "https://sillok.history.go.kr/id/wda_12512030_002",
@@ -131,6 +241,28 @@ export const SEJONG_DATA: KingData = {
         { name: "최만리", role: "반대 상소 주도, 집현전 부제학" },
         { name: "박팽년", role: "집현전 응교" },
       ],
+      storyEntry: {
+        title: "반포의 날",
+        scenes: [
+          {
+            imagePrompt: "Joseon scholar Choe Manri kneeling before King Sejong in a formal audience hall, presenting a written memorial of protest, other court officials watching tensely, king seated unmoved on the throne, ink wash painting style",
+            narration: "최만리는 '새 글자를 만드는 것은 오랑캐나 하는 짓'이라며 상소를 올렸다. 세종은 '네가 운서를 아느냐'며 논리로 반박하고, 상소자들을 의금부에 가뒀다 하루 만에 풀어주었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Scholars at Jiphyeonjeon presenting the completed Hunminjeongeum Haeryebon manuscript to King Sejong, the bound volume open to show elegant calligraphy and phonetic diagrams, candlelight reflecting off the pages, ink wash painting style",
+            narration: "반포와 함께 28장의 해례본이 완성되었다. 글자의 창제 원리와 용례를 상세히 기록한 이 책은, 세계 역사에서 창제 원리가 남아 있는 유일한 문자 체계가 되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Royal proclamation scrolls being distributed to officials across Joseon, messengers on horseback riding out from the capital in different directions, dawn light breaking over the Han River, ink wash painting style",
+            narration: "이날부터 조선의 모든 백성은 자신의 목소리를 글로 남길 권리를 얻었다. 하늘이 만물에 소리를 주었듯, 왕은 백성에게 그 소리를 담을 그릇을 주었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_D0_A28_09A_29A_00040_2005_018_XML",
+      },
       sillokEntry: {
         articleId: "ITKC_JT_D0_A28_09A_29A_00040_2005_018_XML",
         sourceUrl: "",
@@ -152,6 +284,28 @@ export const SEJONG_DATA: KingData = {
         { name: "전순의", role: "편찬 총책임 의관" },
         { name: "노중례", role: "의학자, 향약집성방 편찬에도 참여" },
       ],
+      storyEntry: {
+        title: "365권의 의학 백과사전",
+        scenes: [
+          {
+            imagePrompt: "Royal physician Jeon Sun-ui and a team of scholars and doctors gathered around large writing tables in a palace hall, compiling medical texts from dozens of open reference books, ink brushes moving across paper, ink wash painting style",
+            narration: "세종은 동서고금의 의학 지식을 총망라하라 명했다. 전순의를 중심으로 의관과 집현전 학자들이 모여, 민간 비방까지 수집하여 증상별·처방별로 엮어나갔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Aged King Sejong with visibly weakened eyes, seated in a dimly lit chamber, a court physician attending to him, stacks of medical manuscript volumes piled nearby, determination visible in his expression, ink wash painting style",
+            narration: "세종은 말년에 당뇨와 안질로 고통받으면서도 편찬을 멈추지 않았다. '내 눈이 아직 보이는 동안 마쳐야 한다'는 말을 남기며 끝까지 독려했다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "365 bound volumes of Uibang Yuchui stacked in neat rows in a palace library, officials carefully cataloguing and copying the texts for distribution, a sense of monumental achievement, ink wash painting style with warm amber light",
+            narration: "3년의 작업 끝에 365권이 완성되었다. 중국 의서에 기대던 조선 의학이 마침내 자신의 언어로 쌓아올린 지식의 탑이었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_D0_A27_10A_27A_00020_2005_017_XML",
+      },
       sillokEntry: {
         articleId: "ITKC_JT_D0_A27_10A_27A_00020_2005_017_XML",
         sourceUrl: "",
