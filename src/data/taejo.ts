@@ -8,6 +8,28 @@ export const TAEJO_DATA: KingData = {
       title: "조선 건국",
       desc: "고려를 무너뜨리고 새 왕조 조선을 개창하여 초대 왕으로 즉위하다.",
       unofficialHistorySourceLevel: 'sillok',
+      storyEntry: {
+        title: "하늘의 명으로 왕위에 오르다",
+        scenes: [
+          {
+            imagePrompt: "A Korean general in full ceremonial armor kneeling before a wooden throne in a grand hall, surrounded by rows of ministers in formal court robes bowing deeply, ink wash painting style, Joseon dynasty, dramatic lighting from above",
+            narration: "1392년 7월, 개경의 수창궁에 무릎 꿇은 신하들의 숨소리만이 가득했다. 이성계는 떨리는 두 손을 모아 쥐며 자신이 이 자리에 설 수밖에 없었던 이유를 되새겼다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A king reading a royal proclamation scroll in a great hall, officials standing in rows on both sides, sunlight streaming through paper screen doors, traditional East Asian ink painting, Joseon court atmosphere",
+            narration: "즉위 교서가 낭독되었다. '하늘이 많은 백성을 낳아서 군장을 세워, 이를 길러 서로 살게 하고, 이를 다스려 서로 편안하게 한다.' 새 왕의 목소리는 크고 낮았으나, 그 안에는 오백 년을 버텨야 할 무게가 담겨 있었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Crowds of common people outside a palace gate looking up at proclamation banners, some kneeling, some weeping, misty mountains in the background, traditional Korean ink wash painting with subtle color wash",
+            narration: "중외의 대소 신료와 군민들에게 교지가 전해졌다. 고려의 이름은 사라지고, 조선이라는 두 글자가 동쪽 하늘 아래 처음으로 울려 퍼졌다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_A0_A01_07A_28A_00030_2005_001_XML",
+      },
       sillokEntry: {
         articleId: 'ITKC_JT_A0_A01_07A_28A_00030_2005_001_XML',
         sourceUrl: '',
@@ -23,6 +45,28 @@ export const TAEJO_DATA: KingData = {
       title: "한양 천도",
       desc: "개경에서 한양으로 수도를 옮겨 새 왕조의 터전을 마련하다.",
       unofficialHistorySourceLevel: 'sillok',
+      storyEntry: {
+        title: "오백 년 도읍지를 옮기다",
+        scenes: [
+          {
+            imagePrompt: "A long procession of court officials and royal guards marching through autumn mountains on a narrow road, carrying banners and palanquins, viewed from a high hillside, traditional Korean ink wash painting with golden autumn foliage",
+            narration: "1394년 10월, 태조의 행렬이 개경을 등지고 남쪽으로 내려갔다. 신하들은 짐을 꾸려 뒤를 따랐고, 수백 년 고려의 기억이 그 뒷모습을 바라보고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Royal court officials arriving at a wide river plain below mountains, surveying an empty valley where a new capital will be built, scrolls and maps spread on a table under a tent, ink wash painting style",
+            narration: "한강 북쪽의 너른 땅에 도착하자, 신하들은 지도를 펼쳤다. 북악을 등에 업고 한강을 앞에 둔 이 자리에, 새 왕조의 뿌리가 내려질 터였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Officials in formal robes divided into two groups, one group staying behind in the old capital, one group moving forward, with an ink brush administrative document in the foreground, traditional East Asian painting style",
+            narration: "각 관청의 관원 2명씩은 송경에 남아 행정의 실을 이어 갔고, 최영지와 우인열이 분도평의사사를 맡았다. 두 도읍 사이에 나라의 뼈대가 세워지고 있었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_A0_A03_10A_25A_00010_2005_002_XML",
+      },
       sillokEntry: {
         articleId: 'ITKC_JT_A0_A03_10A_25A_00010_2005_002_XML',
         sourceUrl: '',
@@ -38,6 +82,28 @@ export const TAEJO_DATA: KingData = {
       title: "경복궁 창건",
       desc: "정도전이 이름 붙인 경복궁을 완공하여 조선 왕실의 법궁으로 삼다.",
       unofficialHistorySourceLevel: 'sillok',
+      storyEntry: {
+        title: "이름 하나에 왕조의 뜻을 담다",
+        scenes: [
+          {
+            imagePrompt: "A Joseon dynasty scholar-official unrolling a long scroll on a wooden desk, writing calligraphy with a large brush by candlelight, ink stone and brushes arranged neatly, traditional Korean ink wash painting",
+            narration: "1395년 10월, 판삼사사 정도전은 새 궁궐의 이름을 지으라는 명을 받들었다. 그는 붓을 들기 전 오랫동안 창 너머 궁궐의 윤곽을 바라보았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A grand Korean palace complex viewed from above, with multiple tiled-roof halls arranged in a formal grid, mountains in the background, morning mist rising, traditional ink wash panoramic painting",
+            narration: "경복궁(景福宮)이라 이름 붙인 뒤, 정도전은 그 의의를 글로 올렸다. 근정전에서 정치를 부지런히 하고, 사정전에서 생각을 깊이 하며, 강녕전에서 몸을 편안히 하라는 뜻이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The king receiving a formal document from a kneeling official in a new palace throne hall, other officials witnessing in two rows, fresh wooden pillars still gleaming, ink wash painting with delicate architectural detail",
+            narration: "태조는 정도전이 올린 이름들을 차례로 읽었다. 경복궁, 근정전, 사정전, 강녕전… 각각의 이름에는 새 왕조가 무엇을 향해 서야 하는지가 새겨져 있었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_A0_A04_10A_07A_00020_2005_002_XML",
+      },
       sillokEntry: {
         articleId: 'ITKC_JT_A0_A04_10A_07A_00020_2005_002_XML',
         sourceUrl: '',

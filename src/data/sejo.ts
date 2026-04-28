@@ -7,6 +7,28 @@ export const SEJO_DATA: KingData = {
       year: 1455,
       title: "왕위 찬탈",
       desc: "조카 단종으로부터 선위(禪位)의 형식을 빌어 왕위를 빼앗고 조선 제7대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "찬탈자의 즉위, 그 화려한 침묵",
+        scenes: [
+          {
+            imagePrompt: "A Joseon king in full royal regalia performing a solemn ancestral rite at the grand Jongmyo Shrine, early morning mist rising around the red-pillared hall, ink wash painting style with muted gold and gray tones, tension beneath ceremony",
+            narration: "1455년 7월 4일, 세조는 종묘에 나아가 즉위를 고하였다. 조카의 왕좌를 빼앗은 손으로 향을 피우는 그 순간, 사당의 고요는 무거운 침묵으로 가득 찼다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon king seated on the throne at Geunjeongjeon Hall, hundreds of officials in black and blue robes kneeling in rows across the wide stone courtyard, traditional East Asian ink painting, wide panoramic composition, cold ceremonial atmosphere",
+            narration: "근정전 앞 돌마당에 백관이 줄지어 엎드려 하례를 올렸다. 새 임금의 이름 아래 나라는 숨을 죽였고, 축하의 함성은 어딘지 공허하게 울렸다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Imperial decree scroll being unfurled before assembled court officials in a Joseon palace hall, a lone figure on the throne reading the royal edict, ink brush painting, dramatic diagonal composition, early light streaming through latticed windows",
+            narration: "교서는 관대한 사면을 선포했으나, 모반과 대역만은 용서의 밖이었다. 법도와 은혜를 동시에 내린 그 교서 한 장에, 새 왕조의 서늘한 질서가 새겨졌다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_G0_A01_07A_04A_00010_2005_001_XML",
+      },
       sillokEntry: {
         articleId: 'ITKC_JT_G0_A01_07A_04A_00010_2005_001_XML',
         date: '세조 1년 을해(1455) 7월 4일',
@@ -19,6 +41,28 @@ export const SEJO_DATA: KingData = {
       year: 1456,
       title: "사육신 처형",
       desc: "성삼문·박팽년 등 여섯 충신이 단종 복위를 도모하다 발각되어 능지처참에 처해지고, 절의(節義)의 이름이 후세에 전해지다.",
+      storyEntry: {
+        title: "여섯 충신, 저잣거리의 피",
+        scenes: [
+          {
+            imagePrompt: "Joseon palace interrogation room, a court official being flogged while surrounded by royal guards and ministers, intense lighting from paper lanterns, traditional East Asian ink wash painting, high contrast black and white with red accents, anguish and defiance on the prisoner's face",
+            narration: "1456년 6월, 사정전에 끌려온 성삼문은 장(杖)을 맞으면서도 입을 다물지 않았다. 신문하는 자도, 당하는 자도, 이것이 끝이 아님을 알고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon king on throne issuing a grim decree to assembled officials, scroll being written by a scribe, atmosphere of cold authority, traditional ink brush painting style, palace interior with dark wooden pillars, figures cast in shadow",
+            narration: "의금부의 보고가 올라오자 임금은 망설임 없이 명하였다. 능지처사, 그리고 가족 모두를 변방 노비로 — 충절의 대가는 씨줄까지 끊기는 것이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Public execution ground in front of Joseon government armory, crowds of officials forced to witness, six condemned men being executed by dismemberment, severed heads displayed on poles, somber ink wash painting, overcast sky, silent and horrified onlookers",
+            narration: "군기감 앞 길에 백관이 집결한 가운데, 이개·성삼문·하위지 등 여섯 명이 환열(轘裂)되어 사흘 동안 저자에 효수되었다. 그날 이후 그들의 이름은 사육신(死六臣)으로 불려, 죽음보다 오래 살아남았다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_G0_A02_06A_08A_00020_2005_002_XML",
+      },
       sillokEntry: {
         articleId: 'ITKC_JT_G0_A02_06A_08A_00020_2005_002_XML',
         date: '세조 2년 병자(1456) 6월 8일',
