@@ -7,6 +7,35 @@ export const CHEOLJONG_DATA: KingData = {
       year: 1849,
       title: "강화도 농부의 즉위",
       desc: "강화도에서 농사를 짓던 이원범이 헌종의 뒤를 이어 조선 제25대 왕으로 즉위하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_Y0_A01_06A_09A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_Y0_A01_06A_09A_00010_2005_001_XML",
+        date: "철종 즉위년 기유(1849) 6월 9일",
+        title: "강화도에서 원범을 맞아 왕위에 오르게 하다",
+        translation: "대왕대비 순원왕후가 하교하기를, '헌종이 후사 없이 승하하셨으니 종사를 위하여 전계대원군의 아들 원범을 왕위에 오르게 하노라. 원범은 강화도에 거주하고 있으니 즉시 봉영하여 입궐하게 하라.' 이에 도승지가 강화도로 달려가 원범을 모시고 환궁하니, 이가 곧 철종이다.",
+      },
+      storyEntry: {
+        title: "강화도에서 온 왕",
+        scenes: [
+          {
+            imagePrompt: "A young farmer Lee Won-beom in rough country clothing digging in a field on Ganghwa Island, suddenly confronted by royal messengers in formal court attire bowing deeply before him, his expression frozen in disbelief, the sea visible in the distance, ink wash painting style with jarring contrast between rustic and formal",
+            narration: "헌종 승하 소식과 함께 도승지가 강화도로 달려왔다. 밭을 갈던 이원범 앞에 도승지가 무릎을 꿇었다. 스물다섯 살 농부에게 조선의 왕위가 떨어진 순간이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Lee Won-beom being dressed in royal robes for the first time in the palace, clearly uncomfortable and overwhelmed, court ladies and eunuchs carefully arranging the ceremonial garments, palace walls towering around him, ink wash painting style with atmosphere of confinement and unreality",
+            narration: "왕이 된다는 것은 강화도로 돌아갈 수 없다는 뜻이었다. 조정의 모든 것이 낯설었다. 안동 김씨는 이미 새 왕의 장인 자리를 예약해두고 있었다. 왕좌는 준비되어 있었으나, 그것은 꼭두각시를 위한 자리였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Cheoljong seated on the throne looking distant and melancholy while Kim Mun-geun and other Andong Kim clan officials conduct court business in the foreground, the king's gaze drifting toward a window, ink wash painting style with the king visually marginalized in his own court",
+            narration: "밤마다 짚신을 삼았다는 이야기가 궁중에 돌았다. '나는 밥보다 보리밥이 그립다'는 말이 궁인들의 눈물을 적셨다. 강화도령은 끝내 강화도로 돌아가지 못했다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_Y0_A01_06A_09A_00010_2005_001_XML",
+      },
     },
     {
       year: 1851,
@@ -22,6 +51,35 @@ export const CHEOLJONG_DATA: KingData = {
       year: 1862,
       title: "임술농민봉기",
       desc: "삼남 지방을 중심으로 탐관오리의 수탈에 분노한 백성들이 일제히 들고 일어나 조선 후기 최대의 민란이 일어나다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_Y0_A13_02A_19A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_Y0_A13_02A_19A_00010_2005_001_XML",
+        date: "철종 13년 임술(1862) 2월 19일",
+        title: "진주민란 발생, 삼남에 민란의 불길이 번지다",
+        translation: "진주에서 민란이 일어났다. 우병사 백낙신이 계문하기를, '백성들이 무리를 모아 난을 일으켜 관아를 불태우고 아전들이 모두 달아나 형세가 매우 위태롭습니다'라고 하였다. 삼남이 소동에 빠진 발단이 여기에서 비롯되었다.",
+      },
+      storyEntry: {
+        title: "진주에서 시작된 불길",
+        scenes: [
+          {
+            imagePrompt: "Angry peasants and farmers armed with farm tools and torches marching toward Jinju government office, led by Yu Gye-chun, faces set with fury and desperation, smoke rising from torched buildings in the background, ink wash painting style with red-orange fire accents against grey tones",
+            narration: "철종 13년 2월, 진주에서 불길이 올랐다. 우병사 백낙신의 수탈에 분노한 농민들이 들고 일어났다. 유계춘이 앞장섰다. 관아가 불탔고, 아전들은 달아났다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A map of Korea with flames spreading from Jinju across the southern provinces — Gyeongsang, Jeolla, Chungcheong — illustrated as burning points of light, officials in Seoul looking at reports with alarm, ink wash painting style with cartographic elements",
+            narration: "진주의 불길은 꺼지지 않았다. 경상도, 전라도, 충청도 — 삼남 전체가 들썩였다. 70여 곳에서 민란이 터졌다. 전정, 군정, 환곡 — 삼정의 문란이 쌓이고 쌓여 터진 것이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon officials establishing Samjeongijeongcheong office to reform the three administrative abuses, stacks of reform documents piling up while outside the window ordinary farmers return to empty fields, ink wash painting style with ironic juxtaposition of bureaucratic activity and peasant hardship",
+            narration: "놀란 조정은 삼정이정청을 설치했다. 그러나 세도 정치 아래서 개혁은 문서로만 존재했다. 불길은 잡혔으나 그 불씨는 꺼지지 않았고, 왕조의 황혼은 점점 가까워지고 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_Y0_A13_02A_19A_00010_2005_001_XML",
+      },
     },
     {
       year: 1862,

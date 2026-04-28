@@ -17,6 +17,35 @@ export const GYEONGJONG_DATA: KingData = {
       year: 1721,
       title: "신임사화 시작",
       desc: "소론이 노론의 대리청정 청원을 역모로 규정하고 김창집 등 노론 사대신을 탄핵하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_T0_A01_08A_20A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_T0_A01_08A_20A_00010_2005_001_XML",
+        date: "경종 1년 신축(1721) 8월 20일",
+        title: "소론이 노론의 대리청정 청원을 역모로 규정하여 논핵하다",
+        translation: "사헌부와 사간원이 합계하기를, '노론 신료들이 세제의 대리청정을 청원한 것은 종사를 위태롭게 하고 군부를 협박한 역모의 단초이니, 그 죄를 마땅히 율에 따라 다스려야 합니다'라고 하였다. 이로부터 소론이 조정을 장악하고 노론을 탄핵하는 신임사화가 시작되었다.",
+      },
+      storyEntry: {
+        title: "신임사화 — 소론의 칼날",
+        scenes: [
+          {
+            imagePrompt: "Joseon court in tumult, Soron faction officials in formal robes presenting an impeachment memorial before King Gyeongjong seated on his throne, Noron officials kneeling in defense, tension crackling in the air of Injeongjeon hall, ink wash painting style with sharp contrasts",
+            narration: "경종 1년, 소론은 노론의 대리청정 요청을 역모로 규정하였다. 붓 한 자루가 칼이 되는 순간이었다. 노론 사대신 — 김창집, 이이명, 이건명, 조태채의 이름 위로 죽음의 그림자가 드리웠다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Four Noron ministers being led away by royal guards through the palace gates into exile, their formal robes disheveled, other officials watching in silence, early morning mist obscuring the palace walls, ink wash painting style with atmosphere of dread and inevitability",
+            narration: "사대신은 먼저 귀양을 갔다가, 이듬해 사사 명령이 내려졌다. 수십 년을 쌓아온 노론의 권세가 단 한 번의 붕당 역전으로 무너졌다. 조정은 피와 귀양길로 가득 찼다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gyeongjong alone in his palace chamber, visibly ill and exhausted, gazing out at the empty courtyard while faction struggles rage beyond the walls, a physician waiting at a respectful distance, ink wash painting style with isolated and melancholy composition",
+            narration: "병약한 왕은 당쟁의 소용돌이 한가운데서 실권 없이 군림하였다. 신임사화는 조선 붕당 정치가 낳은 가장 참혹한 학살의 하나였다. 그리고 왕은 4년 뒤, 의문 속에 세상을 떠났다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_T0_A01_08A_20A_00010_2005_001_XML",
+      },
     },
     {
       year: 1722,

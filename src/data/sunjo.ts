@@ -22,6 +22,35 @@ export const SUNJO_DATA: KingData = {
       year: 1811,
       title: "홍경래의 난",
       desc: "평안도 출신의 홍경래가 서북인 차별과 삼정의 문란에 분개하여 봉기하니, 관서 일대를 석 달 넘게 장악하다가 정주성에서 진압되다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_W0_A11_12A_18A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_W0_A11_12A_18A_00010_2005_001_XML",
+        date: "순조 11년 신미(1811) 12월 18일",
+        title: "홍경래가 관서 지방에서 봉기하다",
+        translation: "평안도 가산에서 홍경래가 무리를 모아 난을 일으켰다. 격문을 돌리기를, '조정이 서북인을 오랑캐처럼 멸시하여 수백 년간 과거와 벼슬길을 막았으니 이 어찌 나라의 도리라 하겠는가. 이제 창의하여 이 억울함을 씻고자 한다'고 하였다. 청천강 이북의 여러 읍이 호응하여 순식간에 관서 일대가 흔들리다.",
+      },
+      storyEntry: {
+        title: "홍경래의 봉기",
+        scenes: [
+          {
+            imagePrompt: "Hong Gyeongnae standing before a crowd of armed peasants and soldiers at night in Gasan, holding a torch aloft, reading a proclamation denouncing the court's discrimination against the northwest region, faces lit by firelight showing determination and desperation, ink wash painting style with dramatic shadows",
+            narration: "순조 11년 12월, 평안도 가산에서 홍경래가 창의 격문을 읽었다. 수백 년간 서북인을 차별한 조정을 향한 분노였다. 굶주린 농민들이 그 뒤를 따랐다. 청천강 이북이 흔들리기 시작했다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Rebel forces holding the walls of Jeongjuseong fortress under siege, defenders and attackers exchanging fire, smoke rising from cannon blasts, the fortress silhouetted against a winter sky, ink wash painting style with the cold urgency of a final stand",
+            narration: "홍경래의 군세는 순식간에 관서 일대를 장악하였다. 그러나 정주성에서 관군의 포위를 받아 석 달을 버텼다. 성벽 안에서 병사들은 굶주리고 있었고, 봄은 오지 않았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The ruins of Jeongjuseong fortress after the battle, government soldiers standing amid smoke and rubble, a sense of grim finality, distant mountains visible through the haze, ink wash painting style with ash-grey tones conveying the extinguished flame of rebellion",
+            narration: "정주성이 함락되고 홍경래는 전사했다. 반란은 진압되었으나 세도 정치의 균열은 봉합되지 않았다. 민심의 이탈은 왕조 말기의 긴 내리막을 예고하고 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_W0_A11_12A_18A_00010_2005_001_XML",
+      },
     },
     {
       year: 1834,

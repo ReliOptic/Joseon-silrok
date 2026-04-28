@@ -12,6 +12,35 @@ export const YEJONG_DATA: KingData = {
       year: 1468,
       title: "남이 장군 옥사",
       desc: "훈구 공신 유자광이 남이를 역모죄로 고변하여 남이·강순 등이 처형되니, 신진 무신 세력이 일거에 숙청되다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_H0_A01_10A_00010",
+        date: "예종 1년(1468) 10월",
+        title: "유자광이 남이·강순의 역모를 고변하여 처형하다",
+        translation: "유자광이 남이와 강순이 역모를 꾀한다고 고발하니 국문하여 복주(伏誅)하였다. 임금께서 효수하여 뭇사람에게 보이게 하고 가산을 몰수하도록 명하시어 백관에게 경계를 삼으셨다. 남이는 나이 스물여덟에 처형되었다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_H0_A01_10A_00010",
+      },
+      storyEntry: {
+        title: "남이 장군의 죽음",
+        scenes: [
+          {
+            imagePrompt: "Young general Nam Yi in military uniform being seized by royal guards in a night courtyard, Yu Ja-gwang watching from the shadows, ink wash painting with dramatic torchlight, the moment a decorated war hero becomes an accused traitor",
+            narration: "이시애의 난을 진압한 조선 최고의 장수, 스물여덟의 남이가 포박되었다. 유자광의 고변이었다. 역모라 하였으나 그것이 사실인지는 아무도 묻지 않았다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Nam Yi standing before the royal court during interrogation, surrounded by powerful meritorious subjects who want him removed, ink wash painting, the young general's proud bearing against the machinery of political elimination",
+            narration: "국문 자리에서 남이는 끝내 역모를 인정하지 않았다. 그러나 훈구 공신들이 원하는 답은 이미 정해져 있었다. 예종은 그 칼날을 막지 못하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Execution scene of Nam Yi outside the palace walls, crowds watching in silence, ink wash painting with grey dawn light, the sense of waste — a brilliant young general cut down by political intrigue rather than battle",
+            narration: "스물여덟의 장군은 형장에서 사라졌다. 나라를 지킨 칼이 나라 안의 권력 다툼에 꺾인 날이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_H0_A01_10A_00010",
+      },
     },
     {
       year: 1469,
@@ -27,6 +56,22 @@ export const YEJONG_DATA: KingData = {
       year: 1469,
       title: "승하",
       desc: "즉위한 지 1년 3개월 만에 창덕궁에서 승하하시니, 재위 기간이 짧아 대업을 이루지 못하고 세상을 떠나다.",
+      storyEntry: {
+        title: "단명한 군주",
+        scenes: [
+          {
+            imagePrompt: "King Yejong lying ill in the royal bedchamber, court physicians attending helplessly, meritorious subjects waiting outside in the corridor, ink wash painting with dim candlelight, the sense of a reign too short to leave its mark",
+            narration: "즉위한 지 1년 3개월. 예종은 뜻을 펼치기도 전에 병석에 들었다. 조정은 여전히 훈구 공신들의 것이었고, 임금이 바꿀 수 있는 것은 아직 많지 않았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Empty throne room in Changdeok Palace at dawn, a single candle burned out, court ministers kneeling in mourning outside the palace gates, ink wash painting with pale morning light, the weight of a reign that ended before it began",
+            narration: "스물의 나이로 세상을 떠났다. 너무 짧아 판단하기도 어려운 치세였다. 남이 장군의 죽음만이 그의 이름 곁에 남았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
   ],
   detail: {

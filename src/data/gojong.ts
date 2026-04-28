@@ -27,11 +27,69 @@ export const GOJONG_DATA: KingData = {
       year: 1895,
       title: "을미사변",
       desc: "일본 공사 미우라 고로의 지휘 아래 일본 낭인들이 경복궁에 난입하여 명성황후를 시해하는 전대미문의 만행을 저지르다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_Z0_A32_08A_20A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_Z0_A32_08A_20A_00010_2005_001_XML",
+        date: "고종 32년 을미(1895) 8월 20일",
+        title: "일본 낭인들이 경복궁에 난입하여 왕비를 시해하다",
+        translation: "새벽에 일본 공사 미우라 고로의 지휘 하에 일본 군대와 낭인 무리가 경복궁 건청궁에 난입하였다. 이들이 왕비 민씨를 시해하고 시신을 불태우니, 천하에 이런 만행이 없었다. 국왕은 옥호루에서 이 참상을 목격하였으나 막을 수 없었다. 세상이 이 소식을 듣고 통곡하지 않는 자가 없었다.",
+      },
+      storyEntry: {
+        title: "건청궁의 새벽",
+        scenes: [
+          {
+            imagePrompt: "Japanese ronin soldiers breaking through the gates of Gyeongbokgung palace in the early pre-dawn darkness, torches and drawn swords, court guards unable to stop the advance, the massive palace walls overwhelmed by the sudden violent intrusion, ink wash painting style with chaos and darkness",
+            narration: "1895년 8월 20일 새벽, 일본 공사 미우라 고로의 지시를 받은 낭인들이 경복궁 문을 부수고 들이닥쳤다. 건청궁으로 향하는 발걸음은 멈추지 않았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gojong in the Okhornu pavilion looking in horror at the burning courtyard of Geoncheonggung, unable to intervene, surrounded by helpless court officials, the firelight reflected in his eyes, ink wash painting style with anguish and helplessness",
+            narration: "고종은 옥호루에서 그 참상을 지켜보았다. 막을 수 없었다. 명성황후는 건청궁 곤녕합에서 시해되었고 시신은 불태워졌다. 역사에 이런 만행이 없었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Gojong alone in a dark palace chamber after the assassination, candle burning low, his face showing profound grief and fear, the empty royal seal on the desk beside him, ink wash painting style with desolate atmosphere and deep shadows",
+            narration: "왕비를 잃은 왕은 공포 속에 덕수궁에 갇혔다. 이듬해 봄 아관파천으로 러시아 공사관으로 피신하였다. 나라의 주권은 이미 기울기 시작하고 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_Z0_A32_08A_20A_00010_2005_001_XML",
+      },
     },
     {
       year: 1897,
       title: "대한제국 선포",
       desc: "아관파천 이후 러시아 공사관에서 환궁하여 원구단을 쌓고 황제로 등극함으로써 자주 독립국 대한제국의 수립을 천명하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_Z0_A34_10A_12A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_Z0_A34_10A_12A_00010_2005_001_XML",
+        date: "광무 원년(1897) 10월 12일",
+        title: "황제 즉위식과 대한제국 수립 반포",
+        translation: "임금께서 원구단에 나아가 즉위 의식을 거행하셨다. 백관이 자리를 함께하는 가운데 하늘에 고하여 이르시기를, '짐이 생각건대 우리 나라가 개국 이래로 하늘의 명을 받아 열성조가 서로 이어오다가 오늘에 이르러 짐이 대통을 이어 만기를 주재하니, 국호를 바로잡아 일대의 치적을 빛내지 않을 수 없다. 이에 국호를 대한으로 고치고 연호를 광무로 세우노니, 천하에 널리 알려 모두 알게 하라.' 하셨다.",
+      },
+      storyEntry: {
+        title: "황제의 나라",
+        scenes: [
+          {
+            imagePrompt: "Emperor Gojong in Western-style imperial regalia standing before Hwangudan altar in Seoul, surrounded by officials in modern uniform and traditional dress mixed, ink wash painting with golden ceremonial atmosphere, a nation declaring its sovereignty at twilight",
+            narration: "광무 원년 10월, 고종은 원구단에서 하늘에 고하고 황제로 즉위하였다. 조선은 대한제국이 되었다. 그것은 자주의 선언이었으나, 동시에 기울어진 나라의 마지막 몸부림이기도 하였다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "The Hwangudan altar complex in Seoul illuminated by ceremonial lanterns at night, officials in a mix of traditional and Western-style uniforms arranged in formal rows, the imperial yellow canopy above the throne, ink wash painting style with gold and deep blue tones",
+            narration: "대한제국. 500년 조선이 황제의 나라로 거듭났다. 청나라의 연호 대신 광무(光武)를 세웠다. 하늘 아래 오직 하나의 황제만 있는 것이 아님을 세상에 선포한 것이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Emperor Gojong reviewing modernization projects — telegraph lines, new roads, military reforms — spread on a table before him, advisors presenting documents, yet through the window the silhouettes of foreign warships visible in the harbor, ink wash painting with symbolic tension between aspiration and threat",
+            narration: "광무개혁이 시작되었다. 전화선이 가설되고 근대적 제도가 도입되었다. 그러나 러시아도, 일본도, 미국도 제 이익을 위해 움직이고 있었다. 황제의 꿈과 현실 사이의 거리는 너무나 멀었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_Z0_A34_10A_12A_00010_2005_001_XML",
+      },
     },
   ],
   detail: {

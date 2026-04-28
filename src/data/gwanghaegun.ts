@@ -31,12 +31,70 @@ export const GWANGHAEGUN_DATA: KingData = {
     {
       year: 1619,
       title: "중립 외교 — 강홍립 심하 전투",
-      desc: "명의 요청으로 강홍립이 이끄는 원병을 파병하되 밀지를 내려 상황에 따라 투항을 허락하니, 명과 후금 사이에서 실리를 취하는 현실 외교의 면모를 드러내다."
+      desc: "명의 요청으로 강홍립이 이끄는 원병을 파병하되 밀지를 내려 상황에 따라 투항을 허락하니, 명과 후금 사이에서 실리를 취하는 현실 외교의 면모를 드러내다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_O0_A11_03A_09A_00010_2005_001_XML",
+        date: "광해군 11년 기미(1619) 3월 정해",
+        title: "도원수 강홍립이 심하에서 후금에 투항하다",
+        translation: "도원수 강홍립이 군사를 거느리고 후금에 투항하였다. 이에 앞서 임금이 강홍립에게 밀지를 내려 이르기를, '천조의 명을 따르지 않을 수는 없으나, 형세를 헤아리고 변화를 살펴 굳이 힘써 싸우다 죽음에 이를 필요는 없다' 하였다. 심하에 이르러 명군이 대패하자 강홍립은 마침내 투항하였고, 후금은 그가 시무를 안다며 칭찬하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_O0_A11_03A_09A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "실리의 외교",
+        scenes: [
+          {
+            imagePrompt: "King Gwanghaegun in the royal study at night writing a secret royal decree by candlelight, his expression calculated and composed, maps of Manchuria and Ming China spread on the table beside him, ink wash painting with cool blue and grey tones, atmosphere of a ruler choosing pragmatism over principle",
+            narration: "기미년, 광해군은 명의 원병 요청을 거절할 수 없었다. 그러나 밀지 한 장을 강홍립에게 내렸다. '형세를 헤아리고 변화를 살펴 굳이 힘써 싸우다 죽음에 이를 필요는 없다.' 왕은 두 나라 사이에서 살 길을 계산했다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Joseon general Kang Hong-rip on horseback at the Sarhu battlefield surveying the aftermath of Ming army's devastating defeat, smoke rising from distant hills, his troops standing in tense stillness awaiting his decision, ink wash painting with wide panoramic composition, the weight of an impossible choice",
+            narration: "사르후에서 명군이 대패했다. 강홍립은 전장에 섰다. 싸워야 하는가, 살아야 하는가. 밀지의 무게가 칼보다 무거웠다. 그는 군기를 내렸다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Joseon soldiers laying down their weapons before Jurchen commanders in a snow-covered field, General Kang Hong-rip bowing his head in formal surrender, the Joseon flag being furled, ink wash painting with cold white and grey palette, a pragmatic surrender that saved lives but cost honor",
+            narration: "강홍립의 투항을 두고 세상은 나뉘었다. 명은 배신이라 분노했다. 후금은 현명하다 칭찬했다. 광해군은 침묵했다. 실리는 얻었으나, 명분은 흘려 보냈다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_O0_A11_03A_09A_00010_2005_001_XML",
+      },
     },
     {
       year: 1623,
       title: "인조반정",
-      desc: "서인 세력이 광해군의 폐모살제와 중립 외교를 명분으로 반정을 일으켜 광해군을 폐위하고 능양군을 왕으로 추대하다."
+      desc: "서인 세력이 광해군의 폐모살제와 중립 외교를 명분으로 반정을 일으켜 광해군을 폐위하고 능양군을 왕으로 추대하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_O0_A15_03A_12A_00010_2005_001_XML",
+        date: "광해군 15년 계해(1623) 3월 12일",
+        title: "이귀·김류 등이 군사를 일으켜 광해군을 폐위하고 능양군을 추대하다",
+        translation: "이귀·김류·이괄 등이 군사를 이끌고 한밤중에 창의문을 넘어 궁궐로 진격하였다. 훈련대장 이흥립이 호응하여 문을 열었고, 광해군은 도주하였다가 붙잡혔다. 여러 대신이 폐모살제의 죄를 열거하고 폐위를 청하니, 능양군이 왕위에 올랐다. 이가 곧 인조이다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_O0_A15_03A_12A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "인조반정 — 새벽의 쿠데타",
+        scenes: [
+          {
+            imagePrompt: "Armed rebels in Joseon military armor climbing over the Changui Gate wall at midnight by torchlight, led by commanders in helmets, the city of Hanyang dark and silent below them, ink wash painting with dramatic torch-lit shadows, the tense stillness before a coup erupts",
+            narration: "계해년 3월 한밤, 이귀와 김류가 창의문을 넘었다. 군사 수백이 횃불을 들고 도성 안으로 흘러들었다. 궁문을 지키던 이흥립은 칼을 거두고 문을 열었다. 반정은 시작되었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Gwanghaegun in disheveled robes fleeing through a back palace corridor at night, torch-carrying rebels visible behind him, his shadow long against the stone wall, ink wash painting with stark contrasts of light and darkness, the moment of a king's fall",
+            narration: "광해군은 도주했다. 열다섯 해의 왕위가 하룻밤 새벽에 허물어졌다. 폐모살제의 죄목이 그의 발목을 잡았다. 붙잡힌 왕의 손에는 아무것도 남지 않았다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "New king Injo being formally enthroned in the main palace hall at dawn, officials kneeling in rows before him, while in a distant corner of the composition the deposed Gwanghaegun sits alone bound and uncrowned, ink wash painting with cool morning light, the bitter contrast of power's transfer",
+            narration: "능양군이 왕위에 올랐다. 광해군은 강화도로, 다시 제주도로 유배되었다. 오십여 년을 더 살았으나, 조선은 그를 왕으로 기록하지 않았다. 실리를 택한 군주의 이름은 '군(君)'으로 남았다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_O0_A15_03A_12A_00010_2005_001_XML",
+      },
     }
   ],
   detail: {

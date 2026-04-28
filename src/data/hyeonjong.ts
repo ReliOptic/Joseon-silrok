@@ -11,7 +11,36 @@ export const HYEONJONG_DATA: KingData = {
     {
       year: 1659,
       title: "기해예송 발발",
-      desc: "효종 승하 후 자의대비의 상복 착용 기간을 두고 서인은 기년복(1년), 남인은 3년복을 주장하며 예법 논쟁이 조정을 뒤흔들다."
+      desc: "효종 승하 후 자의대비의 상복 착용 기간을 두고 서인은 기년복(1년), 남인은 3년복을 주장하며 예법 논쟁이 조정을 뒤흔들다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_R0_A01_06A_04A_00020_2005_001_XML",
+        date: "현종 1년 경자(1660) 6월 4일",
+        title: "예조가 자의대비의 복제를 기년으로 정할 것을 청하다",
+        translation: "예조가 아뢰기를, '효종대왕께서는 인조대왕에 대하여 중자(衆子)의 예로 복을 입으셨으니, 자의대비의 복제는 마땅히 기년(朞年)의 제도를 따라야 합니다.' 하니, 임금이 이를 따랐다. 남인 허목(許穆) 등이 3년설(三年說)을 힘써 다투었으나 받아들여지지 아니하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_R0_A01_06A_04A_00020_2005_001_XML",
+      },
+      storyEntry: {
+        title: "상복 한 장의 전쟁",
+        scenes: [
+          {
+            imagePrompt: "Joseon court officials in two opposing groups facing each other in the main hall, some in Southerners' dark robes, some in Westerners' lighter robes, a scroll of mourning dress regulations between them, tense confrontation, ink wash painting style with dramatic contrast",
+            narration: "효종이 승하하자 조정은 즉시 두 쪽으로 갈라졌다. 자의대비가 상복을 1년 입느냐, 3년 입느냐. 상복 한 장의 문제가 조선 정치를 뒤흔드는 전쟁이 되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Scholar Song Si-yeol presenting memorial arguing one-year mourning to the throne, scholar Heo Mok standing to oppose with three-year argument, King Hyeonjong watching from the throne with a troubled expression, ink wash painting style",
+            narration: "서인의 영수 송시열은 기년복을 주장했다. 남인의 허목은 3년복을 부르짖었다. 경전의 글자를 빌렸으나 그 칼날은 효종의 왕통 정통성을 겨누고 있었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Hyeonjong alone in his study late at night, a single candle burning, mourning dress regulations spread before him, his expression weary and conflicted, the weight of factional politics pressing down, ink wash painting style with deep shadows",
+            narration: "조정의 논의는 산 자의 시름보다 죽은 자의 복식에 더 오래 머물렀다. 임금은 당쟁의 파고 속에서 무게추를 옮기며 균형을 구하였으되 끝내 그 소용돌이에서 벗어나지 못하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_R0_A01_06A_04A_00020_2005_001_XML",
+      },
     },
     {
       year: 1660,

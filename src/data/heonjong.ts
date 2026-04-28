@@ -17,6 +17,35 @@ export const HEONJONG_DATA: KingData = {
       year: 1839,
       title: "기해박해",
       desc: "조정이 척사윤음을 반포하고 천주교도를 대대적으로 색출하니, 프랑스 선교사 앵베르·모방·샤스탕 주교와 신자 수백 명이 포박되어 새남터와 서소문 밖에서 목숨을 잃다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_X0_A05_03A_21A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_X0_A05_03A_21A_00010_2005_001_XML",
+        date: "헌종 5년 기해(1839) 3월 21일",
+        title: "척사윤음을 반포하고 사학죄인을 처형하다",
+        translation: "교지를 내리기를, '사학이 기승을 부려 우리 강상을 어지럽히고 인심을 미혹하니 엄히 금절하지 않을 수 없다. 이제 사학죄인 양업복 등을 잡아다 국문하고 전형을 시행하여 안팎에 포고하노니 모두 알도록 하라.' 이로부터 프랑스 선교사 앵베르·모방·샤스탕과 신자 수백 명이 새남터와 서소문 밖에서 처형되었다.",
+      },
+      storyEntry: {
+        title: "박해의 시대",
+        scenes: [
+          {
+            imagePrompt: "French missionary Bishop Imbert in worn traveler's robes walking alone toward a Joseon government office to surrender himself, a crowd of frightened Korean Catholic converts watching from a distance, early morning mist on the Seoul streets, ink wash painting style with atmosphere of tragic dignity",
+            narration: "기해년 봄, 앵베르 주교는 스스로 관아의 문을 두드렸다. 신자들이 자신을 숨겨주다 고초를 당하는 것을 차마 볼 수 없었기 때문이었다. 처형장으로 끌려가면서도 그는 조선말로 기도를 올렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Catholic believers being led to execution at Saenammto riverbank outside Seoul, soldiers with drawn swords, onlookers watching in silence and grief, the Han River visible in the background, ink wash painting style with somber muted palette",
+            narration: "새남터와 서소문 밖에서 수백 명의 신자가 목숨을 잃었다. 조정은 이것을 강상을 지키는 일이라 하였다. 그러나 칼로써 믿음을 끊을 수는 없었다. 피가 스민 땅에서 신앙은 더욱 깊이 뿌리를 내렸다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The young Kim Dae-geon in Catholic priest's robes praying in a candlelit room, rosary in hands, maps of Korea spread before him, the weight of mission and mortal danger visible in his composed expression, ink wash painting style with intimate atmosphere",
+            narration: "그리고 7년 뒤, 조선 최초의 신부 김대건이 새남터에서 스물다섯의 나이로 순교하였다. 박해자의 이름은 역사 속에 묻혔으나, 순교자의 이름은 세월이 지날수록 더욱 빛을 발하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_X0_A05_03A_21A_00010_2005_001_XML",
+      },
     },
     {
       year: 1846,

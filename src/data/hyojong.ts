@@ -7,6 +7,35 @@ export const HYOJONG_DATA: KingData = {
       year: 1649,
       title: "즉위",
       desc: "인조의 둘째 아들로서 형 소현세자가 급서한 뒤 세자에 책봉되었다가, 인조 승하 후 조선 제17대 왕으로 즉위하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_Q0_A01_05A_13A_00010_2005_001_XML",
+        date: "효종 1년 경인(1650) 5월 13일",
+        title: "창덕궁 인정문에서 즉위하다",
+        translation: "창덕궁 인정문(仁政門)에서 즉위하였다. 교서를 반포하기를, '삼가 생각건대, 나라의 근본이 되는 것은 백성이요, 백성을 다스리는 것은 임금이다. 선왕께서 갑자기 승하하시어 나에게 대통을 전하셨으니, 나는 덕이 부족하여 감당하기 어렵거니와 종사(宗社)의 중함과 신민의 기대를 저버릴 수 없어 삼가 왕위에 오르노라.' 하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_Q0_A01_05A_13A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "북벌의 꿈",
+        scenes: [
+          {
+            imagePrompt: "King Hyojong in ceremonial robes standing before the Injeongjeon throne hall at dawn, his face bearing the marks of eight years as a hostage in Shenyang, fists clenched with quiet resolve, early morning mist around the palace courtyard, ink wash painting style",
+            narration: "심양에서 볼모로 보낸 여덟 해. 효종은 그 세월을 잊지 않았다. 왕위에 오른 날, 그는 청에 대한 복수를 마음속 깊이 맹세하며 북벌의 기치를 들었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon soldiers drilling in a vast training ground outside Seoul fortress walls, rows of musketeers practicing formations, cannons being cast in a nearby foundry, military officers inspecting new weapons, ink wash painting style with martial energy",
+            narration: "어영청의 군병이 늘어나고, 성곽이 수축되었으며, 화포가 주조되었다. 이완 장군은 왕의 뜻을 받아 밤낮으로 군사를 훈련하며 북벌 준비의 실무를 이끌었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Hyojong and scholar Song Si-yeol in a candlelit study, poring over maps of Manchuria and military strategy documents, intense and earnest expressions, ink wash painting with deep shadows and the weight of unfulfilled ambition",
+            narration: "송시열은 의리와 대의로 왕의 뜻을 받쳤다. 그러나 청의 국력은 날로 융성하였고, 조선의 재정은 따라오지 못하였다. 북벌의 꿈은 재위 열 해 만에 효종과 함께 스러졌다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_Q0_A01_05A_13A_00010_2005_001_XML",
+      },
     },
     {
       year: 1650,
@@ -32,6 +61,35 @@ export const HYOJONG_DATA: KingData = {
       year: 1658,
       title: "제2차 나선정벌",
       desc: "신류(申瀏)가 이끄는 조선 조총 부대가 다시 흑룡강 유역으로 출정하여 러시아 군선(軍船)을 격파하고 대승을 거두니, 조선 화기 부대의 전투력을 천하에 알리다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_Q0_A09_06A_10A_00010_2005_001_XML",
+        date: "효종 9년 무술(1658) 6월 10일",
+        title: "신류가 나선을 정벌하고 돌아오다",
+        translation: "함경도 병마우후(兵馬虞候) 신류(申瀏)가 조총 군사 200명을 이끌고 청나라 군사와 함께 흑룡강(黑龍江) 유역에서 나선(羅禪, 러시아) 군선을 격파하고 개선하였다. 신류가 치계하기를, '적선(賊船) 11척을 불사르고 나선 군사 수십 명을 죽이거나 사로잡았으며, 아군의 피해는 경미하였습니다.' 하니, 임금이 크게 기뻐하며 논공행상을 명하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_Q0_A09_06A_10A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "조선 군대, 북국을 가다",
+        scenes: [
+          {
+            imagePrompt: "Joseon musketeers in armor marching through vast Manchurian wilderness toward the Amur River, pine forests stretching to the horizon, their distinctive matchlock rifles shouldered, Qing Chinese soldiers alongside them, ink wash painting style with epic scale",
+            narration: "1658년, 신류가 이끄는 조선 조총 부대 200명이 흑룡강을 향해 북쪽으로 행군하였다. 청나라의 요청에 응한 출병이었지만, 그 총구는 조선의 화기 기술을 세상에 증명할 무대를 향하고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon musketeers firing in disciplined volleys from riverbank positions at Russian sailing vessels on the Amur River, smoke rising from muzzles, enemy ships catching fire, dramatic river battle scene, ink wash painting with dynamic composition",
+            narration: "흑룡강 위에서 나선의 군선 11척이 불길에 휩싸였다. 조선 조총 부대의 일제 사격 앞에 러시아 군은 무너졌다. 조선의 군사가 유럽식 총포를 상대로 거둔 승리였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "General Sin Ryu reporting victory to Qing commanders and receiving honors, Joseon soldiers standing proudly with their rifles, snow-capped mountains in the distance, ink wash painting style with dignified and triumphant atmosphere",
+            narration: "개선 보고를 받은 효종은 크게 기뻐하며 논공행상을 명하였다. 북벌의 칼은 청이 아닌 러시아를 향했지만, 조선 군사의 이름이 북국의 강변에 새겨진 날이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_Q0_A09_06A_10A_00010_2005_001_XML",
+      },
     },
   ],
   detail: {

@@ -12,6 +12,28 @@ export const JUNGJONG_DATA: KingData = {
       year: 1515,
       title: "조광조 등용",
       desc: "성리학적 도학 정치를 실현하고자 조광조를 천거받아 등용하고, 현량과를 설치하여 사림 세력을 적극 중용하다.",
+      storyEntry: {
+        title: "조광조의 꿈",
+        scenes: [
+          {
+            imagePrompt: "Young Joseon scholar Jo Gwang-jo in official robes presenting reform proposals to King Jungjong in the royal audience hall, the king listening with hopeful attention, sunlight streaming through palace windows, ink wash painting with luminous idealistic atmosphere, warm golden tones",
+            narration: "중종 10년, 조광조가 조정에 나아갔다. 성리학의 이상으로 나라를 다스린다는 도학 정치의 꿈이 그의 가슴속에 불타고 있었다. 임금도 그 꿈에 함께 설레었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon scholar officials gathered in a study hall debating the Hyeonlyanggwa examination reform, scrolls and books spread across low tables, earnest faces lit by candlelight, ink wash painting with scholarly intensity, cool blue and grey tones",
+            narration: "현량과가 설치되었다. 과거의 문장 실력 대신 덕행과 경술로 인재를 뽑겠다는 선언이었다. 사림의 학자들이 조정으로 쏟아져 들어왔고, 훈구의 노신들은 이를 지켜보며 이를 갈았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Jo Gwang-jo standing alone before the king with a memorial scroll urging reform, ministers divided in silent tension behind him, ink wash painting with dramatic confrontation between idealism and entrenched power, deep shadow pressing in from the edges",
+            narration: "소격서를 혁파하라 청하고, 위훈을 삭제하라 주청하였다. 개혁의 속도는 빨랐고 적은 많았다. 조광조는 멈추는 법을 몰랐다. 그것이 그의 위대함이었고, 그의 파멸의 씨앗이었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_K0_A10_01A_01A_00010",
+      },
     },
     {
       year: 1518,
@@ -22,6 +44,35 @@ export const JUNGJONG_DATA: KingData = {
       year: 1519,
       title: "기묘사화",
       desc: "훈구 세력이 위훈삭제 문제를 빌미로 조광조 일파를 역모로 몰아 대거 숙청하니, 개혁의 기치는 꺾이고 중종은 스스로 등용한 조광조에게 사사를 명하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_K0_A14_11A_15A_00010",
+        date: "중종 14년 기묘(1519) 11월 15일 을묘",
+        title: "조광조 등에게 사사를 명하다",
+        translation: "조광조·김정·김식·김구에게 사사를 명하였다. 전교하기를, '조광조 등이 붕당을 맺어 임금을 속인 죄상이 이미 드러났으니 다스리지 않을 수 없다. 사사하라.' 하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_K0_A14_11A_15A_00010",
+      },
+      storyEntry: {
+        title: "기묘년의 서리",
+        scenes: [
+          {
+            imagePrompt: "Joseon palace courtyard at dawn, royal guards arresting scholar officials in dark robes, the arrested men silent and composed as they are led away, frost on the ground, ink wash painting with cold grey atmosphere, the light barely breaking through clouds",
+            narration: "기묘년 11월, 훈구 대신들이 밤새 대궐을 에워쌌다. '조광조 등이 붕당을 맺어 임금을 속였다.' 고변의 말 한마디에 조정의 봄은 하룻밤 새 서리 맞은 꽃잎처럼 스러졌다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Jungjong alone in the inner palace chamber signing the execution order with a trembling brush, a single candle casting his shadow against the wall, ink wash painting with oppressive silence, the weight of betrayal filling the dark room",
+            narration: "중종은 사사를 명하였다. 자신이 손수 불러들인 사람에게, 자신이 꿈꾸던 개혁을 함께 도모하던 그 사람에게. 붓을 든 손이 떨렸는지 아무도 묻지 않았다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "Jo Gwang-jo alone in a cold prison cell receiving the poison cup from a guard, his expression serene and without resentment, moonlight through a small barred window, ink wash painting with austere dignity, a fallen scholar's final moment",
+            narration: "조광조는 사약을 받으며 말했다 전한다. '임금을 사랑하고 나라를 걱정함이 내 죄라면 달게 받겠다.' 기묘사화로 사림은 무너졌고, 개혁의 꿈은 수십 년의 긴 겨울 속으로 사라졌다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_K0_A14_11A_15A_00010",
+      },
     },
     {
       year: 1536,

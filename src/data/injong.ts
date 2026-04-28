@@ -7,6 +7,27 @@ export const INJONG_DATA: KingData = {
       year: 1544,
       title: "즉위",
       desc: "중종의 승하로 조선 제12대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "여덟 달의 왕",
+        scenes: [
+          {
+            imagePrompt: "King Injong ascending the throne in a solemn coronation ceremony, his expression gentle and scholarly rather than commanding, court officials bowing in rows, ink wash painting with muted ceremonial tones, a king of virtue inheriting a troubled kingdom",
+            narration: "중종이 승하하고 인종이 왕위에 올랐다. 세자 시절부터 학문과 덕으로 성군의 자질을 갖추었다는 평을 받던 인물이었다. 조정은 그의 즉위를 환영하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Injong implementing the rehabilitation of Sarim scholars, officials presenting documents restoring the reputations of those killed in the Gimyo Sahwa, ink wash painting with hopeful morning light, sense of justice being restored",
+            narration: "즉위하자마자 인종은 기묘사화의 희생자들을 신원하고 현량과를 복구하였다. 사림은 다시 조정으로 돌아올 수 있게 되었다. 그러나 시간이 없었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Injong on his deathbed eight months after coronation, court officials and physicians gathered in despair, Queen Dowager Munjeong waiting outside with cold calculation, ink wash painting with dark oppressive atmosphere, the premature end of a virtuous reign",
+            narration: "즉위 여덟 달 만에 인종은 병석에 들었다. 선왕의 상을 치르느라 몸을 돌보지 않은 탓이었다. 문정왕후는 밖에서 기다렸다. 인종이 눈을 감으면 그 다음은 이미 정해져 있었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1545,

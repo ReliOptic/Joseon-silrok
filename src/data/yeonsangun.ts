@@ -17,6 +17,35 @@ export const YEONSANGUN_DATA: KingData = {
       year: 1504,
       title: "갑자사화",
       desc: "생모 폐비 윤씨의 죽음에 관여한 자들을 색출하여 대규모 숙청을 단행하다. 이미 죽은 윤필상·한치형 등은 부관참시에 처하고, 수십 명의 대신이 처형되거나 유배되다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_J0_A10_03A_08A_00010_2005_001_XML",
+        date: "연산군 10년 갑자(1504) 3월 20일",
+        title: "왕이 폐비의 원통함을 말하며 여러 신하에게 엄히 국문하도록 명하다",
+        translation: "왕이 이르기를, '선비(先妣)의 원통함을 이제야 비로소 알았으니, 당시 약을 올린 신하들을 모두 용서할 수 없다' 하고, 의금부에 명하여 엄히 국문하여 놓아 보내지 말라 하였다. 대신들은 황공하여 감히 입을 열지 못하였고, 조정 안에서 모두 흐느껴 울었다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_J0_A10_03A_08A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "갑자년의 피바람",
+        scenes: [
+          {
+            imagePrompt: "King Yeonsangun alone in the palace night chamber holding his mother's memorial portrait, tears on his face turning to cold fury, candle flames casting harsh shadows on stone walls, ink wash painting with deep crimson and black tones, atmosphere of grief transforming into tyranny",
+            narration: "갑자년, 연산군은 어머니 폐비 윤씨의 죽음을 빌미로 조정을 피로 물들였다. 사림과 훈구를 가리지 않았다. 궁 안에 두려움이 번졌다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Joseon court officials being dragged away by royal guards in the palace courtyard at dawn, some in official robes prostrating themselves, others being bound with rope, ink wash painting with cold blue morning light, chaos and terror of mass purge",
+            narration: "이미 죽은 자들도 무덤에서 꺼내어 목을 쳤다. 부관참시의 칼날 앞에서 산 자와 죽은 자의 구분은 무의미했다. 수십 명의 신하가 하루아침에 사라졌다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Empty Joseon throne hall at night, a single terrified official kneeling alone before the vacant throne, memorial tablets and court documents scattered on the floor, ink wash painting with oppressive darkness pressing in from all sides, atmosphere of absolute silence and fear",
+            narration: "사간원과 홍문관이 입을 닫았다. 간쟁은 죽음을 뜻했다. 왕의 분노는 식지 않았고, 조정은 침묵 속에 숨을 죽였다. 광기의 정치가 시작되었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_J0_A10_03A_08A_00010_2005_001_XML",
+      },
     },
     {
       year: 1504,
@@ -32,6 +61,35 @@ export const YEONSANGUN_DATA: KingData = {
       year: 1506,
       title: "중종반정",
       desc: "박원종·성희안 등 훈구 대신들이 반정을 일으켜 연산군을 폐위하다. 왕은 강화도 교동으로 유배되어 같은 해 세상을 떠났으며, 묘호조차 받지 못하였다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_J0_A12_09A_02A_00010_2005_001_XML",
+        date: "연산군 12년 병인(1506) 9월 2일",
+        title: "박원종 등이 군사를 일으켜 왕을 폐위하고 진성대군을 추대하다",
+        translation: "박원종·성희안·유순정 등이 군사를 이끌고 궁궐을 포위하였다. 여러 신하들이 연산군의 폭정을 열거하며 폐위를 청하니, 왕은 항거하지 못하고 교동으로 쫓겨났다. 진성대군이 왕위에 오르니 이가 곧 중종이다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_J0_A12_09A_02A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "중종반정 — 왕이 쫓겨나다",
+        scenes: [
+          {
+            imagePrompt: "Armed Joseon soldiers surrounding the palace walls at night by torchlight, generals in full armor leading troops through the palace gate, ink wash painting with dramatic chiaroscuro of fire and darkness, the moment of coup beginning",
+            narration: "병인년 9월 새벽, 박원종과 성희안이 군사를 이끌고 궁궐을 에워쌌다. 왕의 폭정에 지친 신하들이 마침내 칼을 들었다. 반정의 북소리가 한양을 울렸다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Yeonsangun in disheveled royal robes being escorted out of the palace by guards, his expression broken and defeated, court officials watching in silence as he passes, ink wash painting with cold dawn light, a king stripped of all dignity",
+            narration: "왕은 항거하지 못했다. 열두 해의 치세가 하룻밤에 무너졌다. 묘호도 받지 못할 왕이 궁문을 등졌다. 아무도 그의 이름을 불러주지 않았다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Solitary figure of the deposed king sitting alone in a small island exile cottage, looking out at grey sea mist, ink wash painting with desolate atmosphere, vast empty sky above and cold water below, the loneliness of a fallen tyrant",
+            narration: "강화도 교동에 유배된 연산군은 그해를 넘기지 못하고 세상을 떠났다. 그의 이름 앞에 '군(君)'이 붙었다. 왕이 아니라 군으로 역사에 남은 자, 그것이 그의 마지막 호칭이었다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_J0_A12_09A_02A_00010_2005_001_XML",
+      },
     },
   ],
   detail: {

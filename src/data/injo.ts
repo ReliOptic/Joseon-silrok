@@ -22,11 +22,62 @@ export const INJO_DATA: KingData = {
       year: 1636,
       title: "병자호란",
       desc: "국호를 청으로 고친 홍타이지가 군신 관계를 요구하며 12만 대군을 이끌고 재침하자, 인조는 남한산성으로 들어가 45일간의 항전을 이어가다.",
+      storyEntry: {
+        title: "청군이 온다",
+        scenes: [
+          {
+            imagePrompt: "Massive Qing army crossing the frozen Yalu River in winter, hundreds of cavalry and infantry stretching to the horizon, banners in the grey sky, ink wash painting with overwhelming scale, cold blue and white palette of invasion",
+            narration: "병자년 12월, 청 태종 홍타이지의 12만 대군이 압록강을 건넜다. 군신의 예를 요구하는 국서를 조선이 거부한 지 열흘도 되지 않아서였다. 그 속도에 조정은 대비조차 하지 못하였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Injo and court officials fleeing through Seoul streets at night in urgent procession toward Namhansanseong fortress, torchlight in the darkness, snow falling, ink wash painting with desperate urgency and bitter cold atmosphere",
+            narration: "인조는 강화도로 가는 길이 이미 막혔다는 소식을 들었다. 남은 선택지는 하나였다. 임금의 수레가 남한산성을 향해 눈보라 속으로 달렸다. 백성은 길 위에 남겨졌다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Joseon king and generals on the walls of Namhansanseong fortress looking down at the vast Qing encampment surrounding the mountain, fires glowing in the valley below, ink wash painting with siege atmosphere, the isolation of the besieged garrison palpable",
+            narration: "남한산성에 들어선 순간, 포위가 완성되었다. 성 안에는 50일을 버티기에도 부족한 군량이 있었다. 척화의 함성은 성벽 안에서 점점 작아지고, 굶주림은 점점 커졌다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_P0_A14_12A_01A_00010",
+      },
     },
     {
       year: 1637,
       title: "삼전도의 굴욕",
       desc: "남한산성이 한계에 달하자 인조는 삼전도에 나아가 청 태종 홍타이지 앞에 삼배구고두례(三拜九叩頭禮)를 행하고 항복하며, 소현세자와 봉림대군을 볼모로 심양에 보내다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_P0_A15_01A_30A_00010",
+        date: "인조 15년 정축(1637) 1월 30일",
+        title: "삼전도에서 청 태종에게 삼배구고두례를 행하고 항복하다",
+        translation: "임금께서 남한산성을 나와 삼전도에 나아가 청 황제 앞에서 삼배구고두례를 행하였다. 임금께서 눈물을 흘리며 절하시니 좌우의 신하들이 모두 얼굴을 가리지 않을 수 없었다. 세자와 여러 군이 볼모로 함께 떠나게 되었고, 청 황제는 항복을 받은 뒤에야 임금의 환도를 허락하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_P0_A15_01A_30A_00010",
+      },
+      storyEntry: {
+        title: "삼배구고두",
+        scenes: [
+          {
+            imagePrompt: "King Injo in ceremonial robes walking out from Namhansanseong fortress gate into the snow-covered plain, ministers following in silence, the Qing army waiting in formation in the distance, ink wash painting with devastating stillness, white snow and grey sky",
+            narration: "정축년 정월, 인조는 성문을 열었다. 45일간의 항전이 끝났다. 임금의 발이 눈 위에 닿는 순간, 조선이 2백 년간 지켜온 것들이 함께 무너지기 시작하였다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "King Injo kneeling three times and prostrating nine times before Emperor Hongtaiji seated on a high platform at Samjeondo, Joseon ministers watching with faces hidden in their sleeves, snow and mud on the ground, ink wash painting with maximum humiliation and historical gravity",
+            narration: "삼전도의 수항단 앞에서 인조는 세 번 절하고 아홉 번 이마를 땅에 찧었다. 삼배구고두. 신하가 황제에게 바치는 최고의 굴복이었다. 좌우의 신하들이 얼굴을 가렸다.",
+            durationMs: 6500,
+          },
+          {
+            imagePrompt: "Young Crown Prince Sohyeon and Prince Bongrim being led away into the Qing camp as hostages, looking back at their father the king who stands motionless watching, ink wash painting with heartbreak of separation, cold winter light, the two figures diminishing in the distance",
+            narration: "소현세자와 봉림대군이 심양으로 끌려갔다. 인조는 그 뒷모습을 바라보았다. 명분을 지키려다 아들을 잃었고, 의리를 지키려다 백성을 잃었다. 역사는 그 침묵을 오래 기억한다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_P0_A15_01A_30A_00010",
+      },
     },
     {
       year: 1645,

@@ -12,6 +12,30 @@ export const SEONGJONG_DATA: KingData = {
       year: 1476,
       title: "홍문관 설치",
       desc: "집현전의 정신을 계승하여 홍문관을 설치하고, 경연을 강화하여 학문과 간쟁의 중심 기관으로 삼다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_I0_A07_03A_01A_00010",
+        date: "성종 7년(1476) 3월 1일",
+        title: "홍문관을 설치하고 경연을 강화하다",
+        translation: "홍문관(弘文館)을 설치하였다. 이는 집현전의 뒤를 이어 경전과 역사를 연구하고 왕의 자문에 응하며 경연을 담당하게 하기 위함이었다. 이로써 사림이 조정에 뿌리내릴 제도적 기반이 갖추어졌다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_I0_A07_03A_01A_00010",
+      },
+      storyEntry: {
+        title: "옥당 — 학문의 집",
+        scenes: [
+          {
+            imagePrompt: "New government office being established in the Joseon palace complex, scholars with books and scrolls moving in, ink wash painting with warm morning light, sense of intellectual energy and institutional founding, the rebirth of the Jiphyeonjeon spirit",
+            narration: "성종 7년, 홍문관이 문을 열었다. 세조에게 폐지되었던 집현전의 자리를 대신하는 기관이었다. 학자들이 다시 왕 곁에 섰다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Seongjong in the royal lecture hall discussing classical texts with Hongmungwan scholars, animated intellectual exchange, candlelight on open books, ink wash painting with scholarly atmosphere, the image of a king who truly loves learning",
+            narration: "임금은 경연에 성심을 다하였다. 홍문관의 학사들은 단순한 관료가 아니었다. 그들은 왕에게 직언할 수 있는 자리였고, 사림이 조정에 뿌리내리는 통로였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_I0_A07_03A_01A_00010",
+      },
     },
     {
       year: 1481,
@@ -27,6 +51,35 @@ export const SEONGJONG_DATA: KingData = {
       year: 1485,
       title: "경국대전 완성 반포",
       desc: "세조 대부터 이어온 대법전 편찬 사업을 마무리하여 『경국대전』을 반포하다. 조선 법치국가의 근간이 완성되다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_I0_A16_01A_01A_00010",
+        date: "성종 16년(1485) 1월 1일",
+        title: "경국대전을 중외에 반포하다",
+        translation: "경국대전을 중외에 반포하였다. 교서에 이르기를, '조종 대대로 서로 전해 온 헌장이 이미 갖추어져 있으나 여러 책에 흩어져 있어 살펴보기 어려웠다. 이제 모아 대전을 편찬하였으니 영원한 법식으로 삼아, 중외가 한결같이 준수하고 어기는 일이 없도록 하라'고 하였다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_I0_A16_01A_01A_00010",
+      },
+      storyEntry: {
+        title: "오백 년의 법전",
+        scenes: [
+          {
+            imagePrompt: "Joseon scholars and officials presenting the completed Gyeongguk Daejeon law code to King Seongjong in a formal ceremony, thick volumes of law bound in silk, ink wash painting with ceremonial red and gold tones, the weight of decades of compilation",
+            narration: "성종 16년 정월, 경국대전이 반포되었다. 세조 때부터 시작된 편찬이 마침내 완성된 날이었다. 조선의 모든 통치 규범이 하나의 책 안에 담겼다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Copies of the Gyeongguk Daejeon being distributed to provincial government offices across Joseon, officials reading the law code at their desks, ink wash painting showing the spread of law throughout the kingdom, sense of order established",
+            narration: "경국대전은 전국 관아에 배포되었다. 형벌과 관직, 예법과 토지, 조선의 모든 법도가 이 책 안에 있었다. 오백 년 조선의 뼈대가 완성된 순간이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Seongjong alone in his study at night reviewing the completed law code, satisfied expression, candlelight illuminating the pages, ink wash painting with warm amber tones, the quiet pride of a king who built lasting institutions",
+            narration: "법은 왕보다 오래 산다. 성종은 그것을 알았다. 경국대전은 그가 죽은 뒤에도 조선을 다스렸다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_I0_A16_01A_01A_00010",
+      },
     },
     {
       year: 1493,

@@ -22,6 +22,35 @@ export const SUNJONG_DATA: KingData = {
       year: 1910,
       title: "경술국치",
       desc: "일제의 강압 아래 한일병합조약이 체결되어 518년 조선 왕조가 막을 내리고, 순종은 마지막 군주가 되다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_AA0_A04_08A_29A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_AA0_A04_08A_29A_00010_2005_001_XML",
+        date: "순종 3년 경술(1910) 8월 29일",
+        title: "한일병합의 조칙을 반포하다",
+        translation: "짐이 덕이 없어 어려운 대업을 이어받아 즉위 이래 오늘에 이르도록 유신 정령에 힘썼으나 원기가 쇠약하고 적폐가 날로 뻗어나 날을 이어 다스림을 기약할 길이 없다. 이에 짐이 대국을 깊이 살피고 단연히 이 거사를 결정하여 한국의 통치를 종전부터 짐이 지극히 신임하는 이웃 나라 대일본 황제 폐하께 양여하여 밖으로 동양의 평화를 굳건히 하고 안으로 팔역 민생을 보전케 하노니, 경들 대소 신민은 국세와 시의를 헤아려 소란을 일으키지 말고 각자 그 업에 편안히 하여 일본제국의 문명한 신정에 복종하여 행복을 함께 누리라.",
+      },
+      storyEntry: {
+        title: "마지막 황제",
+        scenes: [
+          {
+            imagePrompt: "Emperor Sunjong seated alone at his desk in Changdeokgung palace, tears visible on his face, the annexation treaty document before him, the imperial seal lying beside it, court officials standing at a distance in silence, ink wash painting style with profound grief and finality",
+            narration: "경술년 8월 29일, 순종은 눈물을 흘렸다. '짐이 부덕하여 종묘사직을 보전하지 못하였으니 선왕들께 면목이 없다.' 그러나 그 손을 움직인 것은 그의 뜻이 아니었다. 조칙의 글자 하나하나는 칼끝으로 새긴 것이었다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "The gates of Gyeongbokgung palace being closed for the last time as Japanese officials walk through, Korean court attendants watching from the sides with bowed heads, the royal banners being taken down, ink wash painting style with the visual weight of historical ending",
+            narration: "태조 이성계가 1392년 첫 불꽃을 피운 이래, 스물일곱 임금이 518년을 이어온 조선의 사직이 이날 아침 소리도 없이 꺼졌다. 종묘의 신위들은 응답이 없었다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "Korean people across the country weeping and mourning in the streets on the day of the annexation, an elderly man bowing to the ground, a mother clutching her children, the ordinary faces of grief and loss, ink wash painting style with muted sorrowful tones",
+            narration: "나라는 빼앗겼으나 역사는 빼앗기지 않았다. 경복궁의 돌들은 말이 없었으나, 백성의 울음소리는 산하를 뒤흔들었다. 오백 년 왕조의 마지막은 이렇듯 비루하고 장엄하였다.",
+            durationMs: 6000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_AA0_A04_08A_29A_00010_2005_001_XML",
+      },
     },
     {
       year: 1926,

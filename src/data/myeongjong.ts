@@ -7,6 +7,35 @@ export const MYEONGJONG_DATA: KingData = {
       year: 1545,
       title: "즉위와 을사사화",
       desc: "인종의 뒤를 이어 열두 살의 나이로 조선 제13대 왕으로 즉위하다. 문정왕후가 수렴청정을 시작하고, 윤원형이 대윤 세력을 숙청한 을사사화가 일어나 수많은 사림이 죽거나 유배되다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_M0_A01_09A_01A_00010_2005_001_XML",
+        date: "명종 1년 병오(1546) 9월 1일",
+        title: "을사사화의 전말을 기록하다",
+        translation: "윤원형(尹元衡)이 윤임(尹任)·유관(柳灌)·유인숙(柳仁淑) 등이 역모를 꾀한다고 무고하여, 임금이 이들을 국문하게 하였다. 윤임 등은 대윤(大尹)의 무리로서 인종의 외척이었는데, 소윤(小尹) 윤원형이 이들을 제거하고 조정을 장악하고자 한 것이었다. 이 옥사로 윤임·유관·유인숙은 사사되고, 이언적(李彦迪)을 비롯한 수십 명의 사림이 유배되니, 세상에서 이를 을사사화라 일렀다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_M0_A01_09A_01A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "을사년의 피바람",
+        scenes: [
+          {
+            imagePrompt: "Queen Dowager Munjeong in widow's ceremonial robes seated behind a bamboo screen conducting regency, young King Myeongjong seated beside her on the throne, court officials kneeling below, Yun Won-hyeong standing to the side with calculating eyes, ink wash painting style",
+            narration: "열두 살 명종이 즉위하자 어머니 문정왕후가 수렴청정을 시작하였다. 대윤이냐 소윤이냐 — 두 외척 세력의 오랜 암투가 마침내 피의 결말을 향해 치닫고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Yun Won-hyeong presenting fabricated evidence of conspiracy to the young king, royal guards dragging away scholars in official robes, torchlit palace courtyard scene of arrests, atmosphere of terror and injustice, ink wash painting style",
+            narration: "윤원형은 대윤 세력이 역모를 꾀한다며 무고하였다. 윤임·유관·유인숙이 사사되고, 이언적을 비롯한 수십 명의 사림이 유배되었다. 조정은 소윤의 손아귀에 들어갔다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Scholars in exile trudging through mountain paths in rain, one carrying books wrapped in oilcloth, their official robes now tattered, ink wash painting with melancholic gray tones and weeping sky",
+            narration: "을사사화의 칼바람은 조선 사림의 씨를 말렸다. 살아남은 자도 유배지에서 세월을 보냈고, 그 공백 속에서 윤원형의 부패와 수탈이 온 나라에 퍼져나갔다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_M0_A01_09A_01A_00010_2005_001_XML",
+      },
     },
     {
       year: 1547,
@@ -22,6 +51,35 @@ export const MYEONGJONG_DATA: KingData = {
       year: 1559,
       title: "임꺽정의 난 발발",
       desc: "황해도 출신의 백정 임꺽정이 탐관오리의 수탈에 분노한 민중을 이끌고 봉기하다. 3년에 걸쳐 황해도·경기도 일대를 휩쓸며 관아를 습격하고 곡식을 빈민에게 나누어 주어 백성의 영웅으로 불리다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_M0_A14_10A_01A_00010_2005_001_XML",
+        date: "명종 14년 기미(1559) 10월 1일",
+        title: "황해도 백정 임꺽정이 도적 무리를 이끌고 관아를 습격하다",
+        translation: "황해도의 백정 임꺽정(林巨正)이 도망한 자들을 불러 모아 관아와 민가를 약탈하고 인명을 살상하니, 그 기세가 매우 날뛰어 관군이 능히 제압하지 못하였다. 도내의 수령 중에는 성을 버리고 도망쳐 숨는 자가 많았다. 조정이 크게 놀라 사신을 파견하여 살피게 하였으나, 적의 행적이 바람처럼 표홀하여 붙잡기가 어려웠다.",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_M0_A14_10A_01A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "의적 임꺽정",
+        scenes: [
+          {
+            imagePrompt: "Im Kkeok-jeong, a butcher-turned-outlaw leader in rough peasant clothes, standing on a hillside overlooking a corrupt official's granary, his band of followers behind him in the mist, determined expression, ink wash painting style with dramatic landscape",
+            narration: "황해도의 백정 임꺽정은 도적이 아니었다. 탐관오리에게 빼앗긴 것을 되찾으러 일어선 자였다. 굶주린 백성들이 그의 깃발 아래 모여들었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Im Kkeok-jeong's band raiding a government storehouse, distributing grain sacks to a crowd of starving peasants outside, children reaching up for food, moonlit night scene, ink wash painting style with contrast between desperate poverty and defiant generosity",
+            narration: "관아를 습격하고 곡식을 빈민에게 나누어 주었다. 도내의 수령들이 성을 버리고 달아났다. 3년간 황해도와 경기도 일대를 휩쓸며 그는 백성들 사이에서 영웅으로 불렸다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Government soldiers surrounding a mountain stronghold in winter snow, Im Kkeok-jeong making a final stand with a small group of followers, snow-covered pine trees, ink wash painting with cold blue-gray tones and the tragedy of inevitable defeat",
+            narration: "1562년, 임꺽정은 관군에게 잡혀 처형되었다. 그러나 그의 봉기는 묻지 않을 수 없는 질문을 남겼다. 법이 공정하고 곡식이 제 주인에게 돌아갔다면, 백정 하나가 삼도를 뒤흔들 수 있었겠는가.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_M0_A14_10A_01A_00010_2005_001_XML",
+      },
     },
     {
       year: 1565,

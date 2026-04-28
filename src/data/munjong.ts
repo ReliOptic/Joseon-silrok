@@ -27,6 +27,35 @@ export const MUNJONG_DATA: KingData = {
       year: 1452,
       title: "승하와 단종 즉위",
       desc: "병환이 깊어진 끝에 경복궁 강녕전에서 승하하니, 세자 홍위가 뒤를 이어 단종으로 즉위하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_E0_A02_05A_14A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_E0_A02_05A_14A_00010_2005_001_XML",
+        date: "문종 2년 임신(1452) 5월 14일",
+        title: "상(上)이 경복궁 강녕전에서 승하하다",
+        translation: "임금이 경복궁 강녕전에서 승하하셨다. 임금은 천성이 어질고 두터우시어 동궁(세자)으로 계실 때부터 손에서 책을 놓지 않으셨고, 경연의 강론을 밤이 깊도록 그치지 않으셨다. 즉위하신 후에는 『고려사』의 완성을 명하여 전대의 득실을 밝히셨고, 화차와 신기전을 제조케 하여 변방의 근심에 대비하셨다. 그러나 성체가 본래 허약하시어 약과 음식이 효험을 보지 못하시다가 마침내 위독하게 되시니, 세자 홍위에게 왕위를 잇도록 유명하시고 영의정 황보인과 좌의정 김종서에게 고아를 부탁하셨다. 향년 39세, 재위 2년여였다.",
+      },
+      storyEntry: {
+        title: "현군의 짧은 봄",
+        scenes: [
+          {
+            imagePrompt: "Ailing King Munjong lying on a royal sickbed in Gangneyongjeon hall of Gyeongbokgung palace, court physicians attending around him, a young crown prince Danjong kneeling beside him, late afternoon light filtering through paper screens, ink wash painting style with somber muted tones",
+            narration: "문종은 세종이 남긴 나라를 온 마음으로 받들었다. 경연을 게을리하지 않았고, 역사를 완성하고 병기를 갖추었다. 그러나 몸은 뜻을 따르지 못하였다. 재위 2년, 왕은 병석에서 어린 세자의 손을 꼭 쥐었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Munjong whispering final instructions to ministers Hwangbo-in and Kim Jong-seo kneeling beside his deathbed, the young crown prince visible in the background, candlelight casting long shadows, ink wash painting style with heavy atmosphere of grief and responsibility",
+            narration: "황보인과 김종서 — 왕은 이 두 사람에게 어린 세자를 맡겼다. '단종을 잘 보필하라.' 그것이 서른아홉 살 군주의 마지막 말이었다. 하지만 역사는 그 부탁을 지키지 못하게 만들었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The young Danjong in crown prince robes walking alone through the empty corridors of Gyeongbokgung palace after his father's death, a single court lady following at a distance, cherry blossoms falling in the courtyard, ink wash painting style with atmosphere of melancholy and foreboding",
+            narration: "문종이 남긴 봄은 너무 짧았다. 어진 왕의 죽음이 열두 살 세자를 권력 다툼의 한가운데 세워놓았고, 조선은 이내 피바람의 계절을 맞이하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_E0_A02_05A_14A_00010_2005_001_XML",
+      },
     },
   ],
   detail: {
