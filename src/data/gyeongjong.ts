@@ -7,11 +7,53 @@ export const GYEONGJONG_DATA: KingData = {
       year: 1720,
       title: "즉위",
       desc: "숙종의 승하를 받아 조선 제20대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "비운의 즉위",
+        scenes: [
+          {
+            imagePrompt: "King Gyeongjong ascending the throne in poor health, his face gaunt and pale, Noron officials watching with barely concealed skepticism about his ability to reign, Soron officials showing guarded hope, ink wash painting with the tense political atmosphere of a king whose legitimacy is already being questioned before his reign begins",
+            narration: "경자년, 경종이 즉위하였다. 어머니 장희빈이 사약을 받아 죽는 것을 어린 나이에 목격하였던 왕세자가 마침내 보위에 올랐다. 그러나 몸은 이미 쇠약하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gyeongjong in the palace study surrounded by competing faction memorials he struggles to process due to his illness, a physician discreetly observing his condition from the side, ink wash painting with the atmosphere of a reign that is contested before it can establish itself",
+            narration: "노론은 경종의 건강을 우려한다며 세제 책봉을 서둘렀다. 소론은 그것을 왕권 침탈이라 맞섰다. 즉위 첫 해부터 조정은 흔들렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gyeongjong alone by a palace window at dusk, looking out at the empty courtyard with an expression of quiet resignation, the factions warring beyond the walls, ink wash painting with melancholy solitude and the sense of a man who never had the strength to truly reign",
+            narration: "사신은 논한다. 경종은 왕이었으나 통치하지 못하였다. 병약한 몸과 거센 당쟁 사이에서 그의 4년 재위는 처음부터 끝까지 폭풍 속의 촛불이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1721,
       title: "세제 책봉 및 대리청정 논의",
       desc: "노론의 주청으로 연잉군(훗날 영조)을 세제로 책봉하고 대리청정을 논의하다.",
+      storyEntry: {
+        title: "세제 책봉 — 이미 다음을 준비하다",
+        scenes: [
+          {
+            imagePrompt: "Noron faction officials presenting a memorial urging appointment of Prince Yeoninggun as Crown Prince to the ailing King Gyeongjong, the king on the throne visibly weakened, the political calculation behind the request nakedly visible, ink wash painting with the cold pragmatism of a faction planning beyond the current king",
+            narration: "신축년, 노론은 연잉군의 세제 책봉을 청하였다. 경종에게 후사가 없다는 이유였지만, 소론의 눈에 그것은 왕의 통치 기간을 단축하려는 시도로 보였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Prince Yeoninggun receiving his appointment as Crown Prince in a formal ceremony, his expression carefully neutral between the competing factions, aware of the political storm his appointment has caused, ink wash painting with the charged ceremonial atmosphere of an appointment that divides more than it unifies",
+            narration: "연잉군이 세제로 책봉되었다. 그러나 노론이 더 나아가 대리청정을 청하자, 소론이 들고 일어났다. 이것이 신임사화의 도화선이 되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gyeongjong caught between the two factions' irreconcilable demands over the regency question, his expression showing exhaustion and the tragic position of a king who has become a prize fought over rather than a ruler in command, ink wash painting with the visual weight of a man trapped between political forces",
+            narration: "사신은 논한다. 세제 책봉과 대리청정 논의는 경종의 왕권이 얼마나 허약한지를 만천하에 드러냈다. 살아있는 왕 앞에서 다음 왕을 준비하는 것 — 이것이 신임사화의 씨앗이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1721,
@@ -85,6 +127,27 @@ export const GYEONGJONG_DATA: KingData = {
       year: 1724,
       title: "승하",
       desc: "재위 4년 만에 갑작스럽게 승하하고, 이후 독살설이 파다하게 퍼지다.",
+      storyEntry: {
+        title: "의문의 죽음",
+        scenes: [
+          {
+            imagePrompt: "King Gyeongjong suddenly collapsing in his palace chamber after eating food brought by a retainer connected to the Crown Prince's household, royal physicians rushing in, the political implications of the moment hanging in the air unspoken, ink wash painting with the sudden shock of a royal death and the shadow of suspicion",
+            narration: "갑진년 8월, 경종이 갑자기 위독해졌다. 게장과 생감을 드신 뒤였다. 이틀 만에 승하하였다. 독살설이 즉시 퍼졌다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Soron officials filing angry memorials accusing the Crown Prince's side of poisoning the king, Noron officials denying vehemently, the dead king's chamber still visible in the background as the living argue over his death, ink wash painting with the unseemly haste of factional politics resuming over an unburied king",
+            narration: "소론은 세제 측 인물이 올린 음식이 죽음을 불렀다고 주장하였다. 노론은 극력 부인하였다. 세제 연잉군이 뒤를 이어 영조로 즉위하였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The ancestral tablet of Gyeongjong being placed in Jongmyo shrine, a somber ceremony attended by the new King Yeongjo who carries the cloud of suspicion over the previous king's death, ink wash painting with the heavy silence of a memorial that closes nothing and resolves nothing",
+            narration: "사신은 논한다. 경종의 죽음은 영조 치세 내내 그의 발목을 잡았다. 독살설의 진위는 지금도 밝혀지지 않았다. 역사는 그 물음표를 거두지 않는다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

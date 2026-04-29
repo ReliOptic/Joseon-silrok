@@ -8,6 +8,27 @@ export const JEONGJO_DATA: KingData = {
       year: 1776,
       title: "즉위",
       desc: "영조의 양위를 받아 조선 제22대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "사도세자의 아들",
+        scenes: [
+          {
+            imagePrompt: "King Jeongjo standing before assembled court officials at his enthronement in Injeongjeon Hall, his expression combining filial grief and steely resolve, officials frozen in shock at his opening declaration about his father's identity, morning light flooding through the hall's great doors, ink wash painting with dramatic upward composition",
+            narration: "병신년, 정조가 즉위하였다. 첫 말이 조정을 얼어붙게 했다. '과인은 사도세자의 아들이다.' 뒤주에서 돌아가신 아버지의 이름을 왕이 된 첫날 입에 올린 것이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Noron officials who had supported the decision to execute Crown Prince Sado standing in the court with apprehension as the new king surveys them, the power dynamic shifting visibly, ink wash painting with the charged atmosphere of old enemies confronting a new power they cannot predict",
+            narration: "노론의 신하들이 긴장하였다. 사도세자의 죽음에 관여하였던 이들의 이마에 식은땀이 맺혔다. 왕은 천천히 그들을 바라보았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Jeongjo in his study that same night, alone with a portrait of Crown Prince Sado, candle burning beside it, the new king's face showing grief held in check by the demands of the throne, ink wash painting with intimate filial mourning and the quiet resolve of a son who survived",
+            narration: "사신은 논한다. 정조는 아버지의 이름으로 왕위에 올랐으나 복수가 아닌 개혁으로 그 이름을 빛내려 하였다. 원한을 다스리는 것이 군주의 도리임을 그는 알고 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1776,
@@ -47,11 +68,53 @@ export const JEONGJO_DATA: KingData = {
       year: 1785,
       title: "대전통편 편찬",
       desc: "경국대전을 토대로 속대전 및 각종 법령을 통합한 대전통편을 완성하여 법제를 정비하다.",
+      storyEntry: {
+        title: "법전의 완성",
+        scenes: [
+          {
+            imagePrompt: "Royal scholars and legal officials working in the Gyujanggak library integrating the Gyeonggukdaejeon and Sokdaejeon with accumulated edicts into the unified Daejeon Tongpyeon legal code, volumes stacked high around them, ink wash painting with the industrious scholarly atmosphere of systematic legal synthesis",
+            narration: "을사년, 대전통편이 완성되었다. 경국대전과 속대전, 그 사이에 쌓인 수많은 법령을 하나의 체계로 통합한 법전이었다. 나라의 규범이 다시 한번 새로운 옷을 입었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Jeongjo reviewing the completed Daejeon Tongpyeon in his study, making final annotations with his ink brush, the volumes spread across his large desk, ink wash painting with the quiet authority of a ruler personally engaged in the details of governance",
+            narration: "정조는 법전 편찬에 직접 관여하였다. 규장각 학자들과 함께 조문 하나하나를 검토하였다. 법치의 기반을 단단히 하는 것이 개혁의 토대임을 그는 알고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Copies of the Daejeon Tongpyeon being distributed to provincial governors across the country, the uniform legal code reaching every corner of Joseon, ink wash painting with the administrative reach of a newly unified legal system spreading outward from the capital",
+            narration: "사신은 논한다. 대전통편은 정조 개혁의 법적 기반이었다. 규장각이 지식의 싱크탱크였다면, 대전통편은 그 지식이 구현될 법제의 그릇이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1791,
       title: "신해통공",
       desc: "시전 상인의 금난전권을 혁파하여 자유 상업을 허용하고 백성의 경제 활동을 넓히다.",
+      storyEntry: {
+        title: "시장을 열다",
+        scenes: [
+          {
+            imagePrompt: "Joseon marketplace in Hanyang with previously unlicensed merchants now freely setting up stalls after the abolition of the licensed merchant monopoly, the market expanded and bustling with new vendors, ink wash painting with the lively energy of a liberated commercial space",
+            narration: "신해년, 정조는 시전 상인의 금난전권을 혁파하였다. 육의전을 제외한 모든 상품에 대해 누구나 자유롭게 장사할 수 있게 되었다. 백성의 생업이 열렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Licensed merchant guild representatives protesting the loss of their monopoly privilege before court officials, while outside the palace gates independent traders celebrate their new freedom, ink wash painting with the conflict between entrenched commercial privilege and liberalization",
+            narration: "특권을 잃은 시전 상인들이 반발하였다. 그러나 정조의 결단은 흔들리지 않았다. 자유로운 상업이 백성의 생활을 풍요롭게 한다는 믿음이 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Small traders and craftspeople thriving in the expanded Joseon marketplace, diverse goods from different regions available, the economic energy of liberated commerce visible in the faces of buyers and sellers, ink wash painting with the warm commercial vitality of a newly opened market",
+            narration: "사신은 논한다. 신해통공은 조선 상업사의 중요한 전환점이었다. 특권보다 자유를, 독점보다 경쟁을 선택한 정조의 경제 철학이 담긴 결단이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1793,
@@ -63,6 +126,28 @@ export const JEONGJO_DATA: KingData = {
         title: "장용청 설치 연혁",
         translation: "앞서 임인년에 명하여 무예 출신(武藝出身)과 무예 별감으로 장교를 지낸 사람 30명을 가려서 번을 나누어 명정전(明政殿) 남쪽 회랑에 입직하게 하였다. 그리고 을사년에 장용위라 호칭하고 20명을 늘리니 이것이 장용영이 설치된 시초이다. 이때부터 해마다 인원을 늘려 왔는데, 척씨(戚氏)의 남군(南軍) 제도를 본받아 5사(司)에 각기 5초(哨)를 두는 것으로 규례를 삼았다.",
         sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_V0_A17_01A_12A_00030_2005_018_XML",
+      },
+      storyEntry: {
+        title: "장용영 — 왕의 군대",
+        scenes: [
+          {
+            imagePrompt: "Elite Jangyongyeong royal guard troops drilling in disciplined formations in the palace training grounds, their uniforms distinct from regular military units, King Jeongjo watching from a raised platform with satisfaction, ink wash painting with the martial precision and royal authority of a dedicated personal army",
+            narration: "계축년, 장용영이 정식으로 편제되었다. 왕의 친위 군영이었다. 임란 이후 오군영의 세력에 눌려 있던 왕권이 마침내 자신만의 군사력을 갖게 되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Jangyongyeong troops stationed both inside the capital as the inner garrison and at Hwaseong fortress as the outer garrison, a map showing the dual deployment, ink wash painting with the strategic vision of a king using military positioning to anchor his reform agenda",
+            narration: "장용영은 내영과 외영으로 나뉘었다. 내영은 한양을 지키고 외영은 수원 화성에 주둔하였다. 정조의 군사력이 개혁의 거점과 함께 자랐다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Jeongjo personally inspecting Jangyongyeong troops in full review formation, the soldiers' discipline and loyalty visible, ink wash painting with the image of a reformer king who understood that political change requires both ideas and force to sustain it",
+            narration: "사신은 논한다. 장용영은 정조의 개혁을 뒷받침하는 실력이었다. 규장각이 학문의 힘이었다면, 장용영은 그 학문이 현실에 뿌리내리게 할 물리적 기반이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+        sourceArticleId: "ITKC_JT_V0_A17_01A_12A_00030_2005_018_XML",
       },
     },
     {

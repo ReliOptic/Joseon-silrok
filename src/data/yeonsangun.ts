@@ -8,11 +8,53 @@ export const YEONSANGUN_DATA: KingData = {
       year: 1494,
       title: "즉위",
       desc: "성종의 뒤를 이어 조선 제10대 왕으로 즉위하다. 생모 폐비 윤씨는 이미 사사된 뒤였으며, 왕은 그 사실을 알지 못한 채 왕위에 올랐다.",
+      storyEntry: {
+        title: "모르는 채로 왕이 된 자",
+        scenes: [
+          {
+            imagePrompt: "Young King Yeonsangun ascending the throne in coronation ceremony, outwardly composed and dignified, court officials bowing, the palace atmosphere calm and ceremonial, with no outward sign of the tragedy coiled beneath the new reign, ink wash painting",
+            narration: "갑인년 12월, 성종이 승하하고 세자 융이 왕위에 올랐다. 연산군이었다. 겉으로는 평범한 즉위였다. 그의 어머니가 어떻게 죽었는지, 왕은 아직 알지 못하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The new king in the royal lecture hall, scholars presenting him with classical texts on governance, the young king appearing to engage earnestly, the early promise of a potentially competent ruler, ink wash painting with scholarly atmosphere",
+            narration: "즉위 초 연산군은 경연에 나아가고 정사를 살폈다. 훈구와 사림 사이의 갈등이 조정을 긴장시키고 있었으나, 새 왕은 아직 그 사이에서 중심을 잡고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A court lady whispering something to the king in a private moment, the king's expression subtly shifting as a shadow of knowledge begins to fall, the weight of a secret that will eventually destroy everything, ink wash painting with psychological tension",
+            narration: "그러나 왕의 귀에 소문이 닿기 시작하였다. 어머니의 이름. 폐비. 사약. 성종. 그 조각들이 모이기 시작하면서, 연산군 안에서 무언가가 천천히 불타기 시작하였다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1498,
       title: "무오사화",
       desc: "김종직이 쓴 조의제문이 세조를 비방한다는 죄목으로 김일손 등 신진 사림파 다수를 처형하고 유배 보내다. 훈구파의 사림 숙청이 본격화되다.",
+      storyEntry: {
+        title: "붓으로 쓴 죄, 피로 받은 벌",
+        scenes: [
+          {
+            imagePrompt: "Court official Yu Ja-gwang presenting Kim Il-son's historical records containing Kim Jong-jik's Joeuijeomun essay to King Yeonsangun, pointing out the passage attacking Sejo's legitimacy, ink wash painting with the moment of a political trap being sprung",
+            narration: "무오년, 이극돈이 실록 편찬 중 김일손의 사초에서 스승 김종직의 조의제문을 발견하였다. 세조의 왕위 찬탈을 비방하는 내용이라는 고변이 왕에게 올라갔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Kim Il-son and other Sarim scholars being interrogated in the palace, their scholarly robes in contrast with the brutal interrogation setting, books and scrolls used as evidence against them, ink wash painting with the persecution of the literary class",
+            narration: "이미 죽은 김종직은 부관참시에 처해졌다. 살아 있는 김일손·정여창 등 사림의 인물들이 처형되거나 귀양길에 올랐다. 훈구파가 사림을 꺾기 위해 왕을 이용한 것이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Sarim scholars in exile trudging through mountain passes away from the capital, their books bundled under their arms, the scholarly idealism of the Seongjong era now scattered, ink wash painting with the melancholy of intellectual persecution",
+            narration: "무오사화로 사림은 조정에서 쓸려나갔다. 연산군은 훈구의 칼을 쥐어주었다. 그것이 단순한 권력 다툼임을 왕은 미처 헤아리지 못하였거나, 혹은 개의치 않았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1504,
@@ -52,11 +94,53 @@ export const YEONSANGUN_DATA: KingData = {
       year: 1504,
       title: "언론 탄압과 한글 금지",
       desc: "자신을 비방하는 한글 투서가 잇따르자 한글 교육과 사용을 금지하고, 사간원·홍문관의 간쟁 기능을 사실상 폐지하다. 신하들의 입을 막아 독단적 통치의 길을 열다.",
+      storyEntry: {
+        title: "간쟁의 입을 막다",
+        scenes: [
+          {
+            imagePrompt: "King Yeonsangun issuing the decree banning Hangul writing, royal messengers carrying the order to government offices and printing houses, books with Korean script being confiscated, ink wash painting with the atmosphere of cultural suppression",
+            narration: "갑자년, 한글로 쓰인 비방 투서가 연달아 발견되었다. 연산군은 한글 교육과 사용을 금지하는 명을 내렸다. 세종이 백성을 위해 만든 문자가 왕을 거스르는 도구가 된 것이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Sagan-won and Hongmungwan officials being barred from presenting remonstrances to the king, their traditional role as critical voices being abolished, the palace halls now echo with only agreement, ink wash painting with oppressive silence",
+            narration: "사간원과 홍문관의 간쟁 기능이 사실상 폐지되었다. 왕에게 잘못을 아뢰는 것이 죽음을 뜻하게 되었다. 직언의 문이 닫히면서 조정은 왕의 거울이 아닌 메아리가 되었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Court officials in silent rows during an audience, none daring to speak critically, the king's gaze sweeping across their bowed heads with suspicious intensity, ink wash painting with the suffocating atmosphere of a court where truth cannot be spoken",
+            narration: "나라가 병들 때 첫 번째로 죽는 것은 말이다. 연산군의 조정에서 진실을 말하는 입은 하나씩 닫혔다. 그 침묵 속에서 왕의 광기는 아무런 제지 없이 자랐다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1505,
       title: "성균관 유흥지 전용",
       desc: "성균관을 유흥을 위한 장소로 변용하고, 전국에서 미녀를 뽑아 흥청을 설치하다. 국가 교육·예학의 중심이 방탕의 무대로 전락하다.",
+      storyEntry: {
+        title: "학당이 유흥장으로",
+        scenes: [
+          {
+            imagePrompt: "Joseon students and scholars being expelled from Sungkyunkwan, their books and belongings in hand, as royal servants arrive to transform the educational institution into a pleasure venue, ink wash painting with the desecration of a sacred scholarly space",
+            narration: "연산군 11년, 성균관에서 유생들이 쫓겨났다. 조선 최고의 교육 기관이 왕의 유흥을 위한 공간으로 탈바꿈하였다. 공자의 위패를 모신 그 마당에 흥청이 들어섰다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Heungcheong entertainers recruited from across the country performing at the transformed Sungkyunkwan grounds, the scholarly atmosphere completely erased, ink wash painting contrasting the former dignity of the space with its current degradation",
+            narration: "전국에서 뽑아 올린 흥청들이 그곳에 모였다. 왕은 밤마다 잔치를 열었다. '흥청망청'이라는 말이 이때 백성들 입에 오르내리기 시작하였다고 전해진다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Displaced Joseon scholars gathered in private homes continuing their studies by candlelight, the institutional collapse forcing learning underground, ink wash painting with the resilience of scholarship in the face of tyrannical suppression",
+            narration: "나라의 학문이 멈추었다. 그러나 유생들은 사가에서 글을 놓지 않았다. 왕의 광기가 조선의 학문 정신까지 지울 수는 없었다. 이듬해 반정이 일어났다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1506,

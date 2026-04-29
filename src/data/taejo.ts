@@ -60,7 +60,7 @@ export const TAEJO_DATA: KingData = {
           },
           {
             imagePrompt: "Officials in formal robes divided into two groups, one group staying behind in the old capital, one group moving forward, with an ink brush administrative document in the foreground, traditional East Asian painting style",
-            narration: "각 관청의 관원 2명씩은 송경에 남아 행정의 실을 이어 갔고, 최영지와 우인열이 분도평의사사를 맡았다. 두 도읍 사이에 나라의 뼈대가 세워지고 있었다.",
+            narration: "사신은 논한다. 천도는 단순한 이사가 아니었다. 고려의 기억이 서린 개경을 떠난 것은 역성혁명의 의지를 땅에 새기는 행위였다. 오백 년 왕업의 뿌리가 한강 북쪽 이 땅에 내리기 시작하였다.",
             durationMs: 4500,
           },
         ],
@@ -118,16 +118,70 @@ export const TAEJO_DATA: KingData = {
       year: 1396,
       title: "한양 도성 축조",
       desc: "백악·낙산·목멱·인왕을 잇는 도성을 쌓아 수도의 방어 체계를 갖추다.",
+      storyEntry: {
+        title: "돌 하나, 나라 하나",
+        scenes: [
+          {
+            imagePrompt: "Thousands of Joseon conscript laborers hauling granite blocks up mountain slopes by torchlight, stone walls rising against the silhouette of Bugaksan mountain, overseers directing work, traditional ink wash painting with dramatic nighttime atmosphere",
+            narration: "태조 5년, 한양의 사산을 잇는 도성 공사가 시작되었다. 전국에서 불러 모은 백성들이 혹한과 혹서를 견디며 돌을 나르고 쌓았다.",
+          },
+          {
+            imagePrompt: "Section foreman inspecting completed granite wall sections on a Joseon city wall, workers resting below, mountain peaks visible on either side, the wall snaking across ridgelines, ink wash painting style with strong compositional lines",
+            narration: "백악·낙산·목멱·인왕의 네 산을 이어 둘레 약 18킬로미터의 도성이 세워졌다. 98일 만에 완성된 장벽이 새 도읍을 안으로 품었다.",
+          },
+          {
+            imagePrompt: "Aerial view of completed Hanyang city walls encircling the new capital, tiled rooftops within, mountains beyond, morning mist rising, ink wash panoramic painting style, sense of a kingdom taking permanent shape",
+            narration: "성벽은 단순한 방어 시설이 아니었다. 이 안이 조선이요, 이 밖이 세상이라는 경계였다. 새 왕조가 땅에 새긴 최초의 선언이었다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1397,
       title: "《경제육전》 반포",
       desc: "정도전의 주도 아래 조선 최초의 법전 《경제육전》을 편찬하여 반포하다.",
+      storyEntry: {
+        title: "조선의 첫 번째 법전",
+        scenes: [
+          {
+            imagePrompt: "Joseon scholar-official Jeong Do-jeon at his desk surrounded by law texts and historical records, writing by candlelight, scrolls and reference books stacked around him, determined scholarly expression, ink wash painting style",
+            narration: "정도전은 조선이 법으로 다스려지는 나라이기를 원했다. 이(吏)·호(戶)·예(禮)·병(兵)·형(刑)·공(工) 여섯 분야를 망라한 법전 편찬에 온 힘을 기울였다.",
+          },
+          {
+            imagePrompt: "King Taejo formally receiving the completed Gyeongjeyukjeon law code from kneeling officials, the bound volumes arranged on ceremonial tables, court assembled in witness, ink wash painting with formal ceremonial composition",
+            narration: "경제육전이 완성되어 태조에게 바쳐졌다. 관직과 형벌, 예법과 세제를 담은 이 책은 고려의 관습에서 벗어나 조선을 법치의 땅으로 세우는 첫걸음이었다.",
+          },
+          {
+            imagePrompt: "Officials distributing copies of the law code to provincial government offices across Joseon, clerks reading and recording, ink wash painting showing the spread of legal order, sense of a new institutional framework taking root",
+            narration: "법전은 중외에 반포되었다. 그러나 이를 주도한 정도전은 이듬해 왕자의 난으로 쓰러진다. 법보다 칼이 먼저인 시대가 아직 끝나지 않았다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1398,
       title: "제1차 왕자의 난",
       desc: "정안군 이방원이 정도전 일파를 제거하고 세자 방석을 폐위하니, 태조께서 깊은 실의에 빠져 왕위를 내놓으시다.",
+      storyEntry: {
+        title: "왕자의 난, 골육의 칼",
+        scenes: [
+          {
+            imagePrompt: "Prince Yi Bang-won in dark armor leading armed retainers through the nighttime streets of Hanyang toward Jeong Do-jeon's residence, torches burning, tension of impending violence, ink wash painting with cold night atmosphere",
+            narration: "무인년 8월, 다섯째 왕자 이방원이 군사를 일으켰다. 정도전이 왕자들의 사병을 혁파하고 세자 방석 중심으로 권력을 굳히려 한다는 것이 명분이었다.",
+          },
+          {
+            imagePrompt: "Jeong Do-jeon's dramatic arrest and execution in a Hanyang courtyard, soldiers surrounding him, the brilliant scholar-statesman facing death with composure, ink wash painting style, the end of a dream for a Confucian utopia",
+            narration: "정도전은 그날 밤 사로잡혀 처형되었다. 조선의 설계자가 쓰러진 것이다. 세자 방석도 폐위되었고, 방번도 살아남지 못하였다.",
+          },
+          {
+            imagePrompt: "King Taejo sitting alone in his palace chamber, head bowed in grief, surrounded by empty space, outside sounds of soldiers and turmoil fading, ink wash painting with oppressive silence and the desolation of a father who has lost his sons",
+            narration: "태조는 자식들이 서로 죽이는 것을 막지 못하였다. 나라를 세운 손으로 아들의 죽음을 막지 못한 아버지는 깊은 실의에 빠져 왕위를 둘째 아들에게 넘겼다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

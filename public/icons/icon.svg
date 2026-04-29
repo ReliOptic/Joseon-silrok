@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#2C1810"/>
+  <rect x="48" y="48" width="416" height="416" rx="48" fill="#F0E6D2"/>
+  <!-- 실록 책 모양 -->
+  <rect x="96" y="96" width="240" height="320" rx="8" fill="#8B4513"/>
+  <rect x="108" y="96" width="228" height="320" rx="6" fill="#D4A574"/>
+  <!-- 책 제목 영역 -->
+  <rect x="124" y="140" width="196" height="232" rx="4" fill="#F5E6C8"/>
+  <!-- 세로쓰기 한자 스타일 장식선 -->
+  <line x1="168" y1="156" x2="168" y2="356" stroke="#8B4513" stroke-width="2"/>
+  <line x1="200" y1="156" x2="200" y2="356" stroke="#8B4513" stroke-width="2"/>
+  <line x1="232" y1="156" x2="232" y2="356" stroke="#8B4513" stroke-width="2"/>
+  <line x1="264" y1="156" x2="264" y2="356" stroke="#8B4513" stroke-width="2"/>
+  <line x1="296" y1="156" x2="296" y2="356" stroke="#8B4513" stroke-width="2"/>
+  <!-- 책 척추 -->
+  <rect x="96" y="96" width="12" height="320" rx="4" fill="#6B3410"/>
+  <!-- 오른쪽 장식 페이지 -->
+  <rect x="320" y="116" width="96" height="280" rx="4" fill="#E8D5B0" opacity="0.8"/>
+  <rect x="332" y="128" width="72" height="4" rx="2" fill="#8B4513" opacity="0.4"/>
+  <rect x="332" y="140" width="60" height="3" rx="1.5" fill="#8B4513" opacity="0.3"/>
+  <rect x="332" y="152" width="66" height="3" rx="1.5" fill="#8B4513" opacity="0.3"/>
+  <rect x="332" y="164" width="58" height="3" rx="1.5" fill="#8B4513" opacity="0.3"/>
+</svg>

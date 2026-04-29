@@ -1,4 +1,4 @@
-export const KING_HOOKLINES: Record<string, string> = {
+export const KING_HOOKLINES: Readonly<Record<string, string>> = {
   taejo: "고려를 무너뜨린 장군, 조선을 세운 왕",
   jeongjong: "왕좌를 버림으로써 살아남은 왕",
   taejong: "형제를 베고 왕이 된 자, 세종의 아버지",

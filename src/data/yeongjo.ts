@@ -6,7 +6,28 @@ export const YEONGJO_DATA: KingData = {
     {
       year: 1724,
       title: "즉위",
-      desc: "경종의 뒤를 이어 조선 제21대 왕으로 즉위하다."
+      desc: "경종의 뒤를 이어 조선 제21대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "경종의 뒤를 잇다",
+        scenes: [
+          {
+            imagePrompt: "Prince Yeoning in formal court robes ascending the steps of Geunjeongjeon throne hall, rows of officials kneeling in the courtyard, clouds parting to reveal morning sunlight over the tiled palace rooftops, ink wash painting style with the formal gravity of a new reign beginning",
+            narration: "갑진년 8월, 연잉군이 경종의 뒤를 이어 왕위에 올랐다. 노론과 소론이 피로 번갈아 조정을 물들이던 시절, 무수리 출신 어머니의 아들이 조선 제21대 왕이 되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young King Yeongjo in ceremonial robes surrounded by court officials of competing factions — Noron in one group, Soron in another — tension visible between them even as they bow to the same king, ink wash painting style with cool blue and grey palette",
+            narration: "즉위 직후부터 노론은 소론을 숙청하려 하였다. 영조는 그 압력을 받아내면서도 당파를 넘어서는 정치를 구상하였다. 탕평의 씨앗은 즉위의 날부터 그의 머릿속에 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Yeongjo alone in the royal study at night, a single candle burning, writing in his journal the vow to govern without partisan bias, the weight of fifty-two years ahead of him unknown, ink wash painting with quiet determination and the solitude of power",
+            narration: "사신은 논한다. 영조는 정통성 시비 속에서 왕이 되었다. 그 불안이 오히려 그를 탕평의 군주로 만들었다. 길고 긴 치세의 첫날 밤, 임금은 홀로 무언가를 다짐하고 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1725,
@@ -45,7 +66,28 @@ export const YEONGJO_DATA: KingData = {
     {
       year: 1746,
       title: "속대전 편찬",
-      desc: "경국대전 이후 산적한 법령을 정리하여 속대전을 완성하고 반포함으로써 통치 규범을 재정비하다."
+      desc: "경국대전 이후 산적한 법령을 정리하여 속대전을 완성하고 반포함으로써 통치 규범을 재정비하다.",
+      storyEntry: {
+        title: "법전 — 질서의 뼈대",
+        scenes: [
+          {
+            imagePrompt: "Royal scholars and legal officials compiling and reviewing centuries of laws and edicts in the Gyujanggak-style royal library, stacks of documents surrounding them, candles burning through the night, ink wash painting with the industrious scholarly atmosphere of systematic legal codification",
+            narration: "경국대전이 반포된 지 260여 년. 그 사이 쌓인 법령이 산더미였다. 영조는 이를 정리하여 속대전을 완성하였다. 나라의 통치 규범을 다시 정비하는 작업이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The completed Sokdaejeon legal code being formally presented to King Yeongjo in a ceremonial setting, the bound volumes arrayed on a low table, officials bowing in attendance, ink wash painting with the formal grandeur of a legal monument completed",
+            narration: "속대전이 반포되었다. 형사·민사·행정 각 분야의 법령이 체계적으로 정리되었다. 규범의 언어가 조정과 지방관청에 통일되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Local magistrates in provincial government offices studying the new Sokdaejeon legal text, applying it to local cases, the reach of the legal code extending to every corner of the kingdom, ink wash painting with the practical governance atmosphere of law being administered throughout Joseon",
+            narration: "사신은 논한다. 속대전은 영조 치세의 조용한 공적이었다. 탕평과 균역이 그의 이름을 빛냈지만, 법전의 정비가 그 이름을 오래 지탱하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1750,
@@ -57,6 +99,28 @@ export const YEONGJO_DATA: KingData = {
         title: "균역청을 설치하고 균역법 시행을 명하다",
         translation: "균역청(均役廳)을 설치하고 균역법 시행을 명하였다. 임금이 이르기를, '양민의 군포 부담이 2필로 너무 무거워 백성들이 고통받고 있으니, 이를 1필로 줄이겠다. 부족한 재원은 결작(結作)과 어염세(魚鹽稅), 선무군관포(選武軍官布) 등으로 충당할 것이며, 이를 관장할 균역청을 두어 시행하라' 하였다. 이로써 오랫동안 하층 백성을 짓눌러 온 군포의 폐단이 크게 줄었으며, 백성들이 크게 기뻐하였다.",
         sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_U0_A26_01A_05A_00010_2005_001_XML",
+      },
+      storyEntry: {
+        title: "군포 반 필의 자비",
+        scenes: [
+          {
+            imagePrompt: "Joseon peasant farmers celebrating the reduction of military cloth tax, some embracing, some bowing toward the capital in gratitude, a village scene of relief and renewed hope, ink wash painting with warm earthy tones and the tangible relief of a burden lifted",
+            narration: "경오년, 영조는 균역청을 설치하고 군포를 2필에서 1필로 줄이는 균역법을 시행하였다. 양인 장정 하나하나의 짐이 반으로 줄었다. 백성들이 기뻐하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Government officials devising new revenue sources — land surtax, salt and fish taxes, military officer cloth payments — to compensate for the reduced military cloth tax, ledgers and maps spread before them, ink wash painting with the pragmatic administrative atmosphere of fiscal problem-solving",
+            narration: "줄어든 재원은 결작과 어염세로 보충하였다. 세금의 무게가 양반 지주와 어업 상업으로도 분산되었다. 완벽하지 않았으나, 나아진 것은 분명하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Yeongjo meeting with common people outside the palace to hear their grievances about taxation, an unusual scene of a Joseon king in direct contact with subjects, ink wash painting with the rare intimacy of a ruler genuinely attending to the welfare of the lowest classes",
+            narration: "사신은 논한다. 균역법은 영조의 민본 의지를 가장 잘 보여주는 정책이었다. 탕평비가 명분이었다면, 균역법은 백성의 삶 속으로 들어간 실천이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+        sourceArticleId: "ITKC_JT_U0_A26_01A_05A_00010_2005_001_XML",
       },
     },
     {
@@ -97,7 +161,28 @@ export const YEONGJO_DATA: KingData = {
     {
       year: 1776,
       title: "승하 — 조선 최장 재위 52년",
-      desc: "재위 52년으로 조선 역대 왕 가운데 가장 오랜 기간 왕위에 있다가 창경궁 집경당에서 승하하니, 향년 83세였다."
+      desc: "재위 52년으로 조선 역대 왕 가운데 가장 오랜 기간 왕위에 있다가 창경궁 집경당에서 승하하니, 향년 83세였다.",
+      storyEntry: {
+        title: "52년의 무게",
+        scenes: [
+          {
+            imagePrompt: "Elderly King Yeongjo in simple robes sitting in the Jipgyeongdang pavilion of Changgyeonggung palace, his face lined with the weight of eighty-three years, the palace garden visible through the open doors, the long reign drawing to a quiet close, ink wash painting with the stillness of extreme old age and historical gravity",
+            narration: "병신년 3월, 영조가 창경궁 집경당에서 눈을 감았다. 향년 83세, 재위 52년. 조선 역대 어느 왕도 이만큼 오래 왕좌에 있지 않았다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "A visual reflection of Yeongjo's reign — on one side the Tangpyeong stele and the Gyungyeok reform documents symbolizing his achievements, on the other side the wooden rice chest of the Imo incident, both present in the same composition, ink wash painting with the dual legacy of a complex reign in balance",
+            narration: "52년의 무게는 하나가 아니었다. 탕평비가 있었고 균역법이 있었다. 그리고 뒤주도 있었다. 한 사람 안에서 군주와 아버지가 끝내 화해하지 못한 채, 83년의 삶이 닫혔다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Young King Jeongjo ascending the throne after Yeongjo's death, his first words — 'I am the son of Crown Prince Sado' — reverberating through the hall, officials frozen in shock, ink wash painting with the dramatic generational handover and the weight of unresolved history passing to the next reign",
+            narration: "사신은 논한다. 영조 승하 직후 손자 정조는 '과인은 사도세자의 아들이다'라고 선언하였다. 할아버지가 뒤주로 막으려 한 역사가 다음 왕의 첫 말로 돌아왔다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     }
   ],
   detail: {

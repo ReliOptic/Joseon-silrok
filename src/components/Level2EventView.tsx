@@ -55,11 +55,17 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
         <div className="absolute left-[15px] top-0 w-px h-full bg-black/20"></div>
 
         {kingData.events.map((ev, i) => (
-          <div key={i} className="relative pl-12 mb-16 group cursor-pointer" onClick={() => onSelectEvent(i)}>
+          <button
+            key={i}
+            type="button"
+            onClick={() => onSelectEvent(i)}
+            aria-label={`${ev.year}년 ${ev.title}`}
+            className="relative pl-12 mb-16 group block w-full text-left"
+          >
             <div className="absolute left-[11px] top-2 w-2.5 h-2.5 rounded-full bg-black/40 group-hover:bg-black group-hover:scale-150 transition-all"></div>
 
             {i < kingData.events.length - 1 && (
-              <svg className="absolute left-[15px] top-4 w-12 h-24 pointer-events-none opacity-30" viewBox="0 0 50 100" fill="none">
+              <svg aria-hidden="true" className="absolute left-[15px] top-4 w-12 h-24 pointer-events-none opacity-30" viewBox="0 0 50 100" fill="none">
                 <path d="M 0 0 C 20 20, 20 80, 0 100" stroke="black" strokeWidth="1" />
               </svg>
             )}
@@ -70,11 +76,11 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
                 <span className="text-[10px] font-bold tracking-widest uppercase opacity-40 border border-current rounded px-1.5 py-0.5">실록</span>
               )}
             </div>
-            <h3 className="text-[32px] font-serif font-bold mb-3 group-hover:text-[#1F3A69] transition-colors leading-[1.5] tracking-[-0.01em]">
+            <h2 className="text-[32px] font-serif font-bold mb-3 group-hover:text-[#1F3A69] transition-colors leading-[1.5] tracking-[-0.01em]">
               {ev.title}
-            </h3>
+            </h2>
             <p className="text-base opacity-80 leading-[1.6] tracking-[-0.01em]">{ev.desc}</p>
-          </div>
+          </button>
         ))}
       </div>
 

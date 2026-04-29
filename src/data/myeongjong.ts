@@ -41,11 +41,53 @@ export const MYEONGJONG_DATA: KingData = {
       year: 1547,
       title: "양재역 벽서 사건",
       desc: "양재역에 문정왕후와 윤원형을 비난하는 벽서가 붙어 반대 세력에 대한 2차 숙청이 단행되다. 이언적, 정황 등 사림의 거목들이 유배되고 조정은 윤원형 일파의 손아귀에 들어가다.",
+      storyEntry: {
+        title: "벽에 쓴 글씨, 죽음의 빌미",
+        scenes: [
+          {
+            imagePrompt: "A anonymous protest notice posted on the wall of Yangjae postal station, discovered by officials in the early morning, the handwritten text denouncing Queen Dowager Munjeong and Yun Won-hyeong's tyranny, ink wash painting with the dangerous act of political protest",
+            narration: "정미년, 양재역 벽에 익명의 벽서가 나붙었다. '여주(女主)가 위에서 정권을 잡고 간신 이기 등이 아래에서 권세를 부리니 나라가 장차 망하리라.' 이것이 빌미가 되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Yun Won-hyeong using the anonymous placard as pretext to arrest and exile Sarim scholars Lee Eon-jeok and others, the accusations clearly fabricated but unstoppable, ink wash painting with political machinery operating without restraint",
+            narration: "윤원형은 이 벽서를 빌미로 이언적·정황 등 사림의 거목들을 유배 보냈다. 을사사화에 이은 두 번째 숙청이었다. 반대 세력은 씨가 말랐다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Scholar Lee Eon-jeok in exile in a remote province, continuing to write philosophical texts despite persecution, ink wash painting with the dignity of intellectual resistance in the face of political suppression",
+            narration: "이언적은 유배지에서도 학문을 멈추지 않았다. 그의 뜻은 꺾이지 않았으나 조정은 그가 없이도 굴러갔다. 윤원형의 방향으로.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1553,
       title: "친정 선포와 외척의 전횡",
       desc: "문정왕후가 수렴청정을 거두고 명종이 친정을 선포하나, 실권은 여전히 윤원형과 그의 첩 정난정이 장악하다. 관직 매매와 수탈이 극에 달해 민심이 크게 흔들리다.",
+      storyEntry: {
+        title: "친정이라는 이름의 허울",
+        scenes: [
+          {
+            imagePrompt: "Queen Dowager Munjeong formally ending her regency, the bamboo screen removed from beside the throne, King Myeongjong now sitting alone on the throne, but Yun Won-hyeong's presence still dominant in the court background, ink wash painting",
+            narration: "명종 8년, 문정왕후가 수렴청정을 거두었다. 이제 왕이 직접 나라를 다스린다는 선언이었다. 그러나 조정의 실권은 여전히 윤원형과 그의 첩 정난정이 쥐고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Jeong Nan-jeong, Yun Won-hyeong's concubine-turned-primary-wife, receiving officials and bribes in her household, effectively running a shadow government, ink wash painting showing the corruption of power operating through personal networks",
+            narration: "관직이 팔렸다. 정난정의 손을 거치지 않으면 벼슬자리를 얻기 어려웠다. 본처를 독살하고 정실의 자리를 차지한 여인이 나라의 인사를 좌우하였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Myeongjong alone in his study, aware of the corruption around him but unable to act effectively against the entrenched power of his uncle Yun Won-hyeong, ink wash painting with the king's impotent awareness and suppressed determination",
+            narration: "명종은 알고 있었다. 그러나 어머니가 살아 있는 한 윤원형을 건드릴 수 없었다. 친정이라는 이름 뒤에서 왕은 조용히 그날을 기다렸다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1559,
@@ -85,11 +127,53 @@ export const MYEONGJONG_DATA: KingData = {
       year: 1565,
       title: "문정왕후 승하와 윤원형 실각",
       desc: "문정왕후가 승하하자 권력의 근간을 잃은 윤원형이 탄핵을 받아 유배되고 사사되다. 명종은 비로소 자신의 뜻으로 정사를 펴려 하나 이미 국력은 크게 쇠퇴해 있었다.",
+      storyEntry: {
+        title: "어머니의 죽음, 권신의 몰락",
+        scenes: [
+          {
+            imagePrompt: "Queen Dowager Munjeong lying on her deathbed in the inner palace, court ladies weeping around her, the bamboo screen of regency folded away for the last time, late afternoon light through latticed windows, ink wash painting style with the somber stillness of a powerful life ending",
+            narration: "을축년 4월, 문정왕후가 승하하였다. 20년간 수렴청정과 배후 권력으로 조선 조정을 지배하던 힘이 사라졌다. 윤원형은 하룻밤 사이에 보호막을 잃었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Yun Won-hyeong and Jeong Nan-jeong in a carriage leaving the capital in disgrace, court officials turning their backs, the gates of Hanyang closing behind them, ink wash painting style with the reversal of fortune and the cold indifference of power",
+            narration: "그동안 침묵하던 사헌부와 사간원이 일제히 윤원형을 탄핵하였다. 탄핵 상소가 빗발쳤고, 조정은 20년 만에 다른 목소리를 낼 수 있게 되었다. 윤원형은 유배 길에 올랐다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Myeongjong alone at his desk late at night, reading reform proposals by candlelight with determination on his face, but the lines of exhaustion and years of suppressed will visible, ink wash painting with the bittersweet atmosphere of too-late freedom",
+            narration: "사신은 논한다. 명종은 이제 비로소 스스로의 뜻으로 정사를 펼 수 있었다. 이황을 부르고 개혁을 도모하였다. 그러나 20년의 외척 정치가 남긴 상처는 너무 깊었고, 왕에게는 시간이 많지 않았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1567,
       title: "명종 승하",
       desc: "명종이 후사 없이 승하하다. 중종의 서손인 하성군이 뒤를 이어 선조로 즉위하며 조선 왕실은 방계 승통의 선례를 남기다.",
+      storyEntry: {
+        title: "후사 없는 왕의 마지막",
+        scenes: [
+          {
+            imagePrompt: "King Myeongjong lying gravely ill in the inner palace, court physicians attending with helpless expressions, the throne room beyond the open doors empty and quiet, summer heat pressing against the paper windows, ink wash painting style with the quiet desperation of a reign ending without an heir",
+            narration: "정묘년 여름, 명종이 위독하였다. 스물아홉 살, 재위 22년. 아들이 없었다. 문정왕후와 윤원형의 그늘 아래서 보낸 세월이 이제 막 끝나려는 참이었는데, 몸이 먼저 꺾였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Court ministers in emergency session debating succession, pointing at genealogical charts showing Haseonggun as the closest eligible candidate, the urgency of the situation evident in their tense postures, ink wash painting with the cold machinery of dynastic succession",
+            narration: "종친과 대신들이 급히 모였다. 중종의 서손 하성군이 거론되었다. 방계 혈통이었으나 달리 선택지가 없었다. 조선 왕실은 처음으로 방계 승통의 길을 열었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The empty throne of Myeongjong in the morning light after his passing, court officials in mourning white bowing before it, the palace silent, ink wash painting with the solemn finality of a reign's end and the weight of a dynasty at a turning point",
+            narration: "사신은 논한다. 명종의 치세는 외척에 의해 시작되어 외척의 몰락으로 잠시 숨을 틔우다 끝났다. 그 짧은 자유의 시간 속에서 임금이 보여준 개혁의 의지를, 역사는 작게나마 기록해 두어야 할 것이다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

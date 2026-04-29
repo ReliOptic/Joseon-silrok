@@ -8,21 +8,105 @@ export const GOJONG_DATA: KingData = {
       year: 1863,
       title: "즉위",
       desc: "흥선군 이하응의 아들로 열두 살의 나이에 철종의 뒤를 이어 조선 제26대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "흥선군의 아들, 조선의 왕",
+        scenes: [
+          {
+            imagePrompt: "Twelve-year-old King Gojong in royal ceremonial robes ascending to the throne, his father Heungseon Daewongun standing prominently in the foreground among the court officials, the real power dynamics visible even in the ceremony's arrangement, ink wash painting style with formal grandeur and political subtext",
+            narration: "계해년 12월, 열두 살 고종이 즉위하였다. 아버지 흥선대원군이 섭정을 맡았다. 안동 김씨 세도는 하룻밤 사이에 무너졌다. 조선 조정에 오랜만에 왕실의 힘이 돌아왔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Heungseon Daewongun in regent's robes reviewing petitions and conducting court business with decisive authority, while young Gojong sits at the throne as a symbolic presence, ink wash painting with the father's energy and ambition dominating the composition",
+            narration: "흥선대원군은 기다렸던 사람이었다. 세도 가문의 눈을 피해 파락호 행세를 하며 때를 기다렸다. 이제 나라를 바꿀 기회가 왔다. 쇄국, 서원 철폐, 경복궁 중건 — 그의 구상은 이미 준비되어 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young Gojong studying in the royal study with tutors, gradually becoming aware of his own position and the political world around him, a growing seriousness in his expression, ink wash painting with the quiet development of a young king finding his identity",
+            narration: "사신은 논한다. 고종의 즉위는 아버지의 기획이었다. 그러나 열두 살 소년은 언젠가 그 기획에서 벗어나 자신의 길을 찾으려 할 것이었다. 부자 간의 갈등은 이미 씨앗으로 심어져 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1865,
       title: "경복궁 중건",
       desc: "흥선대원군이 섭정을 맡아 왕실 권위 회복을 위해 임진왜란 이후 폐허로 남아 있던 경복궁의 중건을 명하다.",
+      storyEntry: {
+        title: "폐허 위에 다시 세운 궁궐",
+        scenes: [
+          {
+            imagePrompt: "Tens of thousands of laborers working on the massive reconstruction of Gyeongbokgung palace, scaffolding covering half-built walls and towers, the scale of the project enormous against the Seoul mountains, Heungseon Daewongun surveying the construction site, ink wash painting style with the epic ambition of architectural restoration",
+            narration: "을축년, 흥선대원군이 경복궁 중건을 명하였다. 임진왜란 때 불탄 뒤 270여 년간 폐허로 남아 있던 조선의 법궁이었다. 왕실 권위를 세우겠다는 선언이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon peasants being forced into corvée labor for the palace construction, their exhausted faces showing the burden of the project, while officials collect the hated Danpochien coins from merchants in the marketplace to fund the work, ink wash painting with the human cost of monumental ambition",
+            narration: "원납전이 강제 징수되었고 백성이 부역에 동원되었다. 당백전이 남발되어 물가가 치솟았다. 왕실의 위엄은 백성의 고통 위에 쌓였다. 경복궁은 웅장하게 올라갔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The completed Gyeongbokgung palace in its restored glory, Gwanghwamun gate magnificent in the foreground, the mountains of Bugaksan behind, but the palace grounds almost too grand and empty for the diminished power it now housed, ink wash painting with the grandeur and the irony of restoration",
+            narration: "사신은 논한다. 경복궁은 완성되었다. 그러나 그 위용이 절정에 달하던 시절, 바깥 세계는 이미 조선을 향해 문을 두드리고 있었다. 돌로 쌓은 권위가 대포 앞에 얼마나 버틸 수 있을 것인가.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1876,
       title: "강화도 조약 체결",
       desc: "일본의 무력 시위에 굴복하여 조선 최초의 근대적 불평등 조약인 강화도 조약을 체결하고 문호를 개방하다.",
+      storyEntry: {
+        title: "포함외교, 열린 문호",
+        scenes: [
+          {
+            imagePrompt: "Japanese warship Unyo anchored menacingly off the coast of Ganghwa Island, its guns trained toward the shore, Joseon coastal battery officers watching helplessly, the asymmetry of military power stark and undeniable, ink wash painting style with the cold drama of gunboat diplomacy",
+            narration: "병자년 1월, 일본 군함 운요호가 강화도 앞바다에 닻을 내렸다. 대포를 앞세운 협상이었다. 270년 전 병자호란 이후 조선이 강대국의 무력 앞에 다시 무릎을 꿇는 순간이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon and Japanese officials signing the Ganghwa Treaty at a formal table inside a government building, the Japanese delegation composed and demanding, the Joseon delegation grim and aware of the inequality being codified, ink wash painting with the weight of a historic capitulation",
+            narration: "강화도 조약이 체결되었다. 부산·원산·인천 세 항구가 열렸다. 조선은 자주국임을 명시하였으나, 그것은 청나라의 종주권을 부정하는 일본의 계산이 담긴 문구였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Ships from multiple foreign nations — Japan, China, Western powers — beginning to arrive at newly opened Korean ports, the Joseon coastline transforming, officials watching the foreign vessels with a mixture of apprehension and forced acceptance, ink wash painting with the irreversible opening of a closed world",
+            narration: "사신은 논한다. 강화도 조약은 조선이 근대 세계에 편입되는 첫 관문이었다. 그러나 그 문은 조선이 스스로 연 것이 아니었다. 포구의 냄새가 바뀌었고, 나라의 운명도 바뀌기 시작하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1894,
       title: "갑오개혁",
       desc: "동학 농민 운동과 청일 전쟁을 계기로 일본의 압력 하에 신분제 폐지·과거제 혁파 등 대규모 근대적 제도 개혁을 단행하다.",
+      storyEntry: {
+        title: "칼 위에 선 개혁",
+        scenes: [
+          {
+            imagePrompt: "Joseon reformers in both traditional and early modern dress working in the Gungukgimucheong reform bureau, drafting sweeping changes to the legal and social system, Japanese advisors visible in the background suggesting the external pressure behind the reforms, ink wash painting with the complex atmosphere of coerced modernization",
+            narration: "갑오년, 군국기무처가 설치되고 개혁안이 쏟아졌다. 신분제가 폐지되고 과거제가 혁파되었다. 조혼이 금지되고 과부 재가가 허용되었다. 오백 년 조선의 틀이 무너지고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A former slave and his former master standing as legal equals in a new Joseon government office, the clerk recording them both simply as citizens, the disbelief and adjustment on their faces visible, ink wash painting with the radical human reality of social transformation",
+            narration: "노비 문서가 불태워졌다. 태어날 때부터 정해진 신분이 법으로 사라졌다. 그러나 일본 군대가 경복궁 안에 주둔한 채 내려진 개혁이었다. 누구를 위한 변화인가, 묻지 않을 수 없었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gojong watching the reform process from a position of diminished authority, Japanese military officers and pro-reform Korean officials dominating the decision-making in the foreground, his expression showing both the hope for modernization and the humiliation of foreign leverage, ink wash painting",
+            narration: "사신은 논한다. 갑오개혁의 내용은 진보적이었으나 그 맥락은 굴욕적이었다. 일본의 압력이 없었다면 이 개혁이 이 속도로 이루어졌겠는가. 외세의 도구가 된 변화를 개혁이라 부를 수 있는가. 역사는 이 질문에 아직 답하지 않는다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1895,

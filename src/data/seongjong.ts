@@ -8,6 +8,27 @@ export const SEONGJONG_DATA: KingData = {
       year: 1469,
       title: "즉위",
       desc: "예종의 뒤를 이어 조선 제9대 왕으로 즉위하다. 당시 나이 열셋으로, 대왕대비 정희왕후가 수렴청정을 맡아 국정을 보좌하다.",
+      storyEntry: {
+        title: "열셋의 왕, 할머니의 수렴청정",
+        scenes: [
+          {
+            imagePrompt: "Young King Seongjong on the throne with Queen Dowager Jeonghui seated behind a bamboo screen conducting regency, the thirteen-year-old king's small figure in large ceremonial robes, court officials arranged before them, ink wash painting with dual authority atmosphere",
+            narration: "예종이 승하하자 열셋의 잘성군 이혈이 왕위에 올랐다. 성종이었다. 대왕대비 정희왕후가 수렴청정을 시작하였다. 할머니의 손이 손자의 왕좌를 지탱하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young Seongjong studying intensively in the royal lecture hall with court scholars, eager and earnest in his learning, the future shape of a great scholarly king visible in the boy's focused expression, ink wash painting with warmth",
+            narration: "성종은 배움을 좋아하였다. 경연에 나아가 신하들과 토론하기를 즐겼고, 학문을 통해 왕의 길을 스스로 익혀갔다. 수렴청정 7년이 그 수련의 시간이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The moment Queen Dowager Jeonghui formally ends regency and returns full authority to the now-grown King Seongjong, ink wash painting with the dignified transfer of power, the young king now composed and ready to rule alone",
+            narration: "7년의 수렴청정이 끝나고 성종이 친정을 시작하였다. 열셋의 소년은 스물의 청년이 되어 있었다. 조선 문화의 황금기를 열 준비가 되어 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1476,
@@ -33,6 +54,11 @@ export const SEONGJONG_DATA: KingData = {
             narration: "임금은 경연에 성심을 다하였다. 홍문관의 학사들은 단순한 관료가 아니었다. 그들은 왕에게 직언할 수 있는 자리였고, 사림이 조정에 뿌리내리는 통로였다.",
             durationMs: 5000,
           },
+          {
+            imagePrompt: "A Hongmungwan scholar presenting a remonstrance memorial to King Seongjong in a calm palace corridor, the king's expression attentive rather than offended, the gesture of honest counsel and open reception, ink wash painting with the composed dignity of institutional integrity",
+            narration: "사신은 논한다. 홍문관은 학문의 집이었으나 동시에 간쟁의 보루였다. 왕의 잘못을 말할 수 있는 제도적 자리가 굳어진 것이야말로, 성종 치세가 후대에 남긴 가장 깊은 유산이었다.",
+            durationMs: 5000,
+          },
         ],
         generatedAt: "2026-04-28T00:00:00Z",
         sourceArticleId: "ITKC_JT_I0_A07_03A_01A_00010",
@@ -42,11 +68,53 @@ export const SEONGJONG_DATA: KingData = {
       year: 1481,
       title: "동국여지승람 편찬",
       desc: "노사신 등에게 명하여 전국의 지리·역사·풍속을 집대성한 『동국여지승람』을 편찬케 하여 국토 인식의 기틀을 마련하다.",
+      storyEntry: {
+        title: "조선의 땅을 책에 담다",
+        scenes: [
+          {
+            imagePrompt: "Scholars No Sa-shin and colleagues assembling geographical records from all eight provinces of Joseon, large maps spread on tables alongside local history documents and cultural records, ink wash painting with the ambitious scope of a national geographical survey",
+            narration: "성종 12년, 노사신 등이 『동국여지승람』을 편찬하였다. 팔도의 지리·역사·풍속·인물을 낱낱이 기록한 이 책은 조선이 자신의 땅을 체계적으로 인식하기 시작한 증거였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Provincial officials and local scholars contributing local knowledge — records of mountains, rivers, famous sites, notable people — to the central compilation effort, ink wash painting showing the collaborative national knowledge-gathering project",
+            narration: "전국의 지방 관아에서 정보가 모였다. 명산과 하천, 고적과 인물, 토산과 풍속. 조선이라는 나라의 몸을 글로 그려낸 지식의 지도였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The completed Donggukyeojiseungnam being distributed to officials and scholars across Joseon, a standard reference for governance and cultural identity, ink wash painting with sense of national self-knowledge achieved",
+            narration: "이 책은 단순한 지리서가 아니었다. 조선이 어떤 땅인지, 어떤 사람들이 살아왔는지를 스스로 기록하는 행위였다. 성종의 문화 사업 중에서도 가장 넓은 눈으로 이루어진 성취였다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1482,
       title: "폐비 윤씨 사사",
       desc: "중전 윤씨의 투기와 실덕을 이유로 폐서인한 후 사약을 내리다. 이 일은 훗날 연산군의 폭정을 예고하는 비극의 씨앗이 되다.",
+      storyEntry: {
+        title: "궁중 깊은 곳의 원한",
+        scenes: [
+          {
+            imagePrompt: "Queen Consort Yun being formally stripped of her royal status in a cold palace ceremony, court ladies watching in silence, the deposed queen led away in commoner's clothes, ink wash painting with stark dignity and institutional cruelty",
+            narration: "성종 10년, 왕비 윤씨가 폐서인되었다. 투기와 실덕이 죄목이었다. 왕의 얼굴을 할퀴었다는 말도 전해진다. 그러나 어린 세자는 이 모든 것을 알지 못하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The deposed Yun in a small room outside the palace receiving the royal poison cup from a court official, her expression resigned but her eyes carrying the weight of injustice, ink wash painting with cold fatalistic atmosphere",
+            narration: "폐서인된 지 2년, 사약이 내려졌다. 대신들은 세자가 자라면 위험하다고 진언하였다. 성종은 그 말을 받아들였다. 어머니는 아들이 모르는 사이에 세상을 떠났다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Young Crown Prince Yeonsan, unaware of his mother's fate, studying in the eastern palace, his future fury contained unknowingly within the innocent boy, ink wash painting with dramatic historical irony and quiet foreboding",
+            narration: "세자 융은 어머니의 죽음을 몰랐다. 그 모름이 훗날 갑자사화라는 폭풍으로 변하였다. 성종이 뿌린 씨앗이 연산군의 손에서 피가 되었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1485,
@@ -86,6 +154,27 @@ export const SEONGJONG_DATA: KingData = {
       year: 1493,
       title: "악학궤범 편찬",
       desc: "성현 등에게 명하여 조선의 음악 이론과 악기·무용·복식을 총망라한 『악학궤범』을 편찬케 하여 예악 문명의 정점을 이루다.",
+      storyEntry: {
+        title: "예악의 나라, 소리를 기록하다",
+        scenes: [
+          {
+            imagePrompt: "Scholar-musician Seong Hyeon directing court musicians and dancers in a palace rehearsal hall, documenting musical instruments, notation systems, and ceremonial dance forms, ink wash painting with cultured atmosphere of systematic artistic preservation",
+            narration: "성종 24년, 성현 등이 『악학궤범』을 완성하였다. 조선의 음악 이론과 악기, 무용, 복식을 체계적으로 기록한 이 책은 예악 문명의 완성을 선언하는 저작이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Detailed illustrations of Joseon court musical instruments being drawn and catalogued, musicians demonstrating playing techniques for scholars to document, ink wash painting with meticulous documentary atmosphere",
+            narration: "어떤 악기를 어떻게 연주하는가, 어떤 춤을 어떤 복식으로 추는가. 소리는 눈에 보이지 않는다. 그것을 글과 그림으로 붙잡아 두는 것이 『악학궤범』의 사명이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Seongjong presiding over a formal court music ceremony with the newly systematized Joseon ritual music performed correctly according to the Akhakywebeom, the harmony of sound and ceremony, ink wash painting with ceremonial grandeur",
+            narration: "법전으로 나라의 몸을 세웠다면, 악학궤범으로 나라의 혼을 세웠다. 성종의 치세는 제도와 문화 두 축에서 조선의 황금기를 완성하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

@@ -8,6 +8,24 @@ export const JEONGJONG_DATA: KingData = {
       year: 1398,
       title: "즉위",
       desc: "제1차 왕자의 난 직후 태조의 양위를 받아 조선 제2대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "피 위에 놓인 왕좌",
+        scenes: [
+          {
+            imagePrompt: "Prince Yi Bang-gwa ascending the Joseon throne in a solemn ceremony, the throne hall still carrying the atmosphere of recent violence and political upheaval, court officials bowing in uncertain silence, ink wash painting with subdued ceremonial tones",
+            narration: "무인년 9월, 왕자의 난이 가라앉자 둘째 왕자 방과가 태조의 양위를 받아 왕위에 올랐다. 그것은 스스로 원한 자리가 아니었다.",
+          },
+          {
+            imagePrompt: "King Jeongjong seated on the throne, the powerful figure of Prince Bangwon visible among the court officials below, the king's expression composed but inwardly aware of his brother's dominance, ink wash painting with tension beneath ceremony",
+            narration: "조정은 이미 다섯째 동생 방원의 위세 아래 있었다. 정종은 그것을 알면서도 왕의 자리를 지켰다. 칼을 들지 않고 나라를 안정시키는 것이 그가 할 수 있는 최선이었다.",
+          },
+          {
+            imagePrompt: "King Jeongjong walking in the palace garden alone at dusk, the weight of an unwanted crown visible in his posture, cherry blossoms falling, ink wash painting with melancholic beauty and quiet resignation",
+            narration: "정종은 원하지 않는 왕좌 위에서 나라를 흔들지 않는 것으로 제 몫을 다하였다. 역사는 그를 기억하지 않지만, 그의 절제가 조선을 지켰다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1399,
@@ -44,6 +62,24 @@ export const JEONGJONG_DATA: KingData = {
       year: 1400,
       title: "도평의사사 폐지·의정부 설치",
       desc: "고려의 유제인 도평의사사를 혁파하고 의정부를 설치하여 재상 중심의 행정 체계를 정비하다.",
+      storyEntry: {
+        title: "고려의 유산을 걷어내다",
+        scenes: [
+          {
+            imagePrompt: "Joseon officials dismantling the signboard of the Dopyeongeuisasa government office, replacing it with a new Uijeongbu sign, symbolic transition of institutional power, ink wash painting with sense of institutional change",
+            narration: "정종 2년, 고려에서 이어온 합의 기구 도평의사사가 혁파되었다. 그 자리에 의정부가 섰다. 새 왕조의 뼈대가 하나씩 제 모양을 갖추어 가고 있었다.",
+          },
+          {
+            imagePrompt: "Three senior ministers of the new Uijeongbu reviewing state documents together in a formal council chamber, their authority newly defined and institutionally separate from military power, ink wash painting with scholarly atmosphere",
+            narration: "영의정·좌의정·우의정 세 재상이 국정을 의논하는 구조가 자리를 잡았다. 왕의 명을 받아 신하들이 함께 나라를 운영하는 체제가 조선의 기본 틀로 굳어졌다.",
+          },
+          {
+            imagePrompt: "Haryun and other scholar-officials writing the new institutional regulations for the Uijeongbu system, candlelight in a palace study, books of Confucian statecraft open beside them, ink wash painting style",
+            narration: "하륜이 주도한 이 제도 개편은 고려의 색채를 지우고 조선다운 통치 질서를 세우는 작업이었다. 정종의 치세가 짧았어도, 이 한 가지 개혁은 오백 년을 버텼다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1400,
@@ -83,6 +119,24 @@ export const JEONGJONG_DATA: KingData = {
       year: 1400,
       title: "태종에게 양위",
       desc: "실권을 장악한 방원에게 왕위를 양위하고 상왕(上王)으로 물러나, 조선 왕실의 권력 이양을 평화롭게 마무리하다.",
+      storyEntry: {
+        title: "왕좌를 놓다",
+        scenes: [
+          {
+            imagePrompt: "King Jeongjong formally handing the royal seal to Prince Bangwon in a quiet audience hall, only a few senior officials present, the moment of abdication rendered with understated dignity, ink wash painting with muted ceremonial tones",
+            narration: "경진년 11월, 정종은 왕위를 정안공 방원에게 넘겼다. '나는 덕이 부족하다. 방원은 영특하고 나라의 큰 공이 있으니 마땅히 왕위에 올라야 한다.' 스스로 쓴 양위의 말이었다.",
+          },
+          {
+            imagePrompt: "Former King Jeongjong walking away from the throne hall as a retired king, his posture relaxed rather than defeated, sunlight falling on the palace courtyard behind him, ink wash painting with sense of relief and quiet dignity",
+            narration: "그는 재위 2년 만에 물러났다. 빼앗긴 것이 아니었다. 스스로 내려놓은 것이었다. 그 차이가 정종을 패자가 아닌 양위의 군주로 만들었다.",
+          },
+          {
+            imagePrompt: "Former King Jeongjong in relaxed scholar's robes enjoying retirement in the palace grounds, no longer burdened by the weight of kingship, serene expression, ink wash painting with peaceful garden atmosphere",
+            narration: "상왕으로 물러난 정종은 63세까지 천수를 누렸다. 권좌를 탐하지 않고 내려놓은 사람만이 누릴 수 있는 삶이었다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

@@ -7,11 +7,53 @@ export const SEONJO_DATA: KingData = {
       year: 1567,
       title: "즉위",
       desc: "명종의 뒤를 이어 조선 제14대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "사림의 왕",
+        scenes: [
+          {
+            imagePrompt: "Young King Seonjo ascending the throne in Gyeongbokgung palace, surrounded by Confucian scholar-officials in formal court robes, morning light streaming through the throne hall windows, ink wash painting with formal ceremonial composition and hopeful atmosphere",
+            narration: "명종이 후사 없이 승하하자 방계 종친 하성군이 왕위에 올랐다. 사림의 오랜 기다림이 결실을 맺는 순간이었다. 새 왕은 훈척의 그늘을 걷어내고 사림의 시대를 열겠다고 천명하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon scholars being recalled from exile to the capital, their procession along mountain roads, relief and cautious hope on their faces, ink wash painting with open landscape and clear sky suggesting political renewal",
+            narration: "기묘사화와 을사사화로 쫓겨났던 선비들이 속속 조정으로 돌아왔다. 이황·이이 같은 거유들이 왕의 부름을 받았다. 사림의 세상이 왔다고들 했다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Seonjo studying the Confucian classics at his royal desk with senior scholar officials, books open before them, earnest discussion visible in their postures, ink wash painting with scholarly warm atmosphere, candles lit against evening light",
+            narration: "사신은 논한다. 선조의 즉위는 조선 정치의 큰 전환이었다. 그러나 사림의 뜻이 하나로 모이기 전에 이미 갈라짐의 씨앗이 싹트고 있었으니, 왕이 그것을 알지 못한 것이 뒷날의 화였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1575,
       title: "동서 붕당 형성",
       desc: "이조전랑 임명을 둘러싼 갈등으로 사림이 동인과 서인으로 갈라져 붕당 정치의 시대가 열리다.",
+      storyEntry: {
+        title: "사림의 분열 — 동인과 서인",
+        scenes: [
+          {
+            imagePrompt: "Joseon scholar-officials in heated debate inside a government office, some gesturing toward the appointment document on the table, the room split visually between two factions, ink wash painting with sharp diagonal composition reflecting political fracture",
+            narration: "선조 8년, 이조전랑 자리를 두고 김효원과 심의겸이 맞섰다. 사소해 보이는 인사 다툼이었으나, 조정의 사림은 그 자리를 기준으로 동인과 서인으로 갈라졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A visual metaphor of Joseon scholars dividing into two groups walking in opposite directions from the same palace gate, the city of Hanyang in the background, ink wash painting with stark compositional split, the moment of irreversible separation",
+            narration: "김효원의 집이 한양 동쪽에 있었으므로 그를 따르는 이들이 동인, 심의겸의 집이 서쪽에 있었으므로 그를 따르는 이들이 서인이라 불렸다. 갈라진 사림은 다시 하나가 되지 못했다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Seonjo looking troubled on the throne as two groups of officials present opposing memorials, the king unable to reconcile them, ink wash painting with oppressive courtroom atmosphere and the king diminished between two competing forces",
+            narration: "사신은 논한다. 동서의 분열은 선조의 치세를 관통하는 상처가 되었다. 임진왜란이 터지던 그 해까지 조정은 당론으로 다투었고, 나라를 지키는 일은 뒷전이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1592,
@@ -85,11 +127,53 @@ export const SEONJO_DATA: KingData = {
       year: 1592,
       title: "의병 봉기",
       desc: "곽재우·고경명·조헌 등 각지의 의병장들이 관군이 무너진 자리에서 일어나 왜적에 맞서 싸우다.",
+      storyEntry: {
+        title: "백성이 일어서다",
+        scenes: [
+          {
+            imagePrompt: "Gwak Jae-u in red general's robe standing before gathered peasants and local scholars armed with farm tools and hunting bows in a riverside meadow in Uiryeong, flames of defiance in their eyes, ink wash painting with bold composition and red accent against earthy tones",
+            narration: "임진년 4월, 관군이 무너지는 것을 보고 곽재우가 의령에서 의병을 일으켰다. 붉은 옷을 입고 낙동강을 누빈 홍의장군의 이름이 왜군 사이에 퍼졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Confucian scholar Jo Heon leading volunteer troops across a mountain pass, monks carrying weapons alongside peasants and scholars, a banner reading 'righteousness' visible, ink wash painting with determined marching composition and mountain landscape",
+            narration: "전라도에서 고경명이, 충청도에서 조헌이 일어났다. 서산대사 휴정은 승병을 이끌었다. 나라가 버린 백성이 나라를 지키러 나섰다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A collage-style ink wash painting showing multiple scenes of guerrilla resistance across different Joseon landscapes — mountain ambushes, night raids, local people sheltering wounded fighters — muted tones with small figures showing the nationwide scale of civilian resistance",
+            narration: "사신은 논한다. 나라를 구한 것은 의주로 도망친 임금이 아니었다. 이름 없는 백성들이 저마다의 고을에서 싸웠고, 그 피가 쌓여 7년을 버텼다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1598,
       title: "7년 전쟁 종결",
       desc: "도요토미 히데요시가 죽고 왜군이 철수하면서 7년에 걸친 임진·정유 전쟁이 마침내 끝나다.",
+      storyEntry: {
+        title: "7년의 끝",
+        scenes: [
+          {
+            imagePrompt: "Japanese warships retreating across the Korea Strait at night, fires from the final naval battle at Noryang visible on the water, Joseon warships pursuing them, ink wash painting with dramatic contrast of burning sea and dark sky, the end of a long war",
+            narration: "무술년 8월 히데요시가 죽었다. 왜군이 철수하기 시작했다. 노량 앞바다에서 이순신이 마지막 전투를 이끌었다. 총탄이 그의 왼쪽 가슴을 꿰뚫었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Admiral Yi Sun-sin's final moment on the deck of his battleship at Noryang, clutching his chest as dawn breaks over the sea, his last order being passed to his nephew — 'do not let them know I have fallen' — ink wash painting with tragic and epic atmosphere, pale dawn light",
+            narration: "'나의 죽음을 알리지 마라.' 이순신은 그 말을 남기고 쓰러졌다. 전쟁을 이긴 장수는 전쟁의 마지막 날에 죽었다. 7년이 그렇게 끝났다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The devastated Korean countryside after seven years of war — burned villages, overgrown fields, displaced people slowly returning home, reconstruction beginning, ink wash painting with muted grey-brown tones and sparse hopeful green shoots suggesting slow recovery",
+            narration: "사신은 논한다. 7년의 전쟁은 조선 팔도를 폐허로 만들었다. 인구가 줄고 토지 대장이 불탔다. 나라를 되찾았으나, 돌아온 것은 왕이 아니라 백성의 몫이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

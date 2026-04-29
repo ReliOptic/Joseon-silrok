@@ -48,9 +48,11 @@ export function Level3DetailView({ kingData, eventIndex, onNavigateEvent, zoomIn
         <h1 className="text-[48px] font-serif font-bold mb-4 leading-[1.4] tracking-[-0.02em]">{event.year}년</h1>
       </div>
 
-      <div
-        className="group bg-white/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/50 shadow-xl relative cursor-pointer hover:bg-white/50 transition-colors"
+      <button
+        type="button"
         onClick={zoomIn}
+        aria-label={`${event.title} 자세히 보기`}
+        className="group bg-white/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/50 shadow-xl relative hover:bg-white/50 transition-colors w-full text-left"
       >
         <div className="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none select-none overflow-hidden">
           <span className="text-[200px] font-serif leading-none">{hanjaChar}</span>
@@ -117,7 +119,7 @@ export function Level3DetailView({ kingData, eventIndex, onNavigateEvent, zoomIn
             <span>→</span>
           </div>
         </div>
-      </div>
+      </button>
     </div>
   );
 }

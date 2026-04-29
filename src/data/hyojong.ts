@@ -41,21 +41,105 @@ export const HYOJONG_DATA: KingData = {
       year: 1650,
       title: "북벌 정책 선포",
       desc: "병자호란의 치욕과 삼전도(三田渡)의 굴욕을 씻기 위해 청(淸)을 정벌한다는 북벌(北伐) 대의를 천명하고, 송시열을 비롯한 신료들과 함께 그 뜻을 다지다.",
+      storyEntry: {
+        title: "설욕의 맹세",
+        scenes: [
+          {
+            imagePrompt: "King Hyojong and scholar Song Si-yeol meeting in the royal study at night, the king speaking with fierce resolve, maps of Manchuria and the Qing territories spread before them, candles burning low, ink wash painting with the intensity of shared conviction and the shadow of an impossible dream",
+            narration: "효종은 즉위 초부터 북벌을 천명하였다. 송시열이 호응하였다. '병자년의 치욕을 하루도 잊은 적이 없노라.' 임금의 말은 진심이었다. 조정은 그 뜻을 받들었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon court officials in a formal session debating the northern expedition policy, some passionate advocates some cautious doubters, the king presiding with quiet determination, ink wash painting with the political tension of an idealistic yet costly policy",
+            narration: "북벌은 단순한 군사 계획이 아니었다. 삼전도의 굴욕을 씻는 의리요, 명나라에 대한 의리를 지키는 대의였다. 그러나 청의 국력은 날로 융성하였고, 현실의 벽은 높았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A lone Joseon soldier standing guard on a northern fortress wall at night, gazing toward the Manchurian horizon with the Qing empire beyond, moonlight on the battlements, ink wash painting with contemplative atmosphere — the gap between a king's dream and military reality",
+            narration: "사신은 논한다. 북벌의 꿈은 조선 사림의 가슴을 불태웠으되, 현실과 이상 사이의 간극을 메울 수 없었다. 그것이 효종의 비극이며, 동시에 그의 진정성이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1652,
       title: "어영청 강화 및 군비 증강",
       desc: "어영청(御營廳)의 군병을 대폭 확충하고 훈련을 강화하며, 성곽 수축·화포 주조 등 군비 증강에 힘써 북벌의 실현 가능성을 현실로 당기려 하다.",
+      storyEntry: {
+        title: "군비의 현실",
+        scenes: [
+          {
+            imagePrompt: "Joseon soldiers drilling in disciplined formations outside Seoul fortress walls, officers directing musketeers in volley fire practice, new cannon being cast in a foundry nearby, ink wash painting with martial energy and the systematic build-up of military strength",
+            narration: "효종은 어영청 군병을 크게 늘렸다. 성곽을 수축하고 화포를 주조하였다. 장군 이완이 밤낮으로 군사 훈련을 독려하였다. 북벌의 꿈에 살을 붙이는 작업이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Royal treasury officials presenting financial reports to King Hyojong showing the mounting costs of military expansion, the king's expression showing the tension between ambition and fiscal reality, ink wash painting with the bureaucratic atmosphere of a kingdom stretching its resources",
+            narration: "군병이 늘수록 군량미가 필요했다. 재정이 조여들었다. 백성의 역역(力役)이 무거워졌다. 북벌의 준비는 백성의 땀 위에 세워지고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Hyojong inspecting the newly trained troops and cannon batteries on the training ground, his posture proud but his face showing the weight of knowing the dream may outpace the means, ink wash painting with the poignant gap between a king's will and his kingdom's capacity",
+            narration: "사신은 논한다. 효종의 군비 증강은 진지한 준비였으나, 청을 실제로 정벌할 역량에는 끝내 미치지 못하였다. 꿈의 크기와 현실의 크기가 달랐다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1653,
       title: "하멜 일행 표류",
       desc: "네덜란드 선박 스페르베르호가 제주도 해안에 난파하여 헨드릭 하멜 등 36명이 조선에 억류되고, 그들을 통해 서양의 화기 기술이 조선에 전해지다.",
+      storyEntry: {
+        title: "서양에서 온 낯선 이들",
+        scenes: [
+          {
+            imagePrompt: "Dutch sailing ship Sperwer wrecked on the rocky coast of Jeju Island in a storm, survivors clinging to debris and wading to shore, Joseon islanders watching in amazement from the beach, ink wash painting with dramatic storm atmosphere and the shock of first contact",
+            narration: "계사년 여름, 네덜란드 선박 스페르베르호가 제주도 해안에 좌초하였다. 푸른 눈의 서양인 36명이 섬 사람들 앞에 나타났다. 조선에 온 첫 서양인 집단이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Hendrick Hamel and other Dutch sailors demonstrating Western firearms and artillery techniques to Joseon military officials in a training ground, the officials closely observing the unfamiliar weapons with a mixture of curiosity and strategic interest, ink wash painting with cross-cultural technology transfer atmosphere",
+            narration: "하멜 일행은 훈련도감에 배속되어 서양 화기 기술을 전하였다. 이미 조선에 억류 중이던 박연(얀 야너스 벨테브레이)이 통역을 맡았다. 낯선 기술이 조선의 군비에 스며들었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Hendrick Hamel writing his journal in a candlelit room during his years of captivity in Joseon, his memories of the country filling the pages, ink wash painting with the intimate atmosphere of a captive observer recording an unknown civilization for the outside world",
+            narration: "사신은 논한다. 하멜은 13년 억류 끝에 탈출하여 조선을 서양에 처음으로 알렸다. 조선은 그를 가두었으나, 그가 남긴 기록이 조선을 세계에 열었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1654,
       title: "제1차 나선정벌",
       desc: "청나라의 요청에 응하여 조총 부대를 이끈 변급(邊岌) 장군이 만주 북쪽으로 출병, 러시아(나선·羅禪) 군과 교전하여 격퇴하다.",
+      storyEntry: {
+        title: "북국의 첫 출병",
+        scenes: [
+          {
+            imagePrompt: "Joseon general Byeon Geup leading a column of musketeers northward through dense Manchurian taiga forests, Qing Chinese liaison officers alongside them, the unfamiliar northern wilderness stretching to the horizon, ink wash painting with the scale and strangeness of an expedition to unknown lands",
+            narration: "갑오년, 청의 요청에 응하여 변급이 조총 부대를 이끌고 북쪽으로 향하였다. 북벌을 꿈꾸는 나라가 청을 도와 러시아와 싸우러 가는 역설이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon musketeers in combat against Russian forces near the Amur River, their disciplined volley fire creating thick smoke, the unfamiliar enemy retreating under the firepower, ink wash painting with the smoke and noise of cross-cultural warfare in an Arctic landscape",
+            narration: "흑룡강 유역에서 조선 조총 부대는 러시아 군과 교전하였다. 나선은 낯선 적이었다. 그러나 조선의 총포가 그들을 몰아쳤다. 첫 번째 나선정벌은 성공이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon soldiers returning home from the northern expedition, their expressions showing fatigue and the dissonance of having fought for the enemy of their king's dream, meeting families at the city gates, ink wash painting with subdued homecoming atmosphere and the irony of duty without honor",
+            narration: "사신은 논한다. 조선 군사가 청을 도와 싸운 것은 현실의 선택이었다. 북벌의 꿈을 품고 청의 적을 함께 물리친 이 역설을, 역사는 조용히 기록하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1658,

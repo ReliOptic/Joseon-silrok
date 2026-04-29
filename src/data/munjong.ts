@@ -8,6 +8,27 @@ export const MUNJONG_DATA: KingData = {
       year: 1450,
       title: "즉위",
       desc: "세종의 양위를 받아 조선 제5대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "20년 기다림 끝의 왕좌",
+        scenes: [
+          {
+            imagePrompt: "King Munjong ascending the throne in full royal regalia, his expression one of solemn readiness after decades of preparation, court officials bowing in ceremony, ink wash painting with a sense of long-deferred fulfillment and quiet determination",
+            narration: "문종은 스물두 살부터 세자였다. 세종 곁에서 20년을 기다렸다. 그리고 마침내 왕이 되었을 때, 그의 나이는 이미 서른여섯이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "New King Munjong in the royal lecture hall on his first day of reign, immediately engaging scholars in the royal lecture session, books and documents open, the court sensing a new scholarly energy, ink wash painting style",
+            narration: "즉위하던 날부터 경연을 열었다. 세종이 닦아놓은 학문의 나라를 이어받아 더 깊이 뿌리내리게 하겠다는 뜻이었다. 신하들은 이 새 왕에게 기대를 품었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Munjong at his desk late at night, surrounded by administrative documents and historical texts, his expression focused yet shadowed by the first signs of illness, candlelight flickering, ink wash painting with the poignancy of a scholar-king racing against time",
+            narration: "그러나 세자 시절 얻은 병이 그를 놓아주지 않았다. 왕좌는 얻었으나 몸이 뜻을 받쳐주지 못하였다. 재위의 봄은 이미 짧다는 것을 몸은 알고 있었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1451,
@@ -44,11 +65,53 @@ export const MUNJONG_DATA: KingData = {
       year: 1452,
       title: "고려사절요 편찬",
       desc: "김종서 등이 『고려사절요』 35권을 편찬하여 올리니 이를 인준하다.",
+      storyEntry: {
+        title: "역사를 요약하는 것도 역사다",
+        scenes: [
+          {
+            imagePrompt: "Kim Jong-seo and scholars presenting the 35-volume Goryeosajeolyao to King Munjong, the compact abridgement of Goryeo history arranged alongside the larger Goryeosa, ink wash painting with scholarly pride and royal appreciation",
+            narration: "문종 2년, 김종서 등이 『고려사절요』 35권을 완성하여 올렸다. 이미 완성된 139권 『고려사』의 핵심을 추려 관리들이 실무에서 쓸 수 있도록 편찬한 것이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Officials in provincial government offices reading the Goryeosajeolyao, using it as a practical historical reference for governance decisions, ink wash painting showing the practical utility of condensed historical knowledge",
+            narration: "방대한 역사를 요약하는 것은 단순한 축약이 아니었다. 무엇이 중요한가를 판단하는 일이었다. 문종은 역사의 교훈이 현장의 관리들에게 닿기를 원하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Munjong reviewing both the Goryeosa and Goryeosajeolyao side by side, marking passages, his scholarly nature evident in his focused engagement, ink wash painting with academic atmosphere",
+            narration: "『고려사』와 『고려사절요』. 두 역사책이 함께 완성된 것은 문종의 짧은 치세가 남긴 귀한 유산이었다. 역사를 알아야 나라를 다스릴 수 있다는 믿음의 결실이었다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1451,
       title: "화차 개량",
       desc: "병기도감에 명하여 화차(火車)와 신기전(神機箭) 등 화기를 개량·증산하여 북방 방어를 강화하다.",
+      storyEntry: {
+        title: "문의 왕이 무를 갖추다",
+        scenes: [
+          {
+            imagePrompt: "Joseon weapons craftsmen working in a royal armory, constructing improved fire carts loaded with Singijeon rocket arrows, technical diagrams on the wall, smoke and sparks from metalworking, ink wash painting with industrial energy",
+            narration: "문종은 학문의 왕이었으나, 나라의 방비를 소홀히 하지 않았다. 병기도감에 명하여 화차와 신기전을 개량하고 늘렸다. 북방의 여진족 위협이 그 배경이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Demonstration of the improved Hwajeo fire cart launching Singijeon rockets in formation on a testing ground, officials observing the range and accuracy, smoke trails arcing across the sky, ink wash painting with dramatic military technology",
+            narration: "화차 한 대에 수십 발의 신기전이 실렸다. 일제히 발사되면 적 기병이 접근할 수 없었다. 문종이 직접 설계에 관여했다는 기록도 남아 있다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Northern border fortress with improved weapons deployed, soldiers training with the new Singijeon rocket launchers, mountains and sparse frontier landscape in background, ink wash painting showing military preparedness",
+            narration: "학문으로 나라를 빛내고 병기로 나라를 지키려 했던 문종. 그러나 무기를 완성하고 역사를 완성하고도 자신의 이야기를 완성할 시간은 주어지지 않았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1452,

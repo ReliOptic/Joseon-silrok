@@ -41,11 +41,53 @@ export const CHEOLJONG_DATA: KingData = {
       year: 1851,
       title: "안동 김씨 세도의 공고화",
       desc: "김문근의 딸을 왕비로 맞아들이며 안동 김씨 일문이 조정의 모든 요직을 장악하고 세도 정치를 더욱 굳히다.",
+      storyEntry: {
+        title: "왕비의 성씨가 곧 권력이었다",
+        scenes: [
+          {
+            imagePrompt: "The royal wedding procession of Queen Cheolin entering the palace gates, her palanquin surrounded by Andong Kim clan retainers as much as royal guards, the formal ceremony masking the political calculation behind the match, ink wash painting style with the pageantry of power consolidation",
+            narration: "신해년, 김문근의 딸이 왕비의 자리에 올랐다. 이로써 안동 김씨는 국왕의 장인 자리까지 차지하였다. 조정의 요직은 남김없이 김씨 일문으로 채워졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Kim Mun-geun and Andong Kim clan officials holding court in a private meeting room, maps of official appointments spread before them, King Cheoljong's name used as a stamp rather than a decision-maker, ink wash painting with the shadow governance of the clan network",
+            narration: "왕의 뜻은 묻지 않았다. 인사는 사가에서 결정되었고 왕은 재가할 뿐이었다. 세도 정치는 철종 대에 이르러 가장 노골적이고 견고한 형태로 완성되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Cheoljong drinking alone in a palace chamber late at night, a window open to the night sky, his gaze distant and melancholy, the sounds of the palace around him suggesting a prison of luxury, ink wash painting with the loneliness of a man without agency",
+            narration: "사신은 논한다. 철종은 왕이었으나 통치하지 않았다. 통치할 수 없었다. 강화도의 보리밥을 그리워하는 마음이, 어쩌면 그가 가진 유일하게 자유로운 감정이었을 것이다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1860,
       title: "최제우의 동학 창시",
       desc: "경주의 최제우가 서학에 맞서 동학을 창시하고, 인내천(人乃天)의 가르침으로 피폐한 민심을 모으다.",
+      storyEntry: {
+        title: "사람이 곧 하늘이다",
+        scenes: [
+          {
+            imagePrompt: "Choe Je-u in a simple scholar's robe sitting in meditation on a hillside in Gyeongju, the mountains around him in morning mist, an expression of spiritual revelation on his face, ink wash painting style with the quiet drama of a founding moment in religious history",
+            narration: "경신년, 경주의 최제우가 도를 깨쳤다. 서학이 서쪽에서 들어와 민심을 흔들고 있었다. 그는 동쪽의 학문, 동학으로 맞서겠다고 선언하였다. '인내천' — 사람이 곧 하늘이라.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Choe Je-u teaching a growing crowd of peasants and commoners in an open field, his words spreading visibly through their faces lighting up with understanding and hope, ink wash painting with the grassroots energy of a new spiritual movement taking hold among the dispossessed",
+            narration: "탐관오리의 수탈 아래 신음하는 농민들이 동학의 가르침에 귀를 기울였다. '귀천이 없다. 사람이 곧 하늘이다.' 이 말은 오백 년 신분제가 흔들리는 소리였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon government officials issuing arrest warrants for Choe Je-u, classifying Donghak as dangerous heresy, while in countryside villages ordinary people secretly continue to practice the new faith, ink wash painting with the contrast between state suppression and popular spiritual hunger",
+            narration: "사신은 논한다. 조정은 동학을 사학으로 규정하고 최제우를 처형하였다. 그러나 민심의 허기는 사라지지 않았다. 동학은 30년 뒤 갑오농민전쟁의 사상적 불씨가 되어 다시 타올랐다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1862,
@@ -85,6 +127,27 @@ export const CHEOLJONG_DATA: KingData = {
       year: 1862,
       title: "삼정이정청 설치",
       desc: "임술농민봉기에 놀란 조정이 전정·군정·환곡의 삼정 문란을 바로잡기 위해 삼정이정청을 설치하나 실효를 거두지 못하다.",
+      storyEntry: {
+        title: "개혁의 문서, 변하지 않는 현실",
+        scenes: [
+          {
+            imagePrompt: "Joseon court officials establishing the Samjeongijeongcheong reform bureau in a formal setting, stacks of documents and ledgers piled high around them, the urgency of the peasant uprisings driving bureaucratic action, ink wash painting style with the busy but ultimately hollow energy of crisis management",
+            narration: "임술년 봉기에 놀란 조정이 삼정이정청을 설치하였다. 전정·군정·환곡의 폐단을 바로잡겠다는 선언이었다. 개혁안이 작성되었고 논의가 이어졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The reform documents of Samjeongijeongcheong piling up unimplemented in a government storage room, dust settling on the stacks of papers, while outside the window tax collectors continue their rounds in a village unchanged, ink wash painting with the irony of paper reform and unchanged reality",
+            narration: "그러나 세도 정치의 뿌리는 건드리지 않았다. 개혁안은 문서로 존재했고, 문서는 창고 속에 쌓였다. 이듬해 삼정이정청은 흐지부지 해체되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Rural peasants in the fields after the rebellion, returning to their exhausting labor, the brief hope of change fading, distant mountains unchanged, ink wash painting with the quiet despair of systemic failure and the resilience of those who must endure it",
+            narration: "사신은 논한다. 삼정이정청의 실패는 세도 정치의 자기 모순을 보여준다. 개혁을 막는 구조를 쥔 자들이 개혁을 논했으니, 그 결말은 처음부터 정해져 있었다. 불씨는 꺼지지 않았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

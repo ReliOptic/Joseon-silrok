@@ -8,6 +8,27 @@ export const SUNJO_DATA: KingData = {
       year: 1800,
       title: "즉위",
       desc: "정조의 뒤를 이어 열한 살의 나이로 조선 제23대 왕으로 즉위하니, 대왕대비 정순왕후가 수렴청정을 시작하다.",
+      storyEntry: {
+        title: "열한 살의 왕",
+        scenes: [
+          {
+            imagePrompt: "The eleven-year-old King Sunjo on the throne, his small frame dwarfed by the imposing royal seat, Queen Dowager Jeongsun seated behind a screen conducting the actual governance, court officials bowing to both figures, ink wash painting with the visual disproportion of a child king and the real power seated behind him",
+            narration: "경신년 6월, 정조가 갑자기 승하하였다. 열한 살 순조가 왕위에 올랐다. 대왕대비 정순왕후가 수렴청정을 시작하였다. 정조의 개혁이 하룻밤 사이에 멈추었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Queen Dowager Jeongsun issuing royal orders from behind the screen while young Sunjo watches silently, Byeokpa faction officials replacing Sipha reformers in court positions, the political reversal of Jeongjo's reign visible in the changing faces at court, ink wash painting with the cold efficiency of a regency government",
+            narration: "정순왕후는 벽파를 중용하였다. 정조가 키운 시파 신료들이 밀려났다. 규장각의 불빛이 어두워졌다. 개혁의 시대는 그렇게 닫혔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young King Sunjo studying state documents alone in his royal study, growing up under a regency that has already shaped the court around him, his expression showing a child learning to be king in a world that has already been decided without him, ink wash painting with the quiet loneliness of a royal childhood constrained by politics",
+            narration: "사신은 논한다. 순조의 즉위는 조선 세도 정치의 서막이었다. 어린 왕 뒤에서 권력을 쥔 것이 먼저는 대비였고, 다음은 외척이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1801,
@@ -44,6 +65,27 @@ export const SUNJO_DATA: KingData = {
       year: 1804,
       title: "안동 김씨 세도 시작",
       desc: "순원왕후의 아버지 김조순이 국왕의 장인으로 조정을 장악하니, 안동 김씨 일문이 요직을 독점하고 세도 정치의 시대가 열리다.",
+      storyEntry: {
+        title: "세도 — 권력의 새 주인",
+        scenes: [
+          {
+            imagePrompt: "Kim Jo-sun and Andong Kim clan officials occupying the key positions of the Joseon court, presenting themselves as loyal ministers while effectively controlling all appointments and decisions, the young king visible but marginalized in his own throne room, ink wash painting with the subtle visual displacement of royal authority by factional power",
+            narration: "순원왕후의 아버지 김조순이 조정을 장악하였다. 안동 김씨 일문이 삼정승을 비롯한 요직을 독점하였다. 왕은 있었으나 왕권은 없었다. 세도의 시대가 열렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon officials from outside the Andong Kim clan being turned away from government appointments by gatekeepers of the seodoin system, capable men excluded regardless of merit, ink wash painting with the closed doors and blocked paths of a patronage system replacing meritocracy",
+            narration: "능력이 아닌 혈연과 당색이 벼슬을 결정하였다. 안동 김씨의 문전을 드나들지 않으면 조정에 발을 붙일 수 없었다. 인재의 길이 막혔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Kim Jo-sun at the center of a private gathering of Andong Kim clan members discussing court appointments and policy in a mansion study, the actual governance of Joseon happening outside the palace walls, ink wash painting with the private but powerful atmosphere of clan politics replacing royal governance",
+            narration: "사신은 논한다. 세도 정치는 왕조의 뼈대를 속으로 갉아먹는 진드기와 같았다. 겉으로 나라의 형식은 유지되었으나, 그 안에 백성을 위한 정치는 없었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1811,
@@ -83,11 +125,53 @@ export const SUNJO_DATA: KingData = {
       year: 1834,
       title: "삼정의 문란 심화",
       desc: "전정·군정·환곡 등 삼정의 폐단이 극에 달하니, 탐관오리가 횡행하고 백성의 유망이 잇따르며 왕조 말기의 징후가 뚜렷해지다.",
+      storyEntry: {
+        title: "삼정의 문란 — 썩은 기둥",
+        scenes: [
+          {
+            imagePrompt: "Corrupt local officials extorting excessive grain taxes from Joseon farmers at harvest time, demanding far beyond the legal amount, farmers' faces showing exhaustion and despair, ink wash painting with the dark tones of institutionalized exploitation and the powerlessness of the taxed against the taxer",
+            narration: "전정(田政)은 토지세인데, 관리가 장부를 속여 없는 땅에도 세금을 매겼다. 군정(軍政)은 군포인데, 죽은 사람과 갓난아이에게도 부과하였다. 환곡(還穀)은 빌려주는 곡식인데, 빌리지도 않은 이에게 이자를 뜯었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Joseon farm families abandoning their villages and fields with only small bundles of belongings, becoming wandering refugees on the roads, the countryside emptying as the tax burden becomes impossible to bear, ink wash painting with the desolate landscape of a kingdom hemorrhaging its population",
+            narration: "견딜 수 없어진 백성이 고향을 버리고 떠났다. 유민이 도처에 넘쳤다. 비어가는 마을이 늘었다. 왕조는 백성 없이 세금만 걷으려 하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "A court official filing yet another report about the Three Administrative Abuses to an indifferent government in Seoul, the report joining countless others already ignored, ink wash painting with the bureaucratic futility of reports about structural problems that the ruling class has no incentive to fix",
+            narration: "사신은 논한다. 삼정의 문란은 세도 정치가 만들어낸 구조적 부패였다. 고치려는 자가 없었으니 고쳐질 리도 없었다. 왕조의 황혼이 들판에서 먼저 보였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1834,
       title: "순조 승하",
       desc: "순조께서 재위 34년 만에 승하하시니, 세도 정치의 기틀 위에서 왕권은 끝내 회복되지 못한 채 아들 헌종에게 왕위를 넘기다.",
+      storyEntry: {
+        title: "왕권 없이 닫힌 치세",
+        scenes: [
+          {
+            imagePrompt: "King Sunjo on his deathbed in the palace, surrounded by Andong Kim clan officials who control even the atmosphere of the royal chamber, the king's face showing the exhaustion of a reign spent without real power, ink wash painting with the quiet tragedy of a king who reigned but did not rule",
+            narration: "갑오년, 순조가 재위 34년 만에 승하하였다. 세도 정치의 기틀 위에서 왕권은 끝내 회복되지 못하였다. 왕이 있었으나 나라를 다스린 것은 왕이 아니었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The young Crown Prince Hyomyeong who had briefly conducted royal duties dying young, leaving his own young son to inherit the throne as Heonjong, the dynastic succession passing to another child king, ink wash painting with the melancholy of generational weakness compounding in the royal line",
+            narration: "아들 효명세자는 대리청정 중 갑자기 세상을 떠났다. 왕위는 손자 헌종에게로 이어졌다. 세도의 시대는 어린 왕을 필요로 하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The Andong Kim clan officials seamlessly transitioning their power from Sunjo's reign to Heonjong's, the machinery of seodoin politics continuing without interruption as one king replaces another, ink wash painting with the institutional inertia of a power structure that outlasts any individual monarch",
+            narration: "사신은 논한다. 순조의 치세는 세도 정치가 왕조를 어떻게 비워내는지를 보여주는 34년이었다. 왕의 이름만 남고 왕의 뜻은 사라진 나라였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

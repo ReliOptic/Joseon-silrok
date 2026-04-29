@@ -76,21 +76,105 @@ export const SEJO_DATA: KingData = {
       year: 1456,
       title: "집현전 폐지",
       desc: "사육신 사건의 여파로 학문 기관 집현전을 혁파하고, 왕권에 도전할 수 있는 학문적 결사의 싹을 잘라내다.",
+      storyEntry: {
+        title: "집현전의 문이 닫히다",
+        scenes: [
+          {
+            imagePrompt: "Joseon officials removing books and scrolls from Jiphyeonjeon hall by royal order, the shelves being emptied, scholars watching from outside the palace gates in stunned silence, ink wash painting with the atmosphere of an institution being erased",
+            narration: "사육신의 피가 채 마르기도 전에, 세조는 집현전을 혁파하였다. 학문과 간쟁의 요람이었던 그곳에서 왕권에 도전할 지식인 집단이 자라났다고 판단한 것이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The Jiphyeonjeon building standing empty and silent, its doors locked, books piled in storage, the spirit of Sejong's scholarly vision departed, ink wash painting with desolate institutional atmosphere",
+            narration: "세종이 꿈꾼 지식의 전당이 문을 닫았다. 성삼문과 박팽년을 길러낸 그 공간이 이제 역사가 되었다. 권력은 때로 자신이 낳은 것을 두려워한다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Sejo signing the decree abolishing Jiphyeonjeon with firm brushstroke, his expression showing no hesitation, the single-minded calculation of a ruler who will not allow another challenge to his authority, ink wash painting",
+            narration: "세조는 후회하지 않았다. 그것이 그의 강함이었고, 그것이 그의 한계였다. 집현전의 폐지는 30년 뒤 성종이 홍문관을 세울 때까지 조선 학문에 긴 그늘을 드리웠다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1460,
       title: "경국대전 편찬 착수",
       desc: "육전(六典)의 체계 아래 조선의 통치 규범을 집대성할 법전 편찬을 명하여, 법치 국가의 기틀을 다지기 시작하다.",
+      storyEntry: {
+        title: "찬탈자가 법전을 만들다",
+        scenes: [
+          {
+            imagePrompt: "King Sejo summoning scholars Choe Hang and No Sa-shin to the throne room to receive the command to compile the Gyeongguk Daejeon law code, an expansive vision of legal order being set in motion, ink wash painting with formal authority",
+            narration: "세조 6년, 임금은 최항과 노사신 등에게 명하여 육전을 찬집하게 하였다. 이(吏)·호(戶)·예(禮)·병(兵)·형(刑)·공(工) 여섯 분야에 걸쳐 조선의 모든 법도를 하나의 책에 담겠다는 선언이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Scholars and officials compiling legal texts from scattered previous codes, organizing them by category at long desks, reference books and earlier law codes spread around them, ink wash painting with scholarly industry",
+            narration: "'법령은 국가의 큰 근본이니 삼가지 않을 수 없다.' 세조의 말이었다. 피로써 얻은 왕좌를 법으로써 굳히려는 의지가 이 편찬 사업의 뿌리였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The first draft sections of the Gyeongguk Daejeon being presented to King Sejo for review, the king reading carefully, the long road to the law code's completion stretching ahead through future reigns, ink wash painting",
+            narration: "법전은 세조의 대에 완성되지 않았다. 예종을 거쳐 성종 16년에야 반포되었다. 그러나 그 씨앗은 세조가 뿌렸다. 찬탈자의 손이 조선 오백 년의 법을 시작하였다는 역설이 역사에 남았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1466,
       title: "직전법 실시",
       desc: "과전법(科田法)을 폐지하고 현직 관료에게만 수조권을 부여하는 직전법을 시행하여 국가 재정을 강화하고 토지 지배 질서를 재편하다.",
+      storyEntry: {
+        title: "현직에게만 땅을 허하라",
+        scenes: [
+          {
+            imagePrompt: "Joseon government officials reviewing land allocation registries, crossing out entries for retired officials and deceased merit subjects, reassigning the tax collection rights to current officeholders, ink wash painting with bureaucratic precision",
+            narration: "세조 12년, 과전법이 폐지되고 직전법이 시행되었다. 현직 관료에게만 수조권을 부여하고 퇴직하면 반환하게 하였다. 토지의 흐름이 나라의 통제 아래 들어왔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Retired former officials and widows of merit subjects losing their land stipends under the new law, contrasted with active officials receiving their allocations, ink wash painting showing the social impact of the legal reform",
+            narration: "공신과 그 후손들이 대대로 토지의 수익을 누리던 관행이 끊겼다. 재정은 강화되었으나, 노신들의 불만도 함께 쌓였다. 세조의 개혁은 늘 이 두 얼굴을 함께 지니고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Sejo examining national treasury accounts showing improved fiscal balance after the Jikjeonbeop reform, financial officials presenting positive reports, ink wash painting with the satisfaction of successful economic policy",
+            narration: "직전법은 국가 재정을 안정시켰다. 강력한 왕권 위에서만 가능한 개혁이었다. 세조는 불의한 방법으로 오른 자리에서 의로운 제도를 만들었다. 역사가 그를 쉬이 판단하지 못하는 이유다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1467,
       title: "원각사지 십층석탑 건립·진관 체제 정비",
       desc: "한양 원각사에 십층석탑을 세워 불교적 권위를 과시하는 한편, 전국의 군사 방어 체계를 진관(鎭管) 단위로 재편하여 국방을 일신하다.",
+      storyEntry: {
+        title: "탑을 세우고 군제를 바꾸다",
+        scenes: [
+          {
+            imagePrompt: "The ten-story marble pagoda of Wongaksa temple rising above the rooftops of Hanyang, craftsmen completing the upper stories, Buddhist monks and court officials watching, ink wash painting with the grandeur of religious architecture against urban skyline",
+            narration: "세조 13년, 한양 원각사에 대리석 십층석탑이 완성되었다. 숭유억불의 나라에서 왕이 손수 탑을 세운 것은 이례적인 일이었다. 세조는 불교에서 자신의 업장을 씻고자 하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Military officials and King Sejo reviewing the new Jingwan defense system map, the kingdom divided into strategic defense zones with clear command structures, ink wash painting with military planning atmosphere",
+            narration: "같은 해, 전국의 군사 방어 체계를 진관 단위로 재편하였다. 각 지역의 방어를 체계적으로 조직하여 외침에 빠르게 대응할 수 있도록 하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Dual image of the pagoda's spiritual significance and soldiers training in the new defense system, showing King Sejo's simultaneous pursuit of religious expiation and practical military governance, ink wash painting",
+            narration: "탑은 죄를 씻으려는 마음이요, 진관은 나라를 지키려는 손이었다. 세조는 자신이 행한 일의 무게를 알면서도 왕의 일을 멈추지 않았다. 그것이 그의 방식이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

@@ -6,7 +6,28 @@ export const HYEONJONG_DATA: KingData = {
     {
       year: 1659,
       title: "즉위",
-      desc: "효종의 승하로 조선 제18대 왕으로 즉위하다."
+      desc: "효종의 승하로 조선 제18대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "예법의 시대를 열다",
+        scenes: [
+          {
+            imagePrompt: "King Hyeonjong ascending the throne after his father Hyojong's sudden death, his young face showing grief and the weight of unexpected succession, officials in mourning robes bowing before him, ink wash painting with the heavy atmosphere of mourning and new responsibility",
+            narration: "기해년 5월, 효종이 갑자기 승하하였다. 현종이 왕위에 올랐다. 그런데 아버지의 장례가 채 끝나기 전에 조정은 이미 다른 싸움으로 달아오르고 있었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Court officials immediately beginning to dispute over mourning dress regulations even as the late king's coffin is still in the palace, some presenting documents and citing classical texts, the new king watching helplessly from the throne, ink wash painting with the surreal tension of factional politics intruding on royal grief",
+            narration: "자의대비의 상복이 문제였다. 기년이냐 3년이냐. 복식 논쟁이 아버지의 상(喪)보다 더 시끄러웠다. 현종의 치세는 그렇게 시작되었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young King Hyeonjong seated in his study late at night, a single candle burning beside mourning ritual texts, his expression weary and isolated, the sound of factional debate metaphorically pressing in from outside the walls, ink wash painting with solitary and burdened atmosphere",
+            narration: "사신은 논한다. 현종은 부왕의 북벌 꿈도, 조정의 예론 다툼도 물려받았다. 그 무게를 홀로 짊어진 채 15년을 버텼다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1659,
@@ -45,7 +66,28 @@ export const HYEONJONG_DATA: KingData = {
     {
       year: 1660,
       title: "서인 주도 기해예송 결착",
-      desc: "송시열을 중심으로 한 서인의 기년복론이 채택되어 남인이 조정에서 밀려나고 서인이 국정을 장악하다."
+      desc: "송시열을 중심으로 한 서인의 기년복론이 채택되어 남인이 조정에서 밀려나고 서인이 국정을 장악하다.",
+      storyEntry: {
+        title: "기년복의 승리",
+        scenes: [
+          {
+            imagePrompt: "Song Si-yeol presenting his memorial on one-year mourning to King Hyeonjong, his bearing confident and authoritative, Southerner officials standing to dispute but outnumbered, the king's expression showing the decision has already been made, ink wash painting with the formal weight of a political verdict dressed in ritual language",
+            narration: "경자년, 임금은 서인의 기년복론을 채택하였다. 송시열의 논리가 조정의 공론으로 굳어졌다. 남인 허목의 3년설은 받아들여지지 않았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Southerner officials leaving the court hall in defeat, some accepting exile, the Western faction officials remaining and taking their positions of power, ink wash painting with the stark visual contrast of political victory and defeat enacted through a ritual dispute",
+            narration: "남인이 밀려났다. 서인이 조정을 잡았다. 예법 논쟁의 결말이 권력의 지형을 바꾸었다. 이것이 조선 붕당 정치의 방식이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Hyeonjong reviewing state documents in his study, the factional struggle temporarily settled but clearly unresolved, his face showing he knows this peace is provisional, ink wash painting with the quiet unease of a king who has settled one battle but senses the next is coming",
+            narration: "사신은 논한다. 기해예송의 결착은 끝이 아니었다. 14년 뒤 같은 문제가 다시 불거져 서인이 실각하였다. 예론의 칼날은 한 번 뽑히면 거두어지지 않는다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1671,
@@ -84,12 +126,54 @@ export const HYEONJONG_DATA: KingData = {
     {
       year: 1674,
       title: "갑인예송 발발",
-      desc: "효종비 인선왕후 승하 후 자의대비의 복상 기간을 다시 두고 서인과 남인이 격돌하여 남인의 대공설이 채택됨으로써 서인이 실각하다."
+      desc: "효종비 인선왕후 승하 후 자의대비의 복상 기간을 다시 두고 서인과 남인이 격돌하여 남인의 대공설이 채택됨으로써 서인이 실각하다.",
+      storyEntry: {
+        title: "두 번째 상복 전쟁",
+        scenes: [
+          {
+            imagePrompt: "Joseon court in renewed factional turmoil, Southerner officials presenting the nine-month mourning argument for Queen Inseon's death, Western faction officials disputing with classical texts, the court hall visually split again as in 1659, ink wash painting with the exhausting repetition of the same political theater",
+            narration: "갑인년, 효종비 인선왕후가 승하하였다. 자의대비의 복상 기간을 두고 조정은 다시 갈라졌다. 기해예송의 상처가 채 아물지도 않았는데 칼이 다시 뽑혔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Heo Jeok presenting the Southerner nine-month mourning argument that contradicts the Western faction's earlier position, King Hyeonjong listening with visible agitation as the logical trap for the Westerners becomes clear, ink wash painting with the sharp intellectual drama of a political checkmate through ritual",
+            narration: "남인 허적이 대공설을 관철하였다. 기해예송에서 기년복을 주장한 서인의 논리가 스스로의 모순을 드러냈다. 서인이 실각하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Western faction officials including Song Si-yeol being sent into exile, their positions stripped, Southerner officials taking their places in the court hall, ink wash painting with the reversal of power and the sense of political seasons turning — the same stage, different actors",
+            narration: "사신은 논한다. 갑인예송은 기해예송의 거울상이었다. 지는 편과 이기는 편만 바뀌었을 뿐, 예론이 권력의 도구로 쓰인다는 사실은 달라지지 않았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1674,
       title: "승하 및 남인 집권",
-      desc: "갑인예송의 결착을 보지 못한 채 현종이 승하하고, 뒤를 이은 숙종 초년에 남인이 조정을 장악하다."
+      desc: "갑인예송의 결착을 보지 못한 채 현종이 승하하고, 뒤를 이은 숙종 초년에 남인이 조정을 장악하다.",
+      storyEntry: {
+        title: "예송의 끝, 왕의 끝",
+        scenes: [
+          {
+            imagePrompt: "King Hyeonjong on his deathbed in the palace, visibly exhausted after fifteen years of factional strife, senior officials in attendance but the factionalism still unresolved, ink wash painting with the quiet finality of a king worn down by the weight of a court he could never fully master",
+            narration: "갑인년 8월, 현종이 승하하였다. 갑인예송의 결착을 보지 못한 채였다. 재위 15년, 예송으로 시작하여 예송으로 끝난 치세였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Young King Sukjong ascending the throne as Southerner officials consolidate their power in the court, the fourteen-year-old new king looking out at officials who are already planning their next moves, ink wash painting with the sense of political momentum flowing past a new young monarch",
+            narration: "열네 살 숙종이 즉위하였다. 남인이 조정을 장악하였다. 현종이 평생 균형을 찾으려 했던 조정은 또 한 번의 전환점을 맞이하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The ancestral tablets of King Hyeonjong being placed in the royal shrine Jongmyo, a solemn ceremony attended by court officials who had spent his reign in factional combat, ink wash painting with the quiet dignity of posthumous memory and the irony of unified ritual after a divided reign",
+            narration: "사신은 논한다. 현종은 예의 시대를 산 왕이었으나 예를 다스리지 못한 왕이기도 하였다. 그 무력함이 그의 치세를 규정하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     }
   ],
   detail: {

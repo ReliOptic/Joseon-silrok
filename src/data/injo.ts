@@ -8,16 +8,79 @@ export const INJO_DATA: KingData = {
       year: 1623,
       title: "인조반정",
       desc: "서인 세력이 광해군의 패륜과 중립 외교를 명분으로 반정을 일으켜 광해군을 폐위하고, 능양군을 조선 제16대 왕으로 추대하다.",
+      storyEntry: {
+        title: "반정 — 명분의 칼",
+        scenes: [
+          {
+            imagePrompt: "Western faction officials in secret night meeting planning the coup against Gwanghaegun, maps and candles on the table, faces intense with resolve and conspiracy, ink wash painting with deep shadows and the charged atmosphere of treason against tyranny",
+            narration: "계해년 봄, 이귀·김류·이괄이 창의문을 넘어 반정을 일으켰다. 명분은 폐모살제와 중립 외교였다. 훈련대장 이흥립이 문을 열었고, 하룻밤 만에 왕이 바뀌었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Neungyanggun being greeted by rebel commanders at the palace gates at dawn, formal robes being draped over his shoulders, the atmosphere of a hastily arranged enthronement, ink wash painting with ambiguous atmosphere mixing liberation and opportunism",
+            narration: "능양군은 반정 세력이 선택한 왕이었다. 광해군의 패악을 바로잡는다는 의로운 이름 아래, 정권을 잃었던 서인이 다시 조정을 잡았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The new King Injo issuing his first royal proclamation in Injeongjeon Hall, pledging loyalty to Ming China and restoration of Confucian principles, officials in rows before him, ink wash painting with formal ceremonial light but the subtle weight of a new political order imposed",
+            narration: "사신은 논한다. 인조반정은 의로운 칼이었으나, 그 칼이 조선을 향해 돌아오는 데는 오래 걸리지 않았다. 친명의 명분이 병자호란의 씨앗이 되었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1624,
       title: "이괄의 난",
       desc: "반정 공신 이괄이 논공행상에 불만을 품고 거병하여 한양을 점령하자, 인조는 공주로 몽진하는 치욕을 겪고 이괄이 평정된 뒤에야 환도하다.",
+      storyEntry: {
+        title: "공신의 칼날이 돌아오다",
+        scenes: [
+          {
+            imagePrompt: "General Yi Gwal in military armor raising his banner of revolt in the northern frontier, his troops falling into formation around him, faces grim with grievance over the inequitable rewards after the coup, ink wash painting with martial tension and northern winter landscape",
+            narration: "갑자년, 반정의 일등 공신 이괄이 칼을 들었다. 논공행상에서 홀대받았다는 분노였다. 반정으로 세운 나라가 반정의 공신에게 칼을 맞았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Injo in travel robes fleeing south toward Gongju through snow, a small royal retinue hurrying along the road, the capital Hanyang abandoned behind them, ink wash painting with the bitter cold and humiliation of a king's second flight within two years of taking the throne",
+            narration: "이괄의 군세가 한양을 점령하였다. 즉위한 지 두 해도 되지 않아 인조는 또다시 몽진길에 올랐다. 공주로 피란하는 임금의 발걸음이 무거웠다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The aftermath of the suppression of Yi Gwal's rebellion — scattered rebel forces, a restored but sobered court returning to Hanyang, King Injo's expression showing relief mixed with deep unease about the fragility of his rule, ink wash painting with subdued return-to-order atmosphere",
+            narration: "사신은 논한다. 이괄의 난은 반정이 낳은 내상이었다. 공신들의 불만이 처음부터 조정 안에 쌓여 있었으니, 명분으로 세운 왕권이 명분 없는 혼란을 부른 것이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1627,
       title: "정묘호란",
       desc: "후금의 3만 대군이 압록강을 건너 침공하자 인조는 강화도로 피난하고, 후금과 형제의 맹약을 맺는 굴욕적인 강화 조약을 체결하다.",
+      storyEntry: {
+        title: "형제의 맹약",
+        scenes: [
+          {
+            imagePrompt: "Jurchen cavalry of the Later Jin crossing the frozen Yalu River in winter, banners flying in the cold air, the scale of thirty thousand troops overwhelming the border defenses, ink wash painting with cold blue-white palette of invasion and unstoppable force",
+            narration: "정묘년 1월, 후금의 3만 대군이 압록강을 건넜다. 조선 조정은 친명 외교를 고수하면서도 군비를 게을리 하였다. 방어선은 순식간에 무너졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Injo's court embarking on boats to cross to Ganghwa Island in winter, the urgent and undignified scene of a royal flight by sea, officials carrying documents and treasures, ink wash painting with grey winter sea and the chaos of emergency evacuation",
+            narration: "인조는 강화도로 피난하였다. 강 건너편에서 후금군이 진격을 멈추고 협상을 요구하였다. 형제의 나라가 되라는 조건이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon and Jurchen officials conducting the peace negotiation ceremony, exchanging the sworn document, Joseon officials visibly pained by the inferior position being imposed, ink wash painting with formal but humiliating diplomatic atmosphere",
+            narration: "사신은 논한다. 형제의 맹약은 굴욕이었으나 병자호란의 예고편이기도 하였다. 조정이 이때 현실을 직시하였다면, 9년 뒤의 참화를 막을 수 있었을지 모른다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1636,
@@ -84,6 +147,27 @@ export const INJO_DATA: KingData = {
       year: 1645,
       title: "소현세자 급서",
       desc: "청에서 8년의 볼모 생활을 마치고 귀국한 소현세자가 귀국 두 달 만에 갑자기 사망하자, 인조는 왕세자 자리를 봉림대군에게 넘기고 세자빈 강씨를 사사하다.",
+      storyEntry: {
+        title: "돌아온 세자, 사라진 희망",
+        scenes: [
+          {
+            imagePrompt: "Crown Prince Sohyeon returning to Joseon after eight years as a hostage in Shenyang, walking through the palace gates with a changed bearing — more worldly, carrying Western scientific instruments and books — court officials watching with unease, ink wash painting with the charged atmosphere of a changed man returning to an unchanged court",
+            narration: "을유년 봄, 소현세자가 심양에서 돌아왔다. 8년의 볼모 생활이 그를 바꾸어 놓았다. 서양 천문기기와 천주교 서적을 품에 안고 온 세자를, 인조는 반갑게 맞이하지 않았다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Crown Prince Sohyeon suddenly gravely ill in his palace chambers just two months after his return, royal physicians in attendance, King Injo standing at the doorway with an unreadable expression, ink wash painting with ominous tension and the clinical coldness of a suspicious death",
+            narration: "귀국한 지 두 달 만에 소현세자가 급서하였다. 사인은 학질이라 하였으나, 온몸이 검게 변하고 이목구비에서 피가 흘렀다는 기록이 남아 있다. 실록도 그 이상을 말하지 않는다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Crown Princess Gang being led to execution after being wrongly accused, her children being expelled from the palace, the empty quarters of the late Crown Prince Sohyeon silent and dark, ink wash painting with the atmosphere of a court tragedy where suspicion has devoured the innocent",
+            narration: "사신은 논한다. 세자빈 강씨마저 사사되고 그 자식들은 제주도로 쫓겨났다. 청에서 새 세상을 품고 돌아온 세자는 두 달 만에 사라졌다. 조선이 놓친 또 하나의 가능성이었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

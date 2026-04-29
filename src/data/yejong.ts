@@ -8,6 +8,27 @@ export const YEJONG_DATA: KingData = {
       year: 1468,
       title: "즉위",
       desc: "세조의 양위를 받아 조선 제8대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "아버지의 유산 위에 서다",
+        scenes: [
+          {
+            imagePrompt: "Young King Yejong ascending the throne after his father Sejo's death, the court in formal mourning attire mixed with coronation ceremony, powerful meritorious subjects filling the hall around the young king, ink wash painting with atmosphere of constrained royal authority",
+            narration: "세조가 승하하자 둘째 아들 이황이 왕위에 올랐다. 예종이었다. 스물의 나이로 받아든 왕좌는 아버지 세조가 닦아놓은 강력한 왕권의 자리였으나, 그것을 유지하는 것은 또 다른 일이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Yejong in early reign receiving reports from powerful meritorious subject officials led by Han Myeong-hoe, the young king's authority circumscribed by the dominance of the senior nobles, ink wash painting showing the political reality of a young ruler among powerful elders",
+            narration: "한명회를 비롯한 훈구 공신들이 조정을 장악하고 있었다. 예종은 왕이었으나 그 무게를 온전히 행사하기 어려웠다. 젊음은 때로 권력의 적이 된다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Yejong studying state documents late at night with determined expression, trying to assert his own vision of governance despite the short time he has, ink wash painting with the urgency of a king aware of his own fragile health",
+            narration: "예종은 주어진 시간을 알고 있었는지 모른다. 짧은 치세였으나 법과 제도를 다잡으려 힘썼다. 직전수조법을 정비하고 경국대전 편찬을 이어받았다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1468,
@@ -47,11 +68,53 @@ export const YEJONG_DATA: KingData = {
       year: 1469,
       title: "직전수조법 개정",
       desc: "현직 관료에게만 수조권을 지급하는 직전법의 수취 질서를 정비하여 국가 재정의 기강을 바로잡고자 하다.",
+      storyEntry: {
+        title: "세조의 제도를 다듬다",
+        scenes: [
+          {
+            imagePrompt: "Joseon finance officials presenting land tenure reform proposals to King Yejong, reviewing the problems with how the Jikjeonbeop was being implemented, officials with land records and census documents, ink wash painting with administrative focus",
+            narration: "예종은 선왕 세조가 만든 직전법의 수취 질서가 흐트러지고 있음을 파악하였다. 현직 관료가 수조권을 행사하는 방식을 정비하여 국가 재정의 기강을 다시 세우고자 하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Government clerks updating the official land and tax registers under the revised Jikjeon regulations, careful documentation of who holds what rights and for how long, ink wash painting with bureaucratic precision",
+            narration: "수취 절차를 명문화하고 관행적 탈루를 막는 규정을 보완하였다. 짧은 치세였으나 제도의 빈틈을 메우는 작업을 게을리하지 않았다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Yejong reviewing completed tax reform documents with a sense of focused purposefulness, aware of limited time, ink wash painting with the quiet efficiency of a ruler making the most of a brief reign",
+            narration: "직전수조법 정비는 화려하지 않았다. 그러나 나라의 살림을 버티게 하는 것은 언제나 이런 조용한 일들이었다. 예종은 그것을 알고 하였다.",
+            durationMs: 4500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1469,
       title: "《경국대전》 편찬 계속",
       desc: "세조 대부터 착수된 《경국대전》 편찬을 이어받아 완성을 향한 작업을 계속 독려하다.",
+      storyEntry: {
+        title: "법전을 향한 바통",
+        scenes: [
+          {
+            imagePrompt: "King Yejong meeting with scholars compiling the Gyeongguk Daejeon, reviewing drafts of completed sections, the accumulated volumes showing progress toward the comprehensive law code, ink wash painting with scholarly continuity across reigns",
+            narration: "세조가 시작한 경국대전 편찬은 예종에게 이어졌다. 왕은 그 작업을 멈추지 않도록 독려하였다. 한 왕조의 법전은 한 왕의 치세를 넘어 완성되는 것이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The law code compilation work continuing in candlelit palace offices, scholars cross-referencing previous codes and new regulations, the methodical work of legal systematization in progress, ink wash painting",
+            narration: "이(吏)·호(戶)·예(禮)·병(兵)·형(刑)·공(工) 여섯 분야의 법규가 하나씩 정리되어갔다. 예종은 그 완성을 보지 못하였으나, 그 바통을 성종에게 넘겼다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "The partially completed law code volumes being carefully stored and protected as King Yejong's reign ends, passed on for continuation, ink wash painting suggesting historical continuity and the collective nature of institutional building",
+            narration: "예종은 재위 1년 3개월 만에 세상을 떠났다. 그러나 경국대전은 살아남아 성종 16년에 완성되었다. 짧은 왕의 몫이 긴 역사 안에 녹아들었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1469,

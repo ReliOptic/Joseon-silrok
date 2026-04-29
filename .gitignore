@@ -9,3 +9,7 @@ coverage/
 .gstack/
 test-results/
 playwright-report/
+docs/mobile-screenshots/
+.omc/
+.omx/
+.claude/worktrees/

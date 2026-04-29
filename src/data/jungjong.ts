@@ -8,6 +8,27 @@ export const JUNGJONG_DATA: KingData = {
       year: 1506,
       title: "중종반정",
       desc: "연산군의 폭정에 반발한 박원종·성희안·유순정 등이 반정을 일으켜 연산군을 폐위하고, 진성대군을 조선 제11대 왕으로 즉위시키다.",
+      storyEntry: {
+        title: "반정의 새벽",
+        scenes: [
+          {
+            imagePrompt: "Joseon general Park Won-jong leading armed troops through the streets of Hanyang at night, torches lighting the way toward the palace, soldiers marching in disciplined formation, ink wash painting with the controlled urgency of a coup launched by establishment figures",
+            narration: "병인년 9월 새벽, 박원종과 성희안이 군사를 이끌고 궁을 에워쌌다. 연산군의 폭정에 지친 훈구 대신들이 일으킨 반정이었다. 북소리가 한양의 밤을 갈랐다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Prince Jinseong being brought to the palace in the middle of the night to be proclaimed king, surprised and unprepared, surrounded by coup leaders, ink wash painting capturing the sudden reversal of fortune and the involuntary nature of his elevation",
+            narration: "진성대군은 한밤중에 불려 나왔다. 왕이 되라는 것이었다. 스스로 원하거나 도모한 것이 아니었다. 그는 반정 공신들의 손에 올려진 왕이었고, 그것이 중종의 치세 내내 그를 옥죄었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The new King Jungjong seated on the throne at dawn after the coup, surrounded by the meritorious subjects who put him there, their expressions showing ownership as much as loyalty, ink wash painting with the ambiguous atmosphere of liberation and new constraint",
+            narration: "연산군은 쫓겨났다. 중종이 즉위하였다. 폭정은 끝났으나 공신들의 그늘이 새 왕을 덮었다. 반정으로 세워진 왕은 반정 공신들의 왕이기도 하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1515,
@@ -40,6 +61,27 @@ export const JUNGJONG_DATA: KingData = {
       year: 1518,
       title: "소격서 폐지",
       desc: "조광조의 강력한 주청에 따라 도교 의식을 주관하던 관청 소격서를 혁파하고, 성리학적 예치 질서를 확립하려는 개혁에 힘을 싣다.",
+      storyEntry: {
+        title: "도교의 제단을 허물다",
+        scenes: [
+          {
+            imagePrompt: "Jo Gwang-jo presenting a forceful memorial to King Jungjong demanding the abolition of the Sogyeokseo Taoist ritual office, the king listening with visible internal conflict, senior officials divided in their reactions, ink wash painting with ideological confrontation",
+            narration: "조광조는 소격서 폐지를 거듭 주청하였다. 성리학의 나라에 도교 제의를 주관하는 관청이 있어서는 안 된다는 것이었다. 왕은 처음에 주저하였으나 마침내 허락하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Officials dismantling the Sogyeokseo Taoist shrine, removing ritual implements and altar furnishings, Taoist priests leaving with their belongings, ink wash painting with the atmosphere of a cultural and religious transformation",
+            narration: "소격서가 혁파되었다. 고려 이래 수백 년을 이어온 도교 의례의 공식 공간이 사라졌다. 사림이 꿈꾸는 순수한 성리학 왕국이 한 걸음 가까워진 순간이었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Jo Gwang-jo and fellow reformers in a quiet moment of satisfaction after the Sogyeokseo abolition, but shadows of coming opposition visible in their surroundings, ink wash painting with brief triumph shadowed by foreboding",
+            narration: "그러나 개혁의 속도는 적을 만들었다. 소격서 폐지는 훈구 대신들의 반감을 쌓아가는 일이기도 하였다. 기묘사화는 불과 1년 뒤에 찾아왔다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1519,
@@ -79,11 +121,53 @@ export const JUNGJONG_DATA: KingData = {
       year: 1536,
       title: "임꺽정 활동 시작",
       desc: "삼남 지방의 극심한 수탈과 양역의 가중으로 백성의 삶이 피폐해지자, 양주 출신의 백정 임꺽정이 무리를 이끌고 황해도 일대에서 의적 활동을 시작하다.",
+      storyEntry: {
+        title: "굶주림이 만들어낸 영웅",
+        scenes: [
+          {
+            imagePrompt: "Im Kkeok-jeong, a butcher of low social status, standing before a group of desperate commoners in a mountain clearing, his powerful build and determined expression drawing followers to his cause, ink wash painting with social realism",
+            narration: "기묘사화 이후 조정은 공신들의 것이었고, 방납의 폐단으로 백성의 삶은 피폐해졌다. 양주의 백정 임꺽정이 이 분노를 모아 일어섰다. 그의 손에 칼이 들렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Im Kkeok-jeong's band attacking a corrupt official's transport, seizing grain and goods to redistribute to starving villagers, the action swift and purposeful, ink wash painting with dramatic action and moral clarity",
+            narration: "탐관오리의 곡식을 빼앗아 굶주린 백성에게 나누어 주었다. 백성들은 그를 도적이라 부르지 않았다. 세상이 그를 만들었다는 것을 알고 있었기 때문이다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon government officials and soldiers unable to catch Im Kkeok-jeong as he moves swiftly through forested mountains, local people deliberately providing no information, ink wash painting showing the rebel sustained by popular sympathy",
+            narration: "관군은 그를 잡지 못하였다. 백성들이 숨겨주었기 때문이다. 임꺽정의 봉기는 중종 치세의 어두운 이면, 개혁이 꺾인 자리에 자란 민심의 울분이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1541,
       title: "대동법 논의",
       desc: "공납의 폐단이 극에 달하여 방납으로 인한 백성의 고통이 깊어지자, 조정에서 공물을 쌀로 통일하여 거두는 대동법의 시행을 본격적으로 논의하기 시작하다.",
+      storyEntry: {
+        title: "쌀로 세금을 통일하자",
+        scenes: [
+          {
+            imagePrompt: "Joseon petitioners and officials describing the bangnam abuse system to King Jungjong, middlemen exploiting the tribute system to extract enormous profits from helpless peasants, ink wash painting showing the gap between official policy and lived reality",
+            narration: "방납의 폐단이 극에 달하였다. 공물을 납부해야 하는 백성 대신 중간 상인이 물건을 납부하고 그 대가로 수십 배의 값을 뜯어내는 구조였다. 조정에서 대안을 논의하기 시작하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Reform-minded officials presenting the Daedongbeop proposal — replacing all tribute goods with unified rice payments — to the royal council, senior ministers divided between reform and vested interests, ink wash painting with policy debate atmosphere",
+            narration: "공물을 쌀로 통일하여 거두면 된다는 제안이었다. 간단해 보이는 이 아이디어가 기득권의 벽에 막혀 시행까지 수십 년이 더 걸렸다. 좋은 법이 나쁜 이해관계를 이기는 것은 항상 느리다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Peasant farmers in their fields imagining relief from the tribute burden, the concept of simplified rice-based taxation offering hope even if not yet implemented, ink wash painting with pastoral hope and the long arc of policy change",
+            narration: "대동법은 중종 때 논의되어 광해군 때 경기도에서 처음 시행되고, 숙종 때에야 전국으로 퍼졌다. 씨앗은 중종 대에 뿌려졌다. 열매는 백 년 뒤에 맺혔다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

@@ -1,0 +1,27 @@
+{
+  "name": "조선왕조실록 — 인터랙티브 사관",
+  "short_name": "조선실록",
+  "description": "시대 → 왕 → 사건 → AI 재현 → 실록 원문. 한 화면에서 끝까지 파고드는 인터랙티브 사관.",
+  "start_url": "/Joseon-silrok/",
+  "scope": "/Joseon-silrok/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#F0E6D2",
+  "background_color": "#F0E6D2",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/Joseon-silrok/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/Joseon-silrok/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["education", "history"]
+}

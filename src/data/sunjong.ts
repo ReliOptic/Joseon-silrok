@@ -8,11 +8,53 @@ export const SUNJONG_DATA: KingData = {
       year: 1907,
       title: "즉위",
       desc: "고종의 양위를 받아 대한제국 제2대 황제, 조선 제27대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "빼앗긴 양위, 강요된 즉위",
+        scenes: [
+          {
+            imagePrompt: "Emperor Gojong being forced to sign abdication documents by Japanese Resident-General officials in a tense palace chamber, his hands shaking, court ministers watching helplessly, the imperial seal placed on the document under duress, ink wash painting style with the suffocating atmosphere of coerced capitulation",
+            narration: "정미년 7월, 고종이 퇴위하였다. 헤이그 밀사 사건을 빌미로 일제가 강제로 양위를 압박하였다. 황태자 이척이 뒤를 이어 순종으로 즉위하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Emperor Sunjong in full imperial regalia at his enthronement ceremony, the ceremony formally correct but surrounded by Japanese officials and military presence, the hollow grandeur of a sovereignty already stripped, ink wash painting style with the tragic irony of imperial ceremony without imperial power",
+            narration: "즉위식은 치러졌다. 황제의 예복이 입혀졌고 백관이 절을 올렸다. 그러나 나라의 외교권은 이미 없었다. 황제의 자리는 있었으나 황제의 권한은 없었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Emperor Sunjong alone in a quiet palace room after the enthronement, the ceremonial robes heavy on his frame, his gaze distant and inward, the weight of being the last emperor visible in every line of his face, ink wash painting with profound stillness and historical gravity",
+            narration: "사신은 논한다. 순종의 즉위는 즉위가 아니었다. 기울어진 나라의 마지막 형식을 유지하기 위해 한 사람이 황제의 이름을 달고 세워진 것이었다. 그 외로움을 누가 헤아릴 수 있겠는가.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1907,
       title: "군대 해산",
       desc: "일제의 강요로 대한제국 군대가 해산되고, 이에 분노한 전국 의병들이 정미의병을 일으켜 무장 항쟁에 나서다.",
+      storyEntry: {
+        title: "무기를 내려놓을 수 없었다",
+        scenes: [
+          {
+            imagePrompt: "Korean imperial army soldiers being ordered to disband at a military parade ground, Japanese officers overseeing the disarmament, some Korean soldiers weeping as they lay down their weapons, others standing rigid with suppressed fury, ink wash painting style with the humiliation and grief of a military dissolution",
+            narration: "정미년 8월, 대한제국 군대가 해산 명령을 받았다. 황제의 조칙이었으나 일제가 강요한 것이었다. 수천 명의 병사들에게 무기를 내려놓으라는 명이 떨어졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Former Korean soldiers refusing to disarm, firing on Japanese troops in Seoul and then fleeing into the mountains to join the righteous army uprising, the spark of Jeongmi Uibyeong visible in their desperate resistance, ink wash painting with dramatic tension and the outbreak of armed resistance",
+            narration: "시위대 참령 박승환이 스스로 목숨을 끊었다. '군인으로서 나라를 지키지 못하고 명령에 굴복할 수 없다.' 그 총성이 신호였다. 병사들이 무기를 들고 일어섰다. 정미의병이었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Righteous army fighters — former soldiers now mixed with farmers and village men — moving through mountain forests with rifles and traditional weapons, determined faces in the predawn darkness, ink wash painting style with the guerrilla energy of popular resistance spreading across the country",
+            narration: "사신은 논한다. 조정이 군대를 내줄 때 백성이 들고 일어났다. 정미의병은 전국으로 번졌다. 나라를 잃어가는 과정에서도, 그것을 막으려는 자들이 있었음을 역사는 기록한다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1909,
@@ -83,6 +125,27 @@ export const SUNJONG_DATA: KingData = {
       year: 1926,
       title: "승하와 6·10만세운동",
       desc: "순종이 창덕궁에서 승하하자 민중은 국장일을 기하여 6·10만세운동을 일으켜 나라 잃은 슬픔과 독립의 의지를 다시금 세상에 알리다.",
+      storyEntry: {
+        title: "마지막 황제의 국장일, 백성의 외침",
+        scenes: [
+          {
+            imagePrompt: "Emperor Sunjong lying peacefully in death in Changdeokgung palace, court attendants in mourning white bowing around him, the palace silent and still, the last light of a dynasty finally extinguished after sixteen years of Japanese colonial rule, ink wash painting style with profound quietude and finality",
+            narration: "병인년 4월, 순종이 창덕궁에서 승하하였다. 나라를 잃은 지 16년이 지나 있었다. 조선 제27대 왕이자 대한제국 마지막 황제의 삶이 조용히 닫혔다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Massive crowds lining the funeral procession route through the streets of Gyeongseong on June 10, Japanese police on alert, young Korean students and activists among the crowd suddenly unfurling independence banners and shouting Manse, the spontaneous eruption of suppressed grief and defiance, ink wash painting style with kinetic crowd energy",
+            narration: "6월 10일 국장일, 거리에 백성이 모였다. 장례 행렬이 지나는 순간 곳곳에서 태극기가 펼쳐지고 만세 소리가 터졌다. 슬픔이 저항이 되었다. 6·10만세운동이었다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "Korean students and independence activists being arrested by Japanese police amid the funeral crowds, some still shouting as they are dragged away, the funeral procession continuing in the background, ink wash painting with the defiant dignity of resistance at the moment of mourning",
+            narration: "사신은 논한다. 순종의 국장일에 백성이 외친 것은 단순한 애도가 아니었다. 나라를 잃었으나 뜻을 잃지 않았다는 선언이었다. 마지막 왕의 죽음이 독립의 불씨를 되살렸다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

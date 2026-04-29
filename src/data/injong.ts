@@ -33,21 +33,105 @@ export const INJONG_DATA: KingData = {
       year: 1545,
       title: "현량과 복구",
       desc: "기묘사화로 폐지되었던 현량과를 복구하여 사림 세력을 조정에 재등용하다.",
+      storyEntry: {
+        title: "닫혔던 문을 다시 열다",
+        scenes: [
+          {
+            imagePrompt: "King Injong issuing the decree restoring the Hyeonlyanggwa examination system, scholars and officials reacting with restrained joy, the institutional door to Sarim participation reopened after decades, ink wash painting with atmosphere of tentative hope",
+            narration: "인종은 즉위하자마자 현량과를 복구하였다. 기묘사화로 폐지된 지 26년 만이었다. 덕행과 경술로 인재를 뽑는 그 제도가 다시 열리자, 사림의 학자들이 숨을 쉬었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Sarim scholars being examined and selected through the restored Hyeonlyanggwa, their faces showing relief and purpose after years of exclusion, ink wash painting with the quiet triumph of scholarly rehabilitation",
+            narration: "과거 문장 실력이 아니라 도학과 덕망으로 뽑는 시험이었다. 기묘사화에서 살아남은 사림의 후예들이 다시 조정으로 나아갈 길이 열렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Injong watching the first Hyeonlyanggwa candidates with quiet satisfaction, but his complexion visibly pale and his body weakened, the contrast between his good intentions and failing health, ink wash painting",
+            narration: "왕의 뜻은 옳았으나 몸이 따르지 않았다. 현량과를 복구한 그 손이 점점 차가워지고 있었다. 인종에게 주어진 시간은 여덟 달이었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1545,
       title: "사림 우대",
       desc: "조광조 등 기묘명현의 신원을 추진하며 사림의 정치 참여를 적극 장려하다.",
+      storyEntry: {
+        title: "기묘명현의 명예를 돌려주다",
+        scenes: [
+          {
+            imagePrompt: "King Injong presiding over the posthumous rehabilitation of Jo Gwang-jo and the Gimyo Sahwa victims, officials recording the restoration of their reputations in official registers, ink wash painting with the solemn atmosphere of historical justice",
+            narration: "인종은 기묘사화로 죽임을 당하거나 유배된 사림의 인물들을 신원하였다. 조광조의 이름 앞에 붙은 역적이라는 딱지가 비로소 떼어졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Surviving Sarim scholars receiving official recognition and court appointments under the new policy, their decades of marginalization ending, ink wash painting with dignified restoration of scholarly honor",
+            narration: "살아 있는 자들에게는 관직이, 죽은 자들에게는 명예가 돌아갔다. 중종이 배신한 사림을 인종이 복원하였다. 아버지가 꺾은 것을 아들이 다시 세우려 하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Injong in his private chamber reviewing the list of Sarim scholars to be reinstated, his expression showing moral clarity and gentle determination despite visible illness, ink wash painting with poignant virtue in the face of physical decline",
+            narration: "그것이 인종이 남긴 것이었다. 법이 아니라 뜻이었다. 짧은 재위였으나 그 뜻은 분명하였다. 사림은 이 왕을 기억하였다. 그리고 애통해하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1545,
       title: "승하",
       desc: "즉위한 지 8개월 만에 병환으로 승하하니, 재위가 지극히 짧아 온 나라가 통곡하다.",
+      storyEntry: {
+        title: "여덟 달의 끝",
+        scenes: [
+          {
+            imagePrompt: "King Injong on his deathbed in Gyeongbokgung palace, court physicians attending helplessly, senior officials kneeling in grief outside the chamber, the spring light fading from the paper screens, ink wash painting with gentle sorrow",
+            narration: "을사년 7월, 인종이 경복궁 청연루에서 승하하였다. 선왕의 상을 치르느라 물도 제대로 마시지 않은 것이 화근이었다. 효성이 그를 죽였다고 세상은 말하였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Court officials and common people of Hanyang openly weeping in the streets as news of King Injong's death spreads, the genuine grief of a population that sensed what was lost, ink wash painting with collective mourning",
+            narration: "군신이 통곡하였고, 도성의 남녀노소가 눈물을 흘렸다고 실록은 전한다. 어진 왕이 무엇인지를 백성은 알고 있었다. 그리고 그것이 얼마나 드문지도.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Queen Dowager Munjeong's figure visible in the shadows as the mourning court prepares for a new succession, her calculating expression contrasting with the genuine grief around her, ink wash painting with the transition from mourning to power",
+            narration: "인종이 눈을 감자 문정왕후가 움직였다. 어린 명종이 즉위하고 수렴청정이 시작되었다. 을사사화까지는 두 달이 남아 있었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1545,
       title: "을사사화 전야",
       desc: "인종의 승하 직후 명종이 즉위하고, 문정왕후와 소윤이 주도한 을사사화가 발발하여 사림은 다시 피바람을 맞다.",
+      storyEntry: {
+        title: "인종의 죽음이 부른 참극",
+        scenes: [
+          {
+            imagePrompt: "Yun Won-hyeong secretly meeting with Queen Dowager Munjeong in a private palace chamber, plotting the elimination of the Daeyun faction, candlelight casting conspiratorial shadows, ink wash painting with atmosphere of dark political scheming",
+            narration: "인종이 승하하자 소윤의 윤원형이 즉각 움직였다. 인종의 외척 대윤 세력을 제거할 기회가 왔다. 문정왕후의 승인이 떨어졌다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Yun Im and other Daeyun faction leaders being arrested and dragged away, the shock of sudden political reversal on their faces, officials who supported Injong now branded as traitors overnight, ink wash painting with brutal efficiency of political purge",
+            narration: "윤임이 역모죄로 체포되었다. 유관·유인숙도 사사되었다. 인종이 살려둔 사림이 인종이 눈을 감자마자 다시 죽어나갔다. 여덟 달의 치세가 남긴 것들이 하나씩 지워졌다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The desolate aftermath of the Eulsa Sahwa — empty government offices, scholars in exile, and a young king Myeongjong on the throne utterly dominated by his mother's regency, ink wash painting with the oppressive weight of a purge's consequences",
+            narration: "을사사화는 인종의 죽음이 부른 참극이었다. 만약 그가 조금만 더 살았다면. 역사의 가장 쓸쓸한 가정이 을사년 가을에 남아 있다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
   ],
   detail: {

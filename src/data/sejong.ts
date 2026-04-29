@@ -191,6 +191,27 @@ export const SEJONG_DATA: KingData = {
         { name: "문종(세자)", role: "측우기 원안 발의 / 세종의 세자" },
         { name: "이순지", role: "표준 측정 체계 정립" },
       ],
+      storyEntry: {
+        title: "비의 양을 숫자로 — 세계 최초",
+        scenes: [
+          {
+            imagePrompt: "Crown Prince Hyang placing a small bronze cylinder in the palace garden during rainfall, measuring the collected rainwater with a ruler, ink wash painting with close observation and scholarly curiosity, fine rain falling around a focused young figure",
+            narration: "세종 23년, 세자 이향이 구리 그릇으로 빗물을 모아 깊이를 재기 시작하였다. 논밭이 얼마나 젖었는지를 땅을 파서 확인하던 시대에, 이 작은 실험이 새로운 과학의 문을 열었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Craftsmen in a palace workshop casting standardized bronze rain gauge cylinders in rows, officials measuring and verifying dimensions for nationwide distribution, ink wash painting with sense of systematic scientific standardization",
+            narration: "세종은 세자의 착상을 나라 전체의 표준으로 만들었다. 깊이 30cm, 지름 15cm의 청동 원통이 전국 모든 군현에 배포되었다. 매번 비가 내리면 수령이 그 깊이를 재어 조정에 보고하였다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Map of Joseon with rainfall measurement reports arriving at the central government from across all provinces, officials compiling data into agricultural planning records, ink wash painting showing the kingdom as an integrated information system",
+            narration: "유럽이 우량계를 발명하기 200년 전이었다. 비의 양을 숫자로 기록하는 이 습관은 흉작을 예측하고 백성의 굶주림을 줄이는 실용의 학문이었다. 세종의 과학은 항상 백성을 향하였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1443,

@@ -8,6 +8,24 @@ export const TAEJONG_DATA: KingData = {
       year: 1400,
       title: "즉위",
       desc: "정종의 양위를 받아 조선 제3대 왕으로 즉위하다.",
+      storyEntry: {
+        title: "칼로 얻은 왕좌",
+        scenes: [
+          {
+            imagePrompt: "Yi Bang-won in full royal regalia ascending the throne of Joseon for the first time, the court assembled in deep reverence mixed with cautious awe, the new king's gaze sharp and commanding, ink wash painting with powerful presence and formal ceremony",
+            narration: "경진년 11월, 이방원이 왕위에 올랐다. 두 차례 왕자의 난에서 형제들과 공신들의 피를 딛고 선 자리였다. 그는 이것이 단순한 즉위가 아님을 누구보다 잘 알았다.",
+          },
+          {
+            imagePrompt: "King Taejong issuing his first royal decree in the throne hall, officials recording every word, the decree calling for capable men to be recommended for office, ink wash painting with decisive atmosphere and institutional authority",
+            narration: "즉위 교서에서 태종은 인재 등용과 기강 확립을 선포하였다. 칼의 시대를 거쳐 이제 법과 제도로 나라를 세울 차례였다. 그것이 그가 그 모든 피 값으로 하겠다고 다짐한 일이었다.",
+          },
+          {
+            imagePrompt: "King Taejong alone in the palace late at night, candlelight casting his shadow large against stone walls, the weight of two fratricides visible in his posture yet his eyes still burning with iron resolve, ink wash painting",
+            narration: "왕의 밤은 편안하지 않았다. 형제의 얼굴이 어둠 속에 떠올랐다. 그러나 태종은 후회를 뒤로 밀었다. 나라를 단단히 세우는 것만이 그 대가를 치르는 길이었다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
       sillokEntry: {
         articleId: "ITKC_JT_C0_A01_01A_14A_00020_2005_001_XML",
         date: "태종 1년 신사(1401) 1월 14일",
@@ -19,7 +37,25 @@ export const TAEJONG_DATA: KingData = {
     {
       year: 1401,
       title: "신문고 설치",
-      desc: "억울한 백성이 직접 임금에게 호소할 수 있도록 대궐 문루에 신문고를 설치하다."
+      desc: "억울한 백성이 직접 임금에게 호소할 수 있도록 대궐 문루에 신문고를 설치하다.",
+      storyEntry: {
+        title: "억울한 자, 북을 쳐라",
+        scenes: [
+          {
+            imagePrompt: "A large ceremonial drum installed at the Joseon palace gate tower, a royal decree being read aloud to gathered citizens below announcing its purpose, morning light, ink wash painting style with sense of accessibility between king and commoner",
+            narration: "태종 1년, 대궐 문루에 신문고가 내걸렸다. 억울한 일이 있는 백성은 누구든 이 북을 쳐서 임금에게 직접 호소할 수 있다는 명이 함께 내려졌다.",
+          },
+          {
+            imagePrompt: "A commoner farmer approaching the palace gate drum with trepidation, guards watching neutrally, other citizens gathered to witness, ink wash painting with composition emphasizing the symbolic distance between ordinary people and royal justice",
+            narration: "북소리는 관청을 건너뛰어 왕에게 직접 닿는 통로였다. 수령에게 억울함을 당한 자, 형벌이 부당하다고 여긴 자가 이 북 앞에 섰다.",
+          },
+          {
+            imagePrompt: "King Taejong receiving a petition from a commoner brought before the throne by court officials, the king listening with intent expression, ink wash painting suggesting the ideal of royal accessibility to the grievances of ordinary people",
+            narration: "신문고는 태종이 왕권 강화와 동시에 백성과 직접 소통하고자 한 뜻의 표현이었다. 강한 왕은 두렵기만 해서는 안 된다는, 그 나름의 통치 철학이 담겨 있었다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1413,
@@ -50,12 +86,48 @@ export const TAEJONG_DATA: KingData = {
     {
       year: 1414,
       title: "6조 직계제 시행",
-      desc: "의정부를 우회하여 6조가 왕에게 직접 보고하는 6조 직계제를 시행함으로써 강력한 왕권을 확립하다."
+      desc: "의정부를 우회하여 6조가 왕에게 직접 보고하는 6조 직계제를 시행함으로써 강력한 왕권을 확립하다.",
+      storyEntry: {
+        title: "모든 길은 왕으로 통한다",
+        scenes: [
+          {
+            imagePrompt: "King Taejong issuing a decisive decree abolishing the Uijeongbu's deliberative power, the three senior ministers looking on with suppressed displeasure as the six ministry heads step forward to report directly to the king, ink wash painting with sharp power dynamics",
+            narration: "태종 14년, 왕은 의정부가 국사를 중간에서 결재하는 관행을 혁파하였다. 이(吏)·호(戶)·예(禮)·병(兵)·형(刑)·공(工) 여섯 판서가 모든 사안을 왕에게 직접 아뢰도록 하였다.",
+          },
+          {
+            imagePrompt: "Six ministry officials presenting reports directly to King Taejong on his throne, bypassing the council chamber, the king personally reviewing each document, ink wash painting emphasizing the concentration of all administrative power at the throne",
+            narration: "이것이 6조 직계제였다. 재상의 권한이 왕 한 사람의 손으로 집중되었다. 개국 공신들의 위세가 왕권을 위협하던 시대를 끝내는 제도적 선언이었다.",
+          },
+          {
+            imagePrompt: "Joseon administrative officials working late into the night preparing reports for the king's direct review, stacks of documents organized by the six ministries, ink wash painting with the sense of a rigorous centralized state apparatus",
+            narration: "단점도 있었다. 모든 결재가 한 곳에 쏠리면 명군일 때는 약이 되나 혼군이면 독이 된다. 태종은 그것도 알고 있었다. 그래서 아들 세종에게 이 제도를 물려주며 스스로 판단케 하였다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1415,
       title: "사병 혁파 및 외척 숙청",
-      desc: "공신과 종친의 사병을 혁파하고 왕비 민씨의 형제들을 처형하여 왕권에 위협이 될 모든 세력을 제거하다."
+      desc: "공신과 종친의 사병을 혁파하고 왕비 민씨의 형제들을 처형하여 왕권에 위협이 될 모든 세력을 제거하다.",
+      storyEntry: {
+        title: "왕의 칼, 마지막 적들을 제거하다",
+        scenes: [
+          {
+            imagePrompt: "Joseon royal decree being issued ordering the dissolution of all private armies of nobles and merit subjects, soldiers in private livery laying down their weapons before government officials, ink wash painting style with formal authority and tension",
+            narration: "태종은 공신과 종친이 거느린 사병을 모두 혁파하였다. 조선에 왕의 군대 외에 다른 군대는 존재할 수 없다는 선언이었다. 왕권에 대한 마지막 잠재적 위협을 제거하는 작업이었다.",
+          },
+          {
+            imagePrompt: "Queen Min's brothers being arrested and led away from the palace by royal guards, court officials watching in silence, the queen's grief implied but not shown, ink wash painting with cold determined atmosphere of political necessity overriding personal feeling",
+            narration: "왕비 민씨의 형제들도 제거되었다. 외척이 왕권을 흔들 싹을 미리 자르는 것이었다. 태종에게는 왕비도, 공신도, 형제도 왕권보다 클 수 없었다.",
+          },
+          {
+            imagePrompt: "King Taejong reviewing military rosters showing all soldiers now under direct royal command, the faces of senior officials showing resigned acceptance, ink wash painting with the quiet authority of a ruler who has completed his consolidation of power",
+            narration: "이로써 조선의 모든 군사력은 오직 왕의 손에 집중되었다. 냉혹하고 철저하였으나, 그 위에서 세종의 태평이 가능해졌다. 역사는 두 사람을 함께 보아야 공평하다.",
+          },
+        ],
+        generatedAt: '2026-04-29',
+      },
     },
     {
       year: 1418,
