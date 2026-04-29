@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const SUNJO_DATA: KingData = {
   id: "sunjo",
+  transitionFromPrev: "정조의 개혁이 막을 내렸다. 열한 살 왕은 외척의 시대를 열었다.",
   events: [
     {
       year: 1800,
@@ -12,6 +13,32 @@ export const SUNJO_DATA: KingData = {
       year: 1801,
       title: "신유박해",
       desc: "정순왕후의 명으로 천주교 신자들을 대거 처형하니, 이승훈·정약종이 순교하고 정약용은 유배되었으며 청나라 신부 주문모도 처형되다.",
+      sillokEntry: {
+        date: "순조 1년 신유(1801) 1월 10일",
+        title: "대왕대비가 척사윤음을 반포하고 사학을 엄금하다",
+        translation: "대왕대비가 전교하기를, '사학이 오랫동안 금령을 어기고 기승을 부리니 강상이 무너지고 인심이 흉흉하다. 이제 일체 사학죄인을 포박하여 법으로 다스리고 다시는 이 땅에 발붙이지 못하게 하라' 하였다. 이로부터 이승훈·정약종 등이 처형되고, 청나라 신부 주문모가 자수하여 처형되었으며, 정약용은 강진으로 유배되었다.",
+      },
+      storyEntry: {
+        title: "신유년의 칼바람",
+        scenes: [
+          {
+            imagePrompt: "Regent Queen Dowager Jeongsun reading a proclamation in the royal court, court officials standing rigidly at attention, the young King Sunjo seated on the throne as a child king, atmosphere of political power wielded through the throne by proxy, ink wash painting style with cold formal authority",
+            narration: "신유년 정월, 열두 살 순조 대신 정순왕후가 전교를 내렸다. 사학을 일체 엄금한다. 포도청의 포졸들이 사방으로 흩어졌다. 조선 천주교의 뿌리를 뽑는 대학살이 시작되었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Jeong Yak-jeon and Jeong Yak-yong brothers being separated at a crossroads, one led toward execution the other toward exile with only a small bundle of belongings, family members weeping at a distance, ink wash painting style with the raw grief of a family torn apart by ideology and power",
+            narration: "정약종은 처형장으로 갔다. 정약용은 유배지 강진으로 향했다. 형제는 그 갈림길에서 다시 만나지 못했다. 그러나 유배지의 고독 속에서 정약용은 목민심서를 썼다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Chinese priest Ju Mun-mo walking calmly toward government officials to surrender himself in the streets of Hanyang, Korean Catholic converts watching with anguish from alleyways, ink wash painting style with spare composition and the tragic dignity of a voluntary sacrifice",
+            narration: "청나라 신부 주문모는 도망칠 수 있었다. 그러나 신자들이 자신을 숨겨주다 죽어가는 것을 보고 스스로 자수하였다. 박해는 진압하였으되, 믿음을 지운 것은 아니었다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1804,
@@ -70,6 +97,7 @@ export const SUNJO_DATA: KingData = {
     desc: "순조의 치세는 왕권이 아닌 외척의 손에서 운영되었다. 안동 김씨가 조정의 요직을 독점하고 삼정의 폐단이 백성의 삶을 짓눌렀다. 그 억압이 임계점을 넘은 것이 홍경래의 난이었다. 평안도의 한 무사는 서북인을 천대하는 조정에 칼을 겨누었고, 굶주린 농민들이 그 뒤를 따랐다. 반란은 진압되었으나 세도 정치의 균열은 봉합되지 않았고, 민심의 이탈은 왕조 말기의 긴 내리막을 예고하였다.",
     unofficialHistory: "홍경래가 정주성에서 최후를 맞기 전날 밤, '우리가 진다 해도 세상은 이미 흔들렸다'는 말을 남겼다고 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "세도의 시대, 왕권이 사라진 왕조",
     figures: [
       { name: "김조순", role: "영안부원군. 순원왕후의 부친으로 안동 김씨 세도의 기반을 닦아 조정을 사실상 지배하다." },
       { name: "홍경래", role: "반란 지도자. 서북인 차별과 삼정의 문란에 맞서 봉기하여 관서 일대를 뒤흔들다." },

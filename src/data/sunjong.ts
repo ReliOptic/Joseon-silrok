@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const SUNJONG_DATA: KingData = {
   id: "sunjong",
+  transitionFromPrev: "고종이 강제 양위되었다. 마지막 왕이 옥좌에 올랐다.",
   events: [
     {
       year: 1907,
@@ -17,6 +18,32 @@ export const SUNJONG_DATA: KingData = {
       year: 1909,
       title: "안중근 의거",
       desc: "독립 운동가 안중근이 하얼빈 역에서 초대 조선 통감 이토 히로부미를 저격하여 조선 침략의 원흉을 응징하다.",
+      sillokEntry: {
+        date: "순종 2년 기유(1909) 10월 26일",
+        title: "안중근이 하얼빈에서 이토 히로부미를 저격하다",
+        translation: "의병장 안중근이 하얼빈 역에서 전 통감 이토 히로부미를 권총으로 저격하여 즉사시켰다. 안중근은 현장에서 체포되었으며, 뤼순 감옥에서 재판을 받게 되었다. 그는 법정에서 이토를 처단한 까닭으로 조선 침략의 죄목 열다섯 가지를 열거하였다.",
+      },
+      storyEntry: {
+        title: "하얼빈 — 총성 하나",
+        scenes: [
+          {
+            imagePrompt: "An Junggeun standing composed on the platform of Harbin station in a dark overcoat, the crowd parting slightly, his gaze fixed and determined, morning light on the station's iron framework above him, ink wash painting style with the taut stillness before a decisive moment",
+            narration: "기유년 10월 26일 아침, 하얼빈 역. 안중근은 플랫폼에 섰다. 조선 침략의 원흉 이토 히로부미의 열차가 역으로 들어오고 있었다. 손 안의 권총이 차가웠다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The moment after the shots are fired at Harbin station, chaos erupting on the platform, Ito Hirobumi falling, Russian soldiers rushing forward, An Junggeun standing still with arms raised in surrender, shouting 'Daehan Dongrib!' in the chaos, ink wash painting style with explosive kinetic energy and frozen moment",
+            narration: "세 발의 총성이 울렸다. 이토가 쓰러졌다. 안중근은 두 팔을 들고 외쳤다. '대한 독립 만세.' 러시아 헌병이 달려들었다. 그는 도망치지 않았다.",
+            durationMs: 6000,
+          },
+          {
+            imagePrompt: "An Junggeun in prison uniform writing at a desk in Lushun prison, his handwritten calligraphy visible — '為國獻身軍人本分' (To sacrifice for the nation is a soldier's duty), calm and dignified expression, ink wash painting style with the quiet power of a man who has made his peace with history",
+            narration: "뤼순 감옥에서 안중근은 마지막 저술을 완성하고 일흔두 점의 유묵을 남겼다. 1910년 3월 26일 순국하였다. 조선이 망하기 다섯 달 전이었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1910,
@@ -63,6 +90,7 @@ export const SUNJONG_DATA: KingData = {
     hanjaChar: "終",
     title: "순종 — 518년 왕조의 마지막을 지키다",
     desc: "순종(純宗, 1874–1926)은 조선 제27대 왕이자 대한제국 제2대 황제로, 고종의 강제 퇴위 이후 1907년 즉위하였다. 재위 3년은 조선 역사상 가장 어두운 시간이었다. 일제는 군대를 해산하고 외교권을 박탈하였으며, 끝내 1910년 한일강제병합으로 518년 조선 왕조를 소멸시켰다. 순종은 진정한 통치권을 단 한 번도 행사하지 못한 채 일제의 손에 이끌린 군주였으나, 나라의 마지막 숨결을 온몸으로 품고 역사 앞에 섰다. 그의 생은 비극이었고, 그 비극은 한 왕조의 최후이자 한 민족의 수난의 시작이었다.",
+    hookLine: "518년 왕조의 마지막, 빼앗긴 조칙",
     unofficialHistory:
       "경술국치 직후, 순종은 눈물을 흘리며 '짐이 부덕하여 종묘사직을 보전하지 못하였으니 선왕들께 면목이 없다'고 탄식하였다 전해진다. 창덕궁 깊은 곳에 유폐된 순종은 때때로 혼자 선원전에 들러 역대 어진 앞에 오래도록 고개를 숙였으며, 시종들은 감히 그 곁에 다가서지 못하였다고 전해진다.",
     figures: [

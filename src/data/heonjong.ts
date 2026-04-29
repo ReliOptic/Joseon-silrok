@@ -53,6 +53,37 @@ export const HEONJONG_DATA: KingData = {
       desc: "조선 최초의 천주교 신부 김대건이 체포되어 한강 새남터에서 군문효수되니, 그의 나이 스물다섯이었다. 이어진 병오박해로 아홉 명의 신자가 목숨을 잃다.",
     },
     {
+      year: 1846,
+      title: "병오박해와 김대건 신부 순교",
+      desc: "조선 최초의 천주교 신부 김대건이 체포되어 한강 새남터에서 군문효수되니, 그의 나이 스물다섯이었다. 이어진 병오박해로 아홉 명의 신자가 목숨을 잃다.",
+      sillokEntry: {
+        date: "헌종 12년 병오(1846) 9월 16일",
+        title: "천주교 사제 김대건을 새남터에서 군문효수하다",
+        translation: "의금부에서 아뢰기를, '사학죄인 김대건은 서양 배를 타고 들어와 포교를 일삼고 조선의 해안 지도를 외적에게 넘겨준 역률에 해당하는 죄인이오니 군문효수의 형으로 처단하소서' 하니, 윤허하였다. 김대건의 나이 스물다섯이었다.",
+      },
+      storyEntry: {
+        title: "스물다섯의 순교",
+        scenes: [
+          {
+            imagePrompt: "Young priest Kim Dae-geon in simple white execution robes standing composed at the Saenammto riverbank execution ground, soldiers surrounding him, the Han River silver behind him, crowds watching from a distance, ink wash painting style with morning light and the calm dignity of a man who has made his peace",
+            narration: "병오년 9월 새남터. 스물다섯 살 김대건이 강가에 섰다. 마카오에서 사제품을 받고 목숨을 건 귀국길을 걸어왔던 조선 최초의 신부였다. 조정은 그것을 역률로 정하였다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "The moment of Kim Dae-geon's execution at Saenammto, Korean Catholic converts watching from the riverbank with bowed heads and tears, the Han River reflecting the sky, ink wash painting style with restrained sorrow and dignity, the river a witness to the moment",
+            narration: "칼이 내려졌다. 강은 흘렀다. 신자들은 땅에 엎드려 울었으나 소리를 낼 수 없었다. 순교자의 나이는 스물다섯이었고, 시신은 강변 모래 속에 묻혔다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Korean Catholic believers secretly gathering at night in a small candlelit room to pray, a hand-drawn portrait of Kim Dae-geon placed reverently on a low table, faces of ordinary people men women and elderly united in quiet defiance, ink wash painting style with warm candlelight in deep darkness",
+            narration: "사신은 논한다. 박해자의 위세는 흙 속에 묻히나 순교자의 이름은 남는다. 김대건은 1984년 성인의 반열에 올랐다. 헌종 12년의 처형장은 성지가 되었다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
+    },
+    {
       year: 1849,
       title: "승하",
       desc: "헌종께서 재위 15년 만에 후사 없이 승하하시니, 세도 가문의 농단 속에 강화도에 숨어 살던 원범이 철종으로 추대되다.",
@@ -65,6 +96,7 @@ export const HEONJONG_DATA: KingData = {
     desc: "헌종 치세는 세도 정치의 그늘 아래 왕권이 허울에 불과하던 시절이었다. 풍양 조씨가 조정을 쥐고 흔드는 동안, 조선 땅 깊숙이 뿌리내린 천주교 신앙은 끊임없이 칼날 위에 놓였다. 기해박해 때 앵베르 주교를 비롯한 선교사 세 명과 수백 명의 신자가 피를 흘렸고, 병오박해에서는 첫 조선인 신부 김대건이 새남터에서 스물다섯의 나이로 순교하였다. 임금의 옥새는 있었으나 임금의 뜻은 없었고, 백성의 신앙은 있었으나 백성의 자유는 없었다.",
     unofficialHistory: "기해박해 당시 앵베르 주교는 체포를 피할 수 있었음에도 신자들이 자신을 숨겨 주다 고초를 당하는 것을 차마 볼 수 없어 스스로 관아에 걸어 들어갔다 하며, 처형장으로 끌려가면서도 조선말로 기도를 올리며 신자들을 위로하였다고 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "칼 앞에 선 신앙, 세도 속에 갇힌 왕",
     figures: [
       { name: "조인영", role: "영의정. 풍양 조씨 세도의 중심으로 척사윤음 반포를 주도하고 기해박해를 이끌다." },
       { name: "앵베르 주교", role: "파리 외방전교회 선교사. 조선에 잠입하여 전교하다 기해박해 때 새남터에서 순교하다." },

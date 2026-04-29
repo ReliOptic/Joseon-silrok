@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const YEONSANGUN_DATA: KingData = {
   id: "yeonsangun",
+  transitionFromPrev: "성종이 승하했다. 폐비 윤씨의 아들이 왕이 되었다. 그 어머니의 운명을 아직 알지 못한 채.",
   events: [
     {
       year: 1494,
@@ -99,6 +100,7 @@ export const YEONSANGUN_DATA: KingData = {
     desc: "연산군은 조선 제10대 왕으로, 성종의 장남이다. 어머니 폐비 윤씨가 성종에게 사약을 받아 죽었다는 사실을 뒤늦게 알게 된 후 극단적 복수심에 사로잡혀 갑자사화를 일으켰다. 무오사화로 사림파를 대거 숙청하고, 언론을 탄압하며, 성균관마저 유흥의 장으로 삼았다. 결국 중종반정으로 폐위되어 강화도 유배지에서 생을 마쳤다. 단순한 폭군이 아닌, 어머니의 비극이 낳은 복잡한 인간으로 역사에 기록된다.",
     unofficialHistory: "연산군이 갑자사화를 단행하던 날 밤, 궁인들 사이에서는 왕이 어머니 폐비 윤씨의 화상 앞에 홀로 무릎을 꿇고 밤새 통곡하였다는 이야기가 오래도록 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "광기와 시인 사이, 폐위된 왕",
     figures: [
       { name: "폐비 윤씨", role: "연산군의 생모. 성종에게 사약을 받아 죽었으며, 그 비극이 갑자사화의 근원이 되었다." },
       { name: "김종직", role: "사림파의 태두. 사후에 조의제문으로 인해 무오사화의 빌미를 제공하였다." },

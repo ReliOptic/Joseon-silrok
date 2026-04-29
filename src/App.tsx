@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ERAS } from './data';
-import { KINGS_DATA } from './data/index';
-import type { Era } from './types/king.types';
+import { loadKingData } from './data/index';
+import type { Era, KingData } from './types/king.types';
 import { ArrowLeft, ZoomIn, ZoomOut, ChevronRight, Search, Share2 } from 'lucide-react';
 import { Level1MacroView } from './components/Level1MacroView';
 import { Level2EventView } from './components/Level2EventView';
@@ -55,9 +55,17 @@ export function App() {
   const prevKing = currentKingIndex > 0 ? ALL_KINGS[currentKingIndex - 1] : null;
   const nextKing = currentKingIndex < ALL_KINGS.length - 1 ? ALL_KINGS[currentKingIndex + 1] : null;
 
-  const kingData = KINGS_DATA[selectedKingId] ?? KINGS_DATA['sejong'];
+  const [kingData, setKingData] = useState<KingData | null>(null);
   const kingMeta = ALL_KINGS.find(k => k.id === selectedKingId);
-  const currentEvent = kingData.events[Math.min(selectedEventIndex, kingData.events.length - 1)];
+  const currentEvent = kingData ? kingData.events[Math.min(selectedEventIndex, kingData.events.length - 1)] : null;
+
+  useEffect(() => {
+    let cancelled = false;
+    loadKingData(selectedKingId).then(data => {
+      if (!cancelled) setKingData(data);
+    });
+    return () => { cancelled = true; };
+  }, [selectedKingId]);
 
   const slideAnimate = (direction: 'prev' | 'next', onMid: () => void) => {
     const outX = direction === 'next' ? -80 : 80;
@@ -75,7 +83,7 @@ export function App() {
   };
 
   const zoomIn = () => {
-    const next = getNextLevel(level, !!currentEvent.storyEntry);
+    const next = getNextLevel(level, !!currentEvent?.storyEntry);
     if (next <= level) return;
     gsap.to(containerRef.current, {
       scale: 1.25, opacity: 0, y: -20, duration: 0.4,
@@ -90,7 +98,7 @@ export function App() {
   };
 
   const zoomOut = () => {
-    const prev = getPrevLevel(level, !!currentEvent.storyEntry);
+    const prev = getPrevLevel(level, !!currentEvent?.storyEntry);
     if (prev >= level) return;
     gsap.to(containerRef.current, {
       scale: 0.8, opacity: 0, y: 20, duration: 0.4,
@@ -173,7 +181,7 @@ export function App() {
   };
 
   const navigateEvent = (direction: 'prev' | 'next') => {
-    const eventsCount = kingData.events.length;
+    const eventsCount = kingData?.events.length ?? 0;
     if (direction === 'next') {
       if (selectedEventIndex < eventsCount - 1) {
         slideAnimate('next', () => setSelectedEventIndex(i => i + 1));
@@ -184,8 +192,12 @@ export function App() {
       if (selectedEventIndex > 0) {
         slideAnimate('prev', () => setSelectedEventIndex(i => i - 1));
       } else if (prevKing) {
-        const prevEventsCount = KINGS_DATA[prevKing.id]?.events.length ?? 1;
-        slideAnimate('prev', () => { setSelectedKingId(prevKing.id); setSelectedEventIndex(prevEventsCount - 1); });
+        slideAnimate('prev', () => {
+          loadKingData(prevKing.id).then(data => {
+            setSelectedKingId(prevKing.id);
+            setSelectedEventIndex(data.events.length - 1);
+          });
+        });
       }
     }
   };
@@ -286,7 +298,7 @@ export function App() {
             {level > 1 && <ChevronRight size={14} />}
             {level > 1 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(2)}>{kingMeta?.name ?? ''}</span>}
             {level > 2 && <ChevronRight size={14} />}
-            {level > 2 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(3)}>{currentEvent.year}년</span>}
+            {level > 2 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(3)}>{currentEvent?.year}년</span>}
             {level > 3 && <ChevronRight size={14} />}
             {level > 3 && <span>실록 (Sillok)</span>}
           </div>
@@ -321,10 +333,10 @@ export function App() {
 
       <div ref={containerRef} className="w-full h-full pt-20 pb-9 overflow-y-auto no-scrollbar">
         {level === 1 && <Level1MacroView setActiveEra={setActiveEra} onSelectKing={selectKing} />}
-        {level === 2 && <Level2EventView kingData={kingData} onSelectEvent={selectEvent} prevKing={prevKing} nextKing={nextKing} onNavigateKing={navigateToKing} />}
-        {level === 3 && <Level3DetailView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} zoomIn={zoomIn} />}
-        {level === 3.5 && <Level35StoryView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} zoomIn={zoomIn} zoomOut={zoomOut} />}
-        {level === 4 && <Level4SillokView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} />}
+        {level === 2 && kingData && <Level2EventView kingData={kingData} onSelectEvent={selectEvent} prevKing={prevKing} nextKing={nextKing} onNavigateKing={navigateToKing} />}
+        {level === 3 && kingData && <Level3DetailView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} zoomIn={zoomIn} />}
+        {level === 3.5 && kingData && <Level35StoryView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} zoomIn={zoomIn} zoomOut={zoomOut} />}
+        {level === 4 && kingData && <Level4SillokView kingData={kingData} eventIndex={selectedEventIndex} onNavigateEvent={navigateEvent} />}
       </div>
 
       <TimelineBar currentKingId={level > 1 ? selectedKingId : null} onSelectKing={selectKingFromTimeline} />

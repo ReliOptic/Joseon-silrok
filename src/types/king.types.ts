@@ -36,6 +36,7 @@ export interface KingDetail {
   readonly unofficialHistory: string;
   readonly unofficialHistorySourceLevel?: 'sillok' | 'historical-record' | 'tradition';
   readonly figures: readonly KingFigure[];
+  readonly hookLine?: string;
 }
 
 export interface KingSillokEntry {
@@ -53,6 +54,7 @@ export interface KingData {
   readonly events: readonly KingEvent[];
   readonly detail: KingDetail;
   readonly sillokEntry: KingSillokEntry;
+  readonly transitionFromPrev?: string;
 }
 
 export interface KingListItem {
@@ -61,6 +63,7 @@ export interface KingListItem {
   readonly reign: string;
   readonly years: number;
   readonly desc: string;
+  readonly succession?: 'normal' | 'coup' | 'short_lived' | 'abdication' | 'usurpation' | 'enthronement' | 'forced_abdication';
 }
 
 export interface EraColor {

@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const MUNJONG_DATA: KingData = {
   id: "munjong",
+  transitionFromPrev: "세종이 승하했다. 32년의 성군 시대가 닫히고, 세자로서 20년을 기다려온 아들이 왕이 되었다.",
   events: [
     {
       year: 1450,
@@ -12,6 +13,32 @@ export const MUNJONG_DATA: KingData = {
       year: 1451,
       title: "고려사 편찬 완성",
       desc: "정인지 등에게 명하여 편찬케 한 『고려사』 139권을 완성하고 반포하다.",
+      sillokEntry: {
+        date: "문종 1년 신미(1451) 8월 25일",
+        title: "『고려사』 139권을 완성하여 올리다",
+        translation: "정인지 등이 『고려사』 139권을 완성하여 올리니, 임금이 이르기를, '역사란 후세의 거울이라. 전대의 흥망을 밝게 기록함이 곧 오늘을 다스리는 법이 되거늘, 경들이 이를 완성하였으니 나라의 큰 공업이로다' 하고, 두루 반포하여 관리들로 하여금 읽게 하였다.",
+      },
+      storyEntry: {
+        title: "역사를 완성하다",
+        scenes: [
+          {
+            imagePrompt: "Scholars Jeong In-ji and Kim Jong-seo presenting the completed 139-volume Goryeosa to King Munjong in the royal audience hall, the stacked volumes arranged on ceremonial tables, the king leaning forward with evident satisfaction, ink wash painting style with warm scholarly atmosphere and golden morning light",
+            narration: "문종 1년 8월, 정인지가 139권의 책을 올렸다. 『고려사』였다. 500년 고려의 흥망을 낱낱이 기록한 왕조의 거울이었다. 왕은 기뻐하며 말했다. '역사란 후세의 거울이라.'",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "Joseon scholars and officials in candlelit study rooms across the kingdom reading freshly distributed copies of the Goryeosa, their faces attentive as they absorb the rise and fall of the previous dynasty, ink wash painting style with intimate scholarly atmosphere",
+            narration: "『고려사』는 전국에 배포되었다. 고려가 왜 망했는가. 무엇이 나라를 살리고 무엇이 나라를 죽이는가. 문종은 역사로 신하들을 가르쳤다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Munjong alone in his study at night surrounded by historical texts and the newly completed Goryeosa volumes, making annotations by candlelight, his expression intent and purposeful despite visible signs of illness and fatigue, ink wash painting style with the poignant image of a scholar-king racing against time",
+            narration: "그러나 왕의 몸은 이미 병들어 있었다. 역사를 완성하였으나 자신의 역사를 다 쓰기에 시간이 모자랐다. 이듬해 문종은 서른아홉의 나이로 눈을 감았다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1452,
@@ -65,6 +92,7 @@ export const MUNJONG_DATA: KingData = {
     desc: "문종은 세종의 학문과 제도를 충실히 계승한 군주였다. 즉위 전부터 세자로서 20여 년간 국정을 보필하며 경연(經筵)을 게을리하지 않았고, 왕위에 오른 뒤에는 『고려사』와 『고려사절요』를 완성하여 역사 기록의 중요성을 온 나라에 천명하였다. 아울러 화차와 신기전의 개량을 독려하며 국방을 다졌으나, 타고난 병약한 몸은 끝내 그의 뜻을 완수하지 못하게 하였다. 재위 2년 3개월, 조선 역사상 가장 짧은 치세 중 하나를 남기고 승하하니 향년 39세였다.",
     unofficialHistory: "문종이 한창 경연에서 신하들과 토론을 나누던 어느 날, 밤이 깊도록 촛불을 밝히고 『자치통감』을 읽다 가래를 심하게 토하였다. 이를 곁에서 본 내시가 어의를 청하려 하자 왕은 손을 저으며 \"역사의 교훈을 다 읽기 전에 어찌 자리를 뜨겠는가\" 하고 끝내 책을 덮지 않았다 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "세종의 아들, 2년을 채우지 못한 현군",
     figures: [
       { name: "정인지(鄭麟趾)", role: "『고려사』 편찬 총재관, 문종의 학문 사업을 주도한 문신" },
       { name: "김종서(金宗瑞)", role: "『고려사절요』 편찬 책임자이자 북방 개척을 이끈 무신·문신" },

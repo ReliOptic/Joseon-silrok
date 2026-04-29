@@ -15,6 +15,18 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('/src/data/') && !id.endsWith('/index.ts') && !id.endsWith('/data.ts')) {
+              const m = id.match(/\/data\/([^/]+)\.ts$/);
+              if (m) return `king-${m[1]}`;
+            }
+          },
+        },
+      },
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

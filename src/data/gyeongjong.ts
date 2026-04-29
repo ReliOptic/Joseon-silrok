@@ -51,6 +51,35 @@ export const GYEONGJONG_DATA: KingData = {
       year: 1722,
       title: "노론 사대신 처형",
       desc: "김창집·이이명·이건명·조태채 노론 사대신이 사사되고 소론이 조정을 장악하다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_T0_A02_03A_27A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_T0_A02_03A_27A_00010_2005_001_XML",
+        date: "경종 2년 임인(1722) 3월 27일",
+        title: "노론 사대신 김창집·이이명·이건명·조태채에게 사사를 명하다",
+        translation: "전교하기를, '김창집·이이명·이건명·조태채를 모두 사사하고 그 나머지 종범들은 법률에 의거하여 처단하라' 하였다. 붕당의 화가 여기에 이르러 극에 달하였다.",
+      },
+      storyEntry: {
+        title: "사대신 사사 — 붕당이 낳은 학살",
+        scenes: [
+          {
+            imagePrompt: "Four elderly Noron ministers in exile, receiving royal messengers with poison cups in remote locations across Joseon, their dignified but resigned expressions, ink wash painting style, sparse composition, each figure isolated in their final moment, cold winter light",
+            narration: "임인년 3월, 사약이 네 방향으로 떠났다. 김창집·이이명·이건명·조태채 — 각기 다른 귀양지에서 같은 날 같은 잔을 받았다. 수십 년 노론의 권세가 한 줄의 전교로 끝났다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Soron officials celebrating in the court hall as news of the Noron executions arrives, some showing relief some unease, the throne visible but empty in the background, ink wash painting style with uneasy triumphant atmosphere, warm candles against dark recesses",
+            narration: "소론은 승리했다. 그러나 이 승리 뒤에 남은 것은 무엇이었는가. 조정은 피냄새가 가시지 않았고, 노론의 씨를 거두었으되 노론의 원한은 씨를 뿌렸다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Gyeongjong sitting alone in his dimly lit palace chamber, visibly weakened and hollow-eyed, surrounded by faction memorials stacked on his desk, the weight of four executions visible in his haunted expression, ink wash painting style, deep shadows pressing in from all sides",
+            narration: "경종은 병상에서 이 모든 것을 명하였다. 실권은 소론에게 있었고, 왕의 손은 붓을 들기도 힘들었다. 2년 뒤 그도 조용히 사라졌다. 독살설은 지금도 역사 속에 물음표로 남아 있다.",
+            durationMs: 5500,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_T0_A02_03A_27A_00010_2005_001_XML",
+      },
     },
     {
       year: 1724,
@@ -65,6 +94,7 @@ export const GYEONGJONG_DATA: KingData = {
     desc: "경종은 희빈 장씨의 소생으로, 어머니 장씨가 사사되는 참화를 어린 나이에 목격하였다. 즉위 후에는 병약한 몸으로 노론과 소론의 극심한 당쟁 속에 휘말려 실권을 제대로 행사하지 못하였다. 재위 기간 내내 붕당 간의 생사를 건 권력 투쟁이 조정을 뒤흔들었으며, 신임사화로 수많은 신료가 목숨을 잃었다. 재위 4년 만에 의문스럽게 승하하여 조선 역사상 가장 비극적인 군주 중 한 명으로 기록된다.",
     unofficialHistory: "경종이 승하하기 수일 전 게장과 생감을 드셨는데, 이를 올린 자가 세제 측 인물이었다는 소문이 궐 안팎에 떠돌았다. 어의들은 극구 부인하였으나, 소론 신료들은 독이 든 음식을 올려 왕을 해쳤다고 주장하였고 이 의혹은 영조 대에 이르러서도 씻기지 않아 두고두고 역사의 그늘로 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "어머니를 잃고 당쟁에 삼켜진 비운의 왕",
     figures: [
       { name: "희빈 장씨", role: "경종의 생모, 숙종의 후궁으로 중전에 올랐다가 사사됨" },
       { name: "김창집", role: "노론 영수, 신임사화로 사사된 사대신 중 한 명" },

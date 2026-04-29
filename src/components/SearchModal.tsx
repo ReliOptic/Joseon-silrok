@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { Search, X } from 'lucide-react';
 import { ERAS } from '../data';
-import { KINGS_DATA } from '../data/index';
+import { loadKingData } from '../data/index';
+import type { KingData } from '../types/king.types';
 
 interface SearchResult {
   readonly kingId: string;
@@ -18,25 +19,31 @@ interface SearchModalProps {
   onClose: () => void;
 }
 
-const ALL_RESULTS: readonly SearchResult[] = ERAS.flatMap(era =>
-  era.kingsList.flatMap(king => {
-    const data = KINGS_DATA[king.id];
-    if (!data) return [];
-    return data.events.map((ev, i) => ({
-      kingId: king.id,
-      kingName: king.name,
-      eventIndex: i,
-      year: ev.year,
-      title: ev.title,
-      desc: ev.desc,
-      hasSillok: !!ev.sillokEntry,
-    }));
-  })
-);
+function buildResults(kingId: string, kingName: string, data: KingData): readonly SearchResult[] {
+  return data.events.map((ev, i) => ({
+    kingId,
+    kingName,
+    eventIndex: i,
+    year: ev.year,
+    title: ev.title,
+    desc: ev.desc,
+    hasSillok: !!ev.sillokEntry,
+  }));
+}
 
 export function SearchModal({ onSelect, onClose }: SearchModalProps) {
   const [query, setQuery] = useState('');
+  const [allResults, setAllResults] = useState<readonly SearchResult[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const kings = ERAS.flatMap(era => era.kingsList);
+    Promise.all(
+      kings.map(king =>
+        loadKingData(king.id).then(data => buildResults(king.id, king.name, data))
+      )
+    ).then(chunks => setAllResults(chunks.flat()));
+  }, []);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -51,13 +58,13 @@ export function SearchModal({ onSelect, onClose }: SearchModalProps) {
     const q = query.trim();
     if (!q) return [];
     const lower = q.toLowerCase();
-    return ALL_RESULTS.filter(r =>
+    return allResults.filter(r =>
       r.title.includes(q) ||
       r.desc.includes(q) ||
       r.kingName.includes(q) ||
       String(r.year).includes(lower)
     ).slice(0, 12);
-  }, [query]);
+  }, [query, allResults]);
 
   return (
     <div
@@ -113,7 +120,9 @@ export function SearchModal({ onSelect, onClose }: SearchModalProps) {
 
         {!query.trim() && (
           <div className="px-4 py-5">
-            <p className="text-xs opacity-30 mb-3 text-center">조선 왕조 전체 사건 {ALL_RESULTS.length}개</p>
+            <p className="text-xs opacity-30 mb-3 text-center">
+              {allResults.length > 0 ? `조선 왕조 전체 사건 ${allResults.length}개` : '검색 인덱스 로딩 중...'}
+            </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {['훈민정음', '임진왜란', '사육신', '한양 천도', '사도세자', '경복궁', '수원 화성', '병자호란'].map(kw => (
                 <button

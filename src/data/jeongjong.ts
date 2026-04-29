@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const JEONGJONG_DATA: KingData = {
   id: "jeongjong",
+  transitionFromPrev: "태조가 왕자의 난에 흔들렸다. 이방원의 칼날이 형제들을 쓸어낸 뒤, 둘째 아들이 옥좌에 앉았다.",
   events: [
     {
       year: 1398,
@@ -12,6 +13,32 @@ export const JEONGJONG_DATA: KingData = {
       year: 1399,
       title: "개경 환도",
       desc: "한양에서 고려의 구도(舊都) 개경으로 도읍을 옮겨 민심을 안정시키고자 하다.",
+      sillokEntry: {
+        date: "정종 1년 기묘(1399) 2월 26일",
+        title: "도읍을 개경으로 옮기다",
+        translation: "임금이 도읍을 개경으로 옮기었다. 이에 앞서 임금이 의논하기를, '한양은 새로 정한 도읍이요 개경은 고려의 구도이니, 민심이 아직 한양에 안정되지 않았고 왕자의 난으로 인심이 흉흉하다. 잠시 개경으로 돌아가 민심을 가라앉힌 뒤 다시 도모함이 옳다' 하니, 신하들이 이를 따랐다.",
+      },
+      storyEntry: {
+        title: "도읍을 버리다",
+        scenes: [
+          {
+            imagePrompt: "Long procession of the Joseon royal court moving out of Hanyang city gates in early morning, banners and palanquins visible, common people watching silently from roadsides, the half-built palace walls of Hanyang visible behind them, ink wash painting style with the subdued atmosphere of retreat and uncertainty",
+            narration: "정종 1년 봄, 조정이 한양을 떠났다. 태조가 피와 꿈으로 세운 새 도읍이었으나, 왕자의 난이 할퀴고 간 땅을 그대로 밟고 있기에는 상처가 너무 깊었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Jeongjong's procession entering the familiar gates of Gaeju (Gaeseong), crowds of people lining the streets with mixed expressions of relief and uncertainty, the old Goryeo palace structures visible in the background, ink wash painting style with a sense of returning to something known but no longer whole",
+            narration: "개경은 낯설지 않았다. 고려 오백 년의 흔적이 남아 있는 땅이었다. 그러나 돌아온 것이 나아감인지 물러남인지, 왕은 알 수 없었다.",
+            durationMs: 5000,
+          },
+          {
+            imagePrompt: "King Jeongjong seated in the Gaeju palace audience hall, the faces of his ministers before him, Prince Bangwon's imposing figure visible among them, the king's expression composed but quietly resigned, ink wash painting style with muted tones conveying a reign held together by restraint rather than power",
+            narration: "개경 환도는 민심을 달랬으나 실권을 돌려오지는 못했다. 왕좌는 있었고 방원은 옆에 있었다. 정종은 그것을 받아들였다. 그것이 그의 지혜였고, 그의 왕조였다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+      },
     },
     {
       year: 1400,
@@ -65,6 +92,7 @@ export const JEONGJONG_DATA: KingData = {
     desc: "정종은 피바람 속에 세워진 왕좌를 묵묵히 지킨 군주였다. 왕자들의 칼날이 궁궐 문 앞까지 미치는 혼란 속에서도 그는 권세에 집착하기보다 종사(宗社)의 안녕을 먼저 헤아렸다. 마침내 두 해가 채 되기도 전에 스스로 왕위를 내어줌으로써, 권력보다 평화를 택한 임금으로 역사에 남게 되었다.",
     unofficialHistory: "정종이 즉위한 날 밤, 내시 하나가 침전 앞에서 떨리는 손으로 촛불을 밝혔는데, 임금이 조용히 손을 저어 불을 끄고는 '어둠이 오히려 편하다'고 중얼거렸다는 이야기가 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "왕좌를 버림으로써 살아남은 왕",
     figures: [
       { name: "이방원(李芳遠)", role: "실권자·후일 태종, 정종의 결정에 결정적 영향을 미친 강력한 동생" },
       { name: "이방간(李芳幹)", role: "제2차 왕자의 난을 일으킨 넷째 왕자" },

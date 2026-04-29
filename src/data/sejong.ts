@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const SEJONG_DATA: KingData = {
   id: "sejong",
+  transitionFromPrev: "태종이 양위했다. 장자도 차자도 아닌 셋째 왕자가 왕이 되었다.",
   events: [
     {
       year: 1418,
@@ -324,6 +325,7 @@ export const SEJONG_DATA: KingData = {
     desc: "자음은 발음 기관의 모양을, 모음은 하늘·땅·사람의 형상을 본뜨다. 세종은 홀로 수년간 음운학을 연구하며 기존 어떤 문자 체계와도 다른 원리를 창안하였다. 집현전 학자들과 토론하고, 눈이 침침한 날도 촛불을 켜고 밤을 새우며 연구한 끝에, '누구나 하루 이틀이면 익힐 수 있는' 문자가 완성되었다. 이것은 단순한 발명이 아니라 지식의 권력을 독점해온 사대부 체제에 대한 조용한 혁명이었다.",
     unofficialHistory: "최만리 등이 '글자를 새로 만드는 것은 중국을 배신하는 행위'라며 거세게 반발하였다. 세종은 '네가 우리말의 음운을 아느냐'며 직접 반박하고 상소자들을 의금부에 가뒀다 다음 날 풀어주었다. 세종 본인이 눈병이 심하여 온정에서 요양하는 중에도 밤낮으로 문자를 연구하였으니, 가까이 모시던 상궁들이 '전하께서 주무시는 것을 본 일이 없다'고 탄식하였다고 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "오백 년의 글자를 만든 왕",
     figures: [
       { name: "장영실", role: "과학 기구 제작자" },
       { name: "정인지", role: "훈민정음 해례본 편찬" },

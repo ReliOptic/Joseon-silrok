@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const SEONGJONG_DATA: KingData = {
   id: "seongjong",
+  transitionFromPrev: "예종이 1년 만에 승하했다. 어린 조카가 왕이 되었고, 대왕대비가 수렴청정을 시작했다.",
   events: [
     {
       year: 1469,
@@ -94,6 +95,7 @@ export const SEONGJONG_DATA: KingData = {
     desc: "조선 제9대 왕. 이름은 혈(娎), 자는 평보(平甫). 세조의 손자이자 덕종의 차남으로, 예종이 후사 없이 승하하자 열셋의 나이로 왕위에 올랐다. 재위 25년간 『경국대전』을 완성하고 홍문관을 세워 사림을 등용함으로써 조선의 문화적 황금기를 열었다. 그러나 폐비 윤씨 사사라는 비극은 그의 치세에 짙은 그림자를 드리웠다.",
     unofficialHistory: "성종이 어느 날 밤 경연 후 홀로 후원을 거닐다 늦도록 돌아오지 않자, 내관들이 애를 태우며 사방을 찾아 헤맸다 한다. 이튿날 아침 전각에 든 왕은 '경국대전의 마지막 조문을 달빛 아래서 읽으니 비로소 그 뜻이 손에 잡히는 듯하였다'고 웃으며 말했다 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "경국대전을 완성하고 아들의 광기를 잉태한 왕",
     figures: [
       { name: "정희왕후 (貞熹王后)", role: "대왕대비. 성종 즉위 초 7년간 수렴청정하여 국정의 안정을 이끌다." },
       { name: "김종직 (金宗直)", role: "영남 사림의 영수. 성종의 중용을 받아 관직에 나아감으로써 사림파의 정계 진출을 열다." },

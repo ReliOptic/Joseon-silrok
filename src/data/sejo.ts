@@ -2,6 +2,7 @@ import type { KingData } from '../types/king.types';
 
 export const SEJO_DATA: KingData = {
   id: "sejo",
+  transitionFromPrev: "단종이 영월로 떠났다. 숙부가 옥좌에 앉았다.",
   events: [
     {
       year: 1455,
@@ -99,6 +100,7 @@ export const SEJO_DATA: KingData = {
     desc: "세조는 피로써 왕좌를 얻고, 법으로써 왕조를 굳힌 군주였다. 조카의 왕위를 빼앗고 충신들의 목을 베는 과정에서 그 이름은 찬탈자의 낙인을 피할 수 없었다. 그러나 강력한 왕권을 배경으로 경국대전 편찬을 명하고, 직전법으로 재정을 바로잡으며, 진관 체제로 국방을 다진 업적은 조선 오백 년 법치의 토대가 되었다. 불의한 시작과 빛나는 결과 사이에서, 세조는 역사가 쉬이 판결을 내리지 못하는 군주로 남아 있다.",
     unofficialHistory: "세조가 단종을 영월로 유배 보낸 뒤 어느 밤, 꿈속에 단종의 어머니 현덕왕후가 나타나 세조의 얼굴에 침을 뱉었고, 그 자리에 종기가 돋아 평생 피부병을 앓았다는 이야기가 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "조카의 왕위를 빼앗고 법전을 완성한 왕",
     figures: [
       { name: "성삼문(成三問)", role: "집현전 학사 출신으로 단종 복위를 주도하다 처형된 사육신의 수장" },
       { name: "한명회(韓明澮)", role: "계유정난부터 세조를 보좌한 최측근 책사로 정권의 실세" },

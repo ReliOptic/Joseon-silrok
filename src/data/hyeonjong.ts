@@ -50,7 +50,36 @@ export const HYEONJONG_DATA: KingData = {
     {
       year: 1671,
       title: "경신대기근",
-      desc: "전국에 대기근이 엄습하여 수십만 명이 아사하고 유민이 속출하는 미증유의 재해가 조선을 뒤덮다."
+      desc: "전국에 대기근이 엄습하여 수십만 명이 아사하고 유민이 속출하는 미증유의 재해가 조선을 뒤덮다.",
+      sillokEntry: {
+        articleId: "ITKC_JT_R0_A12_07A_01A_00010_2005_001_XML",
+        sourceUrl: "https://sillok.history.go.kr/id/ITKC_JT_R0_A12_07A_01A_00010_2005_001_XML",
+        date: "현종 12년 경술(1671) 7월 1일",
+        title: "전국에 대기근이 들어 아사자가 속출하다",
+        translation: "비변사가 아뢰기를, '금년 흉황이 전고 없이 극심하여 경기·삼남·서북 할 것 없이 아사자가 도로에 즐비하고 유민이 사방에서 몰려들고 있습니다. 진휼 곡식이 바닥을 드러내어 더는 버틸 수 없는 지경이오니 속히 대책을 세우소서' 하니, 임금이 크게 근심하여 방도를 의논하게 하였으나 창고는 이미 비어 있었다.",
+      },
+      storyEntry: {
+        title: "경신대기근 — 예송이 멈추지 않는 동안",
+        scenes: [
+          {
+            imagePrompt: "Emaciated Joseon commoners and refugees crowding the roads outside Hanyang city gates in winter, hollow-eyed children and elderly people among them, sparse vegetation and bare trees in the background, ink wash painting style with ashen grey tones conveying the scale of famine devastation",
+            narration: "경신년 봄부터 비가 오지 않았다. 여름에 메뚜기 떼가 들판을 삼켰고, 가을에 거둘 것이 없었다. 도로에 아사자가 즐비했다. 조정의 창고는 비어 있었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "Joseon government officials distributing meager rations from almost-empty granary carts to a vast crowd of starving people, the officials' faces showing helplessness, the crowd's faces showing desperation, ink wash painting style with the contrast of institutional inadequacy against human suffering",
+            narration: "비변사가 아뢰었다. '진휼 곡식이 바닥을 드러내어 더는 버틸 수 없습니다.' 임금이 크게 근심하였으나 방도가 없었다. 수십만이 굶어 죽는 동안 조정에서는 여전히 복식의 글자를 따지고 있었다.",
+            durationMs: 5500,
+          },
+          {
+            imagePrompt: "King Hyeonjong kneeling alone in a simple robe before the royal ancestral shrine, performing a rain prayer ritual, his expression haggard and desperate, courtiers watching at a respectful distance, ink wash painting style with the quiet desperation of a powerless king before heaven",
+            narration: "사신은 논한다. 하늘이 재앙을 내릴 때 예론(禮論)은 백성의 밥이 되지 못한다. 현종 치세에 가장 많은 목숨이 사라진 것은 당쟁의 칼날이 아니라 굶주림이었다. 그것이 예송의 시대가 남긴 또 다른 얼굴이다.",
+            durationMs: 5000,
+          },
+        ],
+        generatedAt: "2026-04-28T00:00:00Z",
+        sourceArticleId: "ITKC_JT_R0_A12_07A_01A_00010_2005_001_XML",
+      },
     },
     {
       year: 1674,
@@ -70,6 +99,7 @@ export const HYEONJONG_DATA: KingData = {
     desc: "현종의 15년 치세는 두 차례의 예송 논쟁으로 점철되었다. 표면은 자의대비의 상복 기간을 둘러싼 예법의 다툼이었으나, 그 밑에는 효종의 왕통 정통성을 어떻게 규정하느냐는 정치적 칼날이 숨어 있었다. 서인과 남인은 경전의 글자를 빌려 권력을 다투었고, 임금은 그 사이에서 무게추를 옮기며 균형을 구하였으되 끝내 당쟁의 파고를 넘지 못하였다. 재위 내내 기근과 전염병이 백성을 덮쳤음에도 조정의 논의는 산 자의 시름보다 죽은 자의 복식에 더 오래 머물렀으니, 이것이 현종 시대의 비극이었다.",
     unofficialHistory: "기해예송이 결착된 날 밤, 현종이 편전에 홀로 앉아 '예가 이처럼 무거운 것인가, 아니면 권세가 이처럼 가벼운 것인가'를 되뇌며 촛불이 다 탈 때까지 자리를 뜨지 않으셨다는 말이 내관들 사이에 조용히 전해진다.",
     unofficialHistorySourceLevel: 'tradition',
+    hookLine: "상복 한 장으로 조정을 뒤흔든 시대",
     figures: [
       { name: "송시열", role: "서인의 영수, 기년복론을 주도하여 기해예송에서 승리하였으나 갑인예송으로 실각함" },
       { name: "허목", role: "남인의 중심, 3년복론을 주창하며 예법의 이면에 담긴 왕통 정통성 문제를 제기함" },
