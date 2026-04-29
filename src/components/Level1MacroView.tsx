@@ -3,11 +3,53 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronRight } from 'lucide-react';
 import { ERAS } from '../data';
-import type { Era } from '../types/king.types';
+import { KING_HOOKLINES } from '../data/hooklines';
+import type { Era, KingListItem } from '../types/king.types';
 
 interface Level1Props {
   setActiveEra: (era: Era) => void;
   onSelectKing: (id: string) => void;
+}
+
+interface SuccessionStyle {
+  borderLeft?: string;
+  opacity?: string;
+  bg?: string;
+  leftBadge?: string;
+  rightBadge?: string;
+}
+
+function getSuccessionStyle(succession: KingListItem['succession']): SuccessionStyle {
+  switch (succession) {
+    case 'coup':
+      return {
+        borderLeft: 'border-l-2 border-l-red-300/50',
+        leftBadge: '⚔',
+      };
+    case 'short_lived':
+      return {
+        opacity: 'opacity-70',
+        bg: 'bg-white/10',
+      };
+    case 'usurpation':
+      return {
+        borderLeft: 'border-l-2 border-dashed border-l-amber-400/60',
+      };
+    case 'abdication':
+      return {
+        rightBadge: '↓',
+      };
+    case 'forced_abdication':
+      return {
+        rightBadge: '⊗',
+      };
+    case 'enthronement':
+      return {
+        leftBadge: '★',
+      };
+    default:
+      return {};
+  }
 }
 
 export function Level1MacroView({ setActiveEra, onSelectKing }: Level1Props) {
@@ -53,6 +95,7 @@ export function Level1MacroView({ setActiveEra, onSelectKing }: Level1Props) {
                 <div className="absolute left-[30px] top-0 bottom-0 w-px bg-black/20"></div>
                 {era.kingsList.map(king => {
                   const height = Math.max(80, king.years * 4);
+                  const sStyle = getSuccessionStyle(king.succession);
                   return (
                     <button
                       key={king.id}
@@ -66,14 +109,32 @@ export function Level1MacroView({ setActiveEra, onSelectKing }: Level1Props) {
                         className="absolute left-[29px] top-8 w-[3px] bg-black/40 group-hover:bg-black transition-colors"
                         style={{ height: `calc(100% - 32px)` }}
                       ></div>
-                      <div className="p-6 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 transition-all group-hover:bg-white/40 group-hover:-translate-y-1 h-full flex flex-col justify-center">
-                        <div className="flex items-baseline gap-4 mb-2">
+                      <div
+                        className={[
+                          "p-6 rounded-2xl backdrop-blur-sm border border-white/30 transition-all group-hover:-translate-y-1 h-full flex flex-col justify-center",
+                          sStyle.bg ?? "bg-white/20",
+                          sStyle.opacity ?? "",
+                          sStyle.borderLeft ?? "",
+                          "group-hover:bg-white/40",
+                        ].filter(Boolean).join(" ")}
+                      >
+                        <div className="flex items-baseline gap-4 mb-1">
+                          {sStyle.leftBadge && (
+                            <span className="text-xs opacity-50 shrink-0">{sStyle.leftBadge}</span>
+                          )}
                           <h3 className="text-[32px] font-serif font-bold leading-[1.5] tracking-[-0.01em]">{king.name}</h3>
                           <span className="text-sm font-bold opacity-60 bg-black/5 px-2 py-1 rounded-full">{king.years}년</span>
+                          {sStyle.rightBadge && (
+                            <span className="text-xs opacity-40 shrink-0">{sStyle.rightBadge}</span>
+                          )}
                           <ChevronRight size={18} className="opacity-0 group-hover:opacity-40 transition-opacity ml-auto shrink-0" />
                         </div>
-                        <p className="text-sm opacity-60 mb-2">{king.reign}</p>
-                        <p className="text-base font-medium leading-[1.6] tracking-[-0.01em]">{king.desc}</p>
+                        {KING_HOOKLINES[king.id] && (
+                          <p className="text-base font-medium leading-[1.5] tracking-[-0.01em] mb-2">
+                            {KING_HOOKLINES[king.id]}
+                          </p>
+                        )}
+                        <p className="text-sm opacity-50 leading-relaxed">{king.reign} &middot; {king.desc}</p>
                       </div>
                     </button>
                   );

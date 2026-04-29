@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5EFE6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EDE4D8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="divider" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B6F47;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#8B6F47;stop-opacity:0.6" />
+      <stop offset="70%" style="stop-color:#8B6F47;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#8B6F47;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- 한지 텍스처 효과 — 미세 노이즈 패턴 -->
+  <rect width="1200" height="630" fill="none" stroke="#C4A882" stroke-width="0.3" opacity="0.15" />
+
+  <!-- 외곽 테두리 프레임 -->
+  <rect x="28" y="28" width="1144" height="574" fill="none" stroke="#8B6F47" stroke-width="1.5" opacity="0.35" />
+  <rect x="36" y="36" width="1128" height="558" fill="none" stroke="#8B6F47" stroke-width="0.7" opacity="0.2" />
+
+  <!-- 좌측 큰 한자 워터마크 — 朝 -->
+  <text
+    x="180"
+    y="420"
+    font-family="'Noto Serif KR', 'Noto Serif CJK KR', 'Source Han Serif KR', 'Batang', serif"
+    font-size="380"
+    fill="#6B4F2A"
+    opacity="0.055"
+    text-anchor="middle"
+    font-weight="900"
+    letter-spacing="0"
+  >朝</text>
+
+  <!-- 우측 한자 워터마크 — 鮮 -->
+  <text
+    x="980"
+    y="460"
+    font-family="'Noto Serif KR', 'Noto Serif CJK KR', 'Source Han Serif KR', 'Batang', serif"
+    font-size="300"
+    fill="#6B4F2A"
+    opacity="0.04"
+    text-anchor="middle"
+    font-weight="900"
+  >鮮</text>
+
+  <!-- 상단 소제목 — 국조보감 스타일 작은 한자 -->
+  <text
+    x="600"
+    y="195"
+    font-family="'Noto Serif KR', 'Noto Serif CJK KR', 'Batang', 'serif'"
+    font-size="15"
+    fill="#8B6F47"
+    opacity="0.7"
+    text-anchor="middle"
+    letter-spacing="8"
+    font-weight="400"
+  >朝鮮王朝實錄</text>
+
+  <!-- 가로 구분선 상단 -->
+  <line x1="200" y1="215" x2="1000" y2="215" stroke="url(#divider)" stroke-width="0.8" opacity="0.5" />
+
+  <!-- 메인 타이포 — 조선왕조실록 -->
+  <text
+    x="600"
+    y="345"
+    font-family="'Noto Serif KR', 'Noto Serif CJK KR', 'Source Han Serif KR', 'Batang', 'KoPub Batang', serif"
+    font-size="88"
+    fill="#2C1A0E"
+    opacity="0.92"
+    text-anchor="middle"
+    font-weight="700"
+    letter-spacing="12"
+  >조선왕조실록</text>
+
+  <!-- 가로 구분선 하단 -->
+  <line x1="200" y1="385" x2="1000" y2="385" stroke="url(#divider)" stroke-width="0.8" opacity="0.5" />
+
+  <!-- 부제 -->
+  <text
+    x="600"
+    y="440"
+    font-family="'Noto Sans KR', 'Noto Serif KR', 'Malgun Gothic', sans-serif"
+    font-size="24"
+    fill="#5C3D1E"
+    opacity="0.75"
+    text-anchor="middle"
+    font-weight="400"
+    letter-spacing="4"
+  >27왕 500년의 이야기</text>
+
+  <!-- 하단 슬로건 -->
+  <text
+    x="600"
+    y="548"
+    font-family="'Noto Sans KR', 'Noto Serif KR', 'Malgun Gothic', sans-serif"
+    font-size="13"
+    fill="#8B6F47"
+    opacity="0.6"
+    text-anchor="middle"
+    font-weight="300"
+    letter-spacing="2"
+  >시대 · 왕 · 사건 · AI 재현 · 원문 — 한 화면에서 끝까지</text>
+</svg>

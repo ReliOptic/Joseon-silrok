@@ -12,6 +12,8 @@ import { Level35StoryView } from './components/Level35StoryView';
 import { Level4SillokView } from './components/Level4SillokView';
 import { TimelineBar } from './components/TimelineBar';
 import { SearchModal } from './components/SearchModal';
+import { OnboardingHint } from './components/OnboardingHint';
+import { MobileBottomNav } from './components/MobileBottomNav';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -212,11 +214,26 @@ export function App() {
       params.set('level', String(level));
       params.set('king', selectedKingId);
       params.set('event', String(selectedEventIndex));
-      window.history.replaceState(null, '', '?' + params.toString());
+      window.history.pushState({ level, king: selectedKingId, event: selectedEventIndex }, '', '?' + params.toString());
     } else {
-      window.history.replaceState(null, '', window.location.pathname);
+      window.history.replaceState({ level: 1 }, '', window.location.pathname);
     }
   }, [level, selectedKingId, selectedEventIndex]);
+
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      const state = e.state as { level?: number; king?: string; event?: number } | null;
+      if (state && typeof state.level === 'number') {
+        setLevel(state.level);
+        if (state.king) setSelectedKingId(state.king);
+        if (typeof state.event === 'number') setSelectedEventIndex(state.event);
+      } else {
+        setLevel(1);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -238,7 +255,6 @@ export function App() {
     };
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches.length !== 2 || touchInitialDistance.current === null) return;
-      e.preventDefault();
       const current = Math.hypot(
         e.touches[1].clientX - e.touches[0].clientX,
         e.touches[1].clientY - e.touches[0].clientY
@@ -284,48 +300,59 @@ export function App() {
     <div className="relative w-full h-screen overflow-hidden text-[#2D2A26]">
       <div className="hanji-noise"></div>
 
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between bg-white/10 backdrop-blur-md border-b border-black/5">
-        <div className="flex items-center gap-4">
+      <nav className="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex items-center justify-between bg-white/10 backdrop-blur-md border-b border-black/5">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
           {level > 1 && (
-            <button onClick={zoomOut} aria-label="뒤로 가기" className="p-2 hover:bg-black/5 rounded-full transition-colors">
+            <button onClick={zoomOut} aria-label="뒤로 가기" className="p-2 hover:bg-black/5 rounded-full transition-colors flex-shrink-0">
               <ArrowLeft size={24} />
             </button>
           )}
-          <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase opacity-80">
-            <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(1)}>
+          <div className="flex items-center gap-1 sm:gap-2 text-sm font-medium tracking-widest uppercase opacity-80 min-w-0">
+            <span className="cursor-pointer hover:opacity-100 hidden sm:inline" onClick={() => zoomToLevel(1)}>
               조선 (Joseon)
             </span>
-            {level > 1 && <ChevronRight size={14} />}
-            {level > 1 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(2)}>{kingMeta?.name ?? ''}</span>}
-            {level > 2 && <ChevronRight size={14} />}
-            {level > 2 && <span className="cursor-pointer hover:opacity-100" onClick={() => zoomToLevel(3)}>{currentEvent?.year}년</span>}
-            {level > 3 && <ChevronRight size={14} />}
-            {level > 3 && <span>실록 (Sillok)</span>}
+            <span className="cursor-pointer hover:opacity-100 sm:hidden" onClick={() => zoomToLevel(1)}>
+              조선
+            </span>
+            {level > 1 && <ChevronRight size={14} className="flex-shrink-0" />}
+            {level > 1 && (
+              <span className="cursor-pointer hover:opacity-100 truncate max-w-[80px] sm:max-w-none" onClick={() => zoomToLevel(2)}>
+                {kingMeta?.name ?? ''}
+              </span>
+            )}
+            {level > 2 && <ChevronRight size={14} className="hidden sm:block flex-shrink-0" />}
+            {level > 2 && (
+              <span className="cursor-pointer hover:opacity-100 hidden sm:inline" onClick={() => zoomToLevel(3)}>
+                {currentEvent?.year}년
+              </span>
+            )}
+            {level > 3 && <ChevronRight size={14} className="hidden sm:block flex-shrink-0" />}
+            {level > 3 && <span className="hidden sm:inline">실록 (Sillok)</span>}
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
           {level > 1 && (
             <button
               onClick={shareUrl}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs opacity-50 hover:opacity-80 transition-opacity rounded-full hover:bg-black/5"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs opacity-50 hover:opacity-80 transition-opacity rounded-full hover:bg-black/5"
               title="현재 페이지 URL 복사"
             >
               <Share2 size={14} />
-              <span className="hidden sm:inline">{shareCopied ? '복사됨!' : '공유'}</span>
+              <span>{shareCopied ? '복사됨!' : '공유'}</span>
             </button>
           )}
           <button
             onClick={() => setIsSearchOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs opacity-50 hover:opacity-80 transition-opacity rounded-full hover:bg-black/5"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs opacity-50 hover:opacity-80 transition-opacity rounded-full hover:bg-black/5"
             title="검색 (/ 또는 ⌘K)"
           >
-            <Search size={14} /><span className="hidden sm:inline">검색</span>
+            <Search size={14} /><span>검색</span>
           </button>
-          <button onClick={zoomOut} disabled={level <= 1} aria-label="축소" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+          <button onClick={zoomOut} disabled={level <= 1} aria-label="축소" className="hidden sm:flex p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
             <ZoomOut size={20} />
           </button>
-          <span className="text-xs font-bold">LV.{Math.floor(level)}</span>
-          <button onClick={zoomIn} disabled={level >= 4} aria-label="확대" className="p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
+          <span className="hidden sm:inline text-xs font-bold">LV.{Math.floor(level)}</span>
+          <button onClick={zoomIn} disabled={level >= 4} aria-label="확대" className="hidden sm:flex p-2 hover:bg-black/5 rounded-full disabled:opacity-30">
             <ZoomIn size={20} />
           </button>
         </div>
@@ -340,6 +367,17 @@ export function App() {
       </div>
 
       <TimelineBar currentKingId={level > 1 ? selectedKingId : null} onSelectKing={selectKingFromTimeline} />
+
+      {level === 1 && <OnboardingHint />}
+
+      <MobileBottomNav
+        level={level}
+        onZoomIn={zoomIn}
+        onZoomOut={zoomOut}
+        onSearch={() => setIsSearchOpen(true)}
+        onShare={shareUrl}
+        shareCopied={shareCopied}
+      />
 
       {isSearchOpen && (
         <SearchModal

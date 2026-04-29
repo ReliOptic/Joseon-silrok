@@ -1,6 +1,7 @@
 import type { KingData, KingListItem } from '../types/king.types';
 import { ERAS } from '../data';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { TransitionCard } from './TransitionCard';
 
 interface Level2Props {
   kingData: KingData;
@@ -28,6 +29,11 @@ export function Level2EventView({ kingData, onSelectEvent, prevKing, nextKing, o
           </button>
         ) : <span />}
       </div>
+
+      {/* Transition card */}
+      {kingData.transitionFromPrev && (
+        <TransitionCard kingId={kingData.id} text={kingData.transitionFromPrev} />
+      )}
 
       {/* King header */}
       <div className="mb-20">
